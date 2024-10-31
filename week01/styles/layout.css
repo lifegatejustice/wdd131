@@ -5,12 +5,11 @@
 body {
     font-family: var(--paragraph-font);
     max-width: 960px;
-    padding: 20px;
     margin: 0 auto;
     box-sizing: border-box;
-    display: grid; /* Make the body a grid container */
-    grid-template-columns: 2fr 1fr; /* Two columns: main content and aside */
-    grid-template-rows: auto 1fr auto; /* Header, main content, footer */
+    display: grid; 
+    grid-template-columns: 2fr 1fr; 
+    grid-template-rows: auto 1fr auto; 
     grid-template-areas: 
         "header header"
         "main aside"
@@ -28,11 +27,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-    grid-area: header; /* Assign header to the grid area */
+    grid-area: header; 
 }
 
 main {
-    grid-area: main; /* Assign main to the grid area */
+    grid-area: main; 
     margin-right: 10rem;
     margin-top: 10px;
     background-color: grey;
@@ -52,7 +51,7 @@ aside {
 
 
 footer {
-    grid-area: footer; /* Assign footer to the grid area */
+    grid-area: footer; 
     padding: 2rem;
     text-align: center;
 }
