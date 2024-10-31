@@ -9,12 +9,12 @@ body {
     margin: 0 auto;
     box-sizing: border-box;
     display: grid; /* Make the body a grid container */
-    grid-template-columns: 3fr 1fr; /* Two columns: main content and aside */
+    grid-template-columns: 2fr 1fr; /* Two columns: main content and aside */
     grid-template-rows: auto 1fr auto; /* Header, main content, footer */
     grid-template-areas: 
         "header header"
         "main aside"
-        "footer footer"; /* Define areas for header, main, aside, and footer */
+        "footer footer";
 }
 
 
@@ -33,14 +33,23 @@ header {
 
 main {
     grid-area: main; /* Assign main to the grid area */
-    margin: 1rem;
+    margin-right: 10rem;
+    margin-top: 10px;
+    background-color: grey;
+    border: 2px solid grey;
 }
 
 aside {
-    grid-area: aside; /* Assign aside to the grid area */
-    padding: 1rem;
-    background-color: var(--secondary-color); /* Optional: Add background color */
+    margin-top: 10px;
+    
+    background-color: var(--secondary-color); 
+    border: 2px solid grey;
+    
+
+
 }
+
+
 
 footer {
     grid-area: footer; /* Assign footer to the grid area */
