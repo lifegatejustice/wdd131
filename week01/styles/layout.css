@@ -1,32 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
+
 body {
     font-family: var(--paragraph-font);
     max-width: 960px;
     padding: 20px;
     margin: 0 auto;
     box-sizing: border-box;
+    display: grid; /* Make the body a grid container */
+    grid-template-columns: 3fr 1fr; /* Two columns: main content and aside */
+    grid-template-rows: auto 1fr auto; /* Header, main content, footer */
+    grid-template-areas: 
+        "header header"
+        "main aside"
+        "footer footer"; /* Define areas for header, main, aside, and footer */
 }
 
-:root {
-    --primary-color: #004d1a;
-    --secondary-color: #E2DEDE;
-    --accent1-color: #003311;
-    --accent2-color: #006622; 
+
+:root{
     --heading-font: 'outfit', serif;
     --paragraph-font: 'poppins', serif;
-
-    --nav-background-color: #003311; 
-    --nav-link-color: #ffffff;
-    --nav-hover-link-color: #ffffff;
-    --nav-hover-background-color: #006622; 
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
-    color: var(--accent2-color);
-    margin: 0;
+}
+
+header {
+    grid-area: header; /* Assign header to the grid area */
+}
+
+main {
+    grid-area: main; /* Assign main to the grid area */
+    margin: 1rem;
+}
+
+aside {
+    grid-area: aside; /* Assign aside to the grid area */
+    padding: 1rem;
+    background-color: var(--secondary-color); /* Optional: Add background color */
+}
+
+footer {
+    grid-area: footer; /* Assign footer to the grid area */
+    padding: 2rem;
+    text-align: center;
 }
 
 nav {
@@ -37,45 +56,11 @@ nav {
     align-items: center;
 }
 
-main{
-    grid-column: 2/3;
-    margin: 1rem;
-
-}
-
-.mainl{
-    border-bottom: 2px solid #029929;
-    padding-bottom: 20px;
-    margin-bottom: 50px;
-    
-
-}
-.grid1{
-    display: grid;
-    grid-template-columns: auto 1fr auto / auto 1fr auto;
-    gap: 20px;
-}
-
-.grid1 h1{
-    padding: 2rem;
-    grid-column: 1 / 4;
-    text-align: left;
-}
-
-.grid1 main{
-    padding: 2rem;
-    grid-column: 1 / 2;
-}
-
-aside{
-    padding: 2rem;
-    grid-column: 2 / 3;
-    border: 2px solid black;
-    float: right;
-}
-
-footer{
-    grid-column: 1 / 4;
-    padding: 2rem;
-    text-align: center;
+nav a {
+    color: white;
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
