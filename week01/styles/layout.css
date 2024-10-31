@@ -64,7 +64,7 @@ nav a:hover {
 .grid1 h1{
     padding: 2rem;
     grid-column: 1 / 4;
-    text-align: center;
+    text-align: left;
 }
 
 .grid1 main{
@@ -75,6 +75,8 @@ nav a:hover {
 aside{
     padding: 2rem;
     grid-column: 2 / 3;
+    border: 2px solid black;
+    float: right;
 }
 
 footer{
