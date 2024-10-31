@@ -30,31 +30,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 nav {
-    background-color: var(--nav-background-color);
-    font-size: 1.2rem;
+    background-color: #029929;
+    padding: 1rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 1rem;
 }
 
-nav a {
-    display: block;
-    color: var(--nav-link-color);
-    text-decoration: none;
-    padding: 1rem;
-    transition: background-color 0.3s ease;
+main{
+    grid-column: 2/3;
+    margin: 1rem;
+
 }
 
-nav a:link, nav a:visited {
-    color: var(--nav-link-color);
-}
+.mainl{
+    border-bottom: 2px solid #029929;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+    
 
-nav a:hover {
-    color: var(--nav-hover-link-color);
-    background-color: var(--nav-hover-background-color);
 }
-
 .grid1{
     display: grid;
     grid-template-columns: auto 1fr auto / auto 1fr auto;
