@@ -1,5 +1,3 @@
-let myName;
-let myAge;
 
-myName = "Chris";
-myAge = 37;
+let myName = "Chris";
+let myAge = 37;
