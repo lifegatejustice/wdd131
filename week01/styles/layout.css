@@ -4,7 +4,8 @@
 
 body {
     font-family: var(--paragraph-font);
-    max-width: 960px;
+    /*max-width: 960px;*/
+    padding: 20px;
     margin: 0 auto;
     box-sizing: border-box;
     display: grid; 
@@ -12,7 +13,7 @@ body {
     grid-template-rows: auto 1fr auto; 
     grid-template-areas: 
         "header header"
-        "aside"
+        "main aside"
         "footer footer";
 }
 
@@ -28,32 +29,48 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
     grid-area: header; 
+    border-radius: 20px;
 }
 
 main {
+    
     grid-area: main; 
     margin-right: 10rem;
     margin-top: 10px;
     background-color: grey;
     border: 2px solid grey;
+    width: 96%;
+    padding-left: 10px;
+    border-radius: 20px;
+    box-shadow: grey;
+}
+
+main h2{
+    color: white
 }
 
 aside {
     margin-top: 10px;
+    padding-left: 10px;
     
     background-color: var(--secondary-color); 
     border: 2px solid grey;
-    
-
-
+    border-radius: 20px;
 }
-
 
 
 footer {
     grid-area: footer; 
     padding: 2rem;
     text-align: center;
+    background-color: #029929;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px gray;
+}
+
+footer p{
+    color: white
 }
 
 nav {
@@ -62,6 +79,7 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    border-radius: 20px;
 }
 
 nav a {
