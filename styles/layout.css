@@ -106,12 +106,18 @@ main h3 {
     text-align: center;
 }
 
-main p {
+.about {
     padding: 10px;
     padding-top: 40px;
     margin-bottom: 40px;
     position: relative;
     bottom: 20px;
+    z-index: 1;
+}
+
+.fact {
+    float: right;
+    margin-left: 40px;
     z-index: 1;
 }
 
@@ -127,10 +133,9 @@ main p {
     z-index: 2;
 }
 
+
 .nigerianflag img{
     float: left;
-    position: relative;
-    margin-top: 20px;
 
 }
 
