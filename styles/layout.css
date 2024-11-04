@@ -115,7 +115,7 @@ main p {
     z-index: 1;
 }
 
-main img {
+.profilepic img {
     width: 150px;
     height: auto;
     float: right;
