@@ -88,6 +88,7 @@ main {
     grid-area: main; 
     margin-right: 10rem;
     margin-top: 10px;
+    max-width: 980px;
     width: 96%;
     padding: 10px;
     border-radius: 20px;
