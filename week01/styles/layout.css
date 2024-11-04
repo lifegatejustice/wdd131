@@ -56,12 +56,31 @@ main h2{
     padding: 10px;
 }
 
+main p{
+    padding: 10px;
+}
+
+main img {
+    justify-self: end;
+    width: 150px;
+    height: auto;
+    float: right;
+    padding: 2px;
+    margin: 0 0 1rem 1rem;
+    box-shadow: 0 0 30px gray;
+}
+
+
 aside {
     margin-top: 10px;
     background-color: var(--secondary-color); 
     border: px solid grey;
     border-radius: 20px;
-    padding: ;
+    padding: 10px;
+}
+
+aside p{
+    padding: 10px;
 }
 
 aside h2{
@@ -85,6 +104,7 @@ footer {
 
 footer p{
     color: white
+    
 }
 
 nav {
