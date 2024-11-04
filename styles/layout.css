@@ -154,6 +154,7 @@ aside {
     padding-left: 10px;
     background-color: var();
     height: 100%;
+    list-style-type: none;
     
 }
 
@@ -187,6 +188,7 @@ aside ul{
     background-color: var(--secondary-color);
     position: relative;
     bottom: 40px;
+    list-style-type: none;
 }
 
 
