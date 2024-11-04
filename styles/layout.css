@@ -116,9 +116,9 @@ main h3 {
 }
 
 .fact {
-    float: right;
-    margin-left: 40px;
+    padding-left: 10px;
     z-index: 1;
+    padding: 10px;
 }
 
 .profilepic img {
@@ -126,16 +126,18 @@ main h3 {
     height: auto;
     float: right;
     padding: 2px;
-    margin: 0 0 2rem 1rem;
+    margin: 0 0 1rem 2rem;
     box-shadow: 0 0 30px gray;
     border-radius: 10px;
     position: relative;
+    right: 20px;
     z-index: 2;
 }
 
 
-.nigerianflag img{
+.nigerianflag {
     float: left;
+    padding: 10px;
 
 }
 
@@ -145,6 +147,8 @@ aside {
     border-radius: 20px;
     padding-left: 10px;
     background-color: var();
+    height: 100%;
+    
 }
 
 aside h2 {
@@ -155,13 +159,31 @@ aside h2 {
     padding: 10px;
 }
 
-aside p {
+aside p{
+    padding-left: 20px;
+    padding-top: 40px;
+    background-color: var(--secondary-color);
+    position: relative;
+    bottom: 60px;
+}
+
+.p1{
     padding: 10px;
     padding-top: 40px;
     background-color: var(--secondary-color);
     position: relative;
     bottom: 20px;
 }
+
+aside ul{
+    padding: 10px;
+    padding-top: 40px;
+    background-color: var(--secondary-color);
+    position: relative;
+    bottom: 40px;
+}
+
+
 
 footer {
     grid-area: footer; 
@@ -175,4 +197,9 @@ footer {
 
 footer p {
     color: white;
+}
+
+figcaption{
+    text-align: center;
+    font-style: italic;
 }

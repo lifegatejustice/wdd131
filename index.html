@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lifegate Justice | WDD 131</title>
     <link rel="stylesheet" href="styles/layout.css">
+    <script src="scripts/getdate.js" defer></script>
+    <link rel="icon" href="images/profile.webp" type="image/webp">
+    <meta name="description" content="Lifegate Justice's personal website for WDD 131">
+    <meta name="keywords" content="Lifegate Justice, WDD 131, BYU-Idaho, Software Development">
 </head>
 
 <body>
@@ -15,35 +19,66 @@
             </h1>
             <nav>
                 <ul>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">I-Learn</a></li>
-                    <li><a href="#">Scriptures</a></li>
-                    <li><a href="#">Final Project</a></li>
+                    <li><a href="https://www.linkedin.com/in/lifegatejustice" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://byui.instructure.com/" target="_blank" rel="noopener noreferrer">I-Learn</a></li>
+                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" rel="noopener noreferrer">Scriptures</a></li>
+                    <li><a href="#" aria-label="Final Project">Final Project</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
     <main>
+        <section class="card">
         <h2>About Me</h2>
         <div class="profilepic">
-        <img src="images/profile.webp" alt="Portrait of Lifegate Justice" width="200"></div>
+            <img src="images/profile.webp" alt="Portrait of Lifegate Justice" width="200" loading="lazy" decoding="async">
+        </div>
         <p class="about">My name is Lifegate, and I go by Lifegate🤷‍♂️. I was born in Nigeria, where I live with my family. I am currently a student at BYU-Idaho studying Software Development. My family is my world, and I love spending time with them. I'm passionate about video games and enjoy learning new things.</p>
 
         <h3>Aba, Nigeria</h3>
         <hr>
-        <div class="nigrianflag">
-        <img src="images/Flag_of_Nigeria.svg" alt="Official flag of Nigeria" width="200"></div>
+        <div class="nigerianflag">
+            <figure>
+                <img src="images/Flag_of_Nigeria.svg" alt="Official flag of Nigeria" width="200" loading="lazy" decoding="async">
+                <figcaption>Official Nigerian Flag</figcaption>
+            </figure>
+        </div>
         <p class="fact">Nigeria is the most populous black nation on Earth. It is home to the second largest film industry on the globe whilst also being the fashion, technological and creative hub in Africa.</p>
+        </section>
     </main>
 
     <aside>
-        <h2>Web Dev Resources</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt amet, asperiores fugiat cum consequatur omnis id voluptates odio magnam eligendi nam, esse aperiam dolorum, hic doloribus architecto excepturi itaque. Ipsum.</p>
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <p class="p1">Enhance your web development skills with these essential resources. From tutorials to interactive coding exercises, these sites offer invaluable tools for every level of learner.</p>
+            
+            <ul>
+                <li>
+                    <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">
+                        MDN Web Docs
+                    </a> - Comprehensive documentation on web technologies including HTML, CSS, and JavaScript.
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com/" target="_blank" rel="noopener noreferrer">
+                        W3Schools
+                    </a> - A beginner-friendly platform with tutorials, examples, and interactive exercises.
+                </li>
+                <li>
+                    <a href="https://www.codecademy.com/" target="_blank" rel="noopener noreferrer">
+                        Codecademy
+                    </a> - An interactive platform offering courses on a wide range of coding languages and web development.
+                </li>
+            </ul>
+            
+            <p>These resources will help build your foundational knowledge and keep you updated with the latest trends in web development.</p>
+        </section>
     </aside>
+    
 
     <footer>
-        <p>©2024 👽 Lifegate Justice De-Tom 👽 Nigeria </p>
+        <p>&copy; 2024 Lifegate Justice De-Tom Nigeria</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
     </footer>
+    
 </body>
 </html>
