@@ -127,6 +127,12 @@ main img {
     z-index: 2;
 }
 
+.nigerianflag img{
+    float: left;
+    position: relative;
+
+}
+
 aside {
     grid-area: aside;
     /*background-color: var(--secondary-color); */
