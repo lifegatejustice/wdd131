@@ -80,6 +80,7 @@ header, main, footer{
     max-width: 640px;
     margin: 1rem auto;
     border: 1px solid green;
+    border-radius: 20px;
     padding: 20px;
     background-color: #007AA1;
 
@@ -93,11 +94,13 @@ main{
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    border-radius: 20px;
 }
 
 section{
     padding: 1rem;
     background-color: aliceblue;
+    border-radius: 20px;
 
 }
 
