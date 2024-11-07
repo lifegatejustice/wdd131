@@ -3,6 +3,7 @@
         background-color: black;
         color: aliceblue;
     }
+
     main{
         grid-template-columns: 1fr 1fr;
     }
