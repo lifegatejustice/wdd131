@@ -85,6 +85,10 @@ header, main, footer{
 
 }
 
+header{
+    color: aliceblue;
+}
+
 main{
     display: grid;
     grid-template-columns: 1fr;
@@ -99,4 +103,5 @@ section{
 
 footer{
     font-family: Roboto, sans-serif;
+    color: aliceblue;
 }
