@@ -1,7 +1,7 @@
 // loops.js
 myInfo = {
   name: "Brother T",
-  photo: "images/photo.jpg",
+  photo: "images/profile.webp",
   favoriteFoods: ["Fettucini", "Steak", "Chicken", "Shrimp", "Baked Potato"],
   hobbies: ["Reading", "Fishing", "Camping"],
   placesLived: [
