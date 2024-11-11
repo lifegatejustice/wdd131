@@ -1,5 +1,7 @@
+const username = "Lifegate"
+const welcomeMsg = document.getElementById("welcome-msg");
 
+welcomeMsg.textContext += username === "" ? `Guest` : username;
 
-document.title = "mydocument";
-document.body.style.backgroundColor = "(0, 0%, 15%)";
-console.log(document)
+console.dir(document);
+
