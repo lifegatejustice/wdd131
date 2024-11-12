@@ -1,7 +1,9 @@
-const username = "Lifegate"
-const welcomeMsg = document.getElementById("welcome-msg");
+const buttonElement = document.getElementById("submitButton");
 
-welcomeMsg.textContext += username === "" ? `Guest` : username;
-
-console.dir(document);
+function copyInput() {
+  const inputElement = document.getElementById("inputBox");
+  const outputElement = document.getElementById("output");
+  outputElement.innerHTML = inputElement.value;
+}
+buttonElement.addEventListener("click", copyInput);
 
