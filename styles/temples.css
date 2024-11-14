@@ -216,7 +216,7 @@ figure img{
 
 .images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Responsive columns */
+  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr)); /* Responsive columns */
   gap: 10px; /* Space between images */
 }
 
