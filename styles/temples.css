@@ -106,9 +106,16 @@
     font-style: italic;
   }
 
-body{
+  body {
     font-family: "Poppins", sans-serif;
-
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box; 
+    grid-template-rows: auto 1fr auto; 
+    grid-template-areas: 
+        "header header"
+        "main aside"
+        "footer footer";
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -118,20 +125,20 @@ h1,h2,h3,h4,h5,h6{
 header h1{
     position: relative;
     z-index: 2;
-    top: 95px;
     padding-left: 20px;
+    top: 15px;
     color: aliceblue;
 }
 
-header{
-    
-}
 
 nav {
 	background-color: #36454f;
     text-align: right;
     position: relative;
     padding: 20px;
+    bottom: 80px;
+    margin: 0%;
+    z-index: 1;
 	/*max-width: 800px;*/
 }
 nav ul {
@@ -145,9 +152,13 @@ nav a {
 	text-decoration: none;
 }
 
+
+
 nav a:hover {
 	text-decoration:overline;
 }
+
+
 
 .active {
 	color: yellow;
@@ -155,12 +166,17 @@ nav a:hover {
 
 main{
     max-width: 100%;
+    position: relative;
+    bottom: 60px;
+    
 }
 
 figure img{
     height: 300px;
     width: 100%;
     display: grid;
+    box-shadow: 0 0 30px gray;
+    box-shadow: 0 0 30px gray;
 
 }
 
@@ -179,7 +195,18 @@ section h2{
     
 }
 
+footer {
+    grid-area: footer; 
+    padding: 10px;
+    text-align: center;
+    background-color: #36454f;
+    margin-top: 10px;
+    box-shadow: 0 0 30px gray;
+}
 
+footer p {
+    color: white;
+}
 
 
 
