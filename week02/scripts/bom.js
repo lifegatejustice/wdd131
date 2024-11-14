@@ -18,7 +18,6 @@ button.addEventListener('click', function() {
         
         // Append the delete button to the list item
         li.append(deleteButton);
-        
         // Append the list item to the ul list
         list.append(li);
         
