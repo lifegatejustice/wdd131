@@ -118,17 +118,19 @@ h1,h2,h3,h4,h5,h6{
 header h1{
     position: relative;
     z-index: 2;
-    top: 30px;
+    top: 95px;
     padding-left: 20px;
+    color: aliceblue;
+}
+
+header{
     
 }
 
 nav {
 	background-color: #36454f;
-	margin: 0 auto;
     text-align: right;
     position: relative;
-    bottom: 65px;
     padding: 20px;
 	/*max-width: 800px;*/
 }
@@ -151,9 +153,13 @@ nav a:hover {
 	color: yellow;
 }
 
+main{
+    max-width: 100%;
+}
+
 figure img{
     height: 300px;
-    width: 400px;
+    width: 100%;
     display: grid;
 
 }
@@ -161,14 +167,17 @@ figure img{
 .images {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns in each row */
-    gap: 20px; /* Space between items */
+     /* Space between items */
 }
 
 .images div {
     text-align: center; /* Center-align the image captions */
 }
 
-
+section h2{
+    text-align: center;
+    
+}
 
 
 
