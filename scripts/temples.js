@@ -1,12 +1,7 @@
 const lastModified = document.querySelector("#last-modified");
 
 const today = new Date();
-const currentDay = today.getDate();
-const currentMonth = today.getMonth() + 1; // Months are zero-based
-const currentYear = today.getFullYear();
-
-// Format the date with slashes
-const formattedDate = `${currentDay}/${currentMonth}/${currentYear}`;
+const formattedDate = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'numeric', year: 'numeric' }).format(today);
 
 if (lastModified) lastModified.textContent = formattedDate;
 
@@ -17,5 +12,3 @@ hamButton.addEventListener('click', () => {
 	navigation.classList.toggle('open');
 	hamButton.classList.toggle('open');
 });
-
-  
