@@ -90,7 +90,7 @@ header{
 }
 
 /* large view navigation ************************************/
-@media (min-width: 37.5em) {
+@media (min-width: 704px) {
 	h1 {
 		font-size: 2.5rem;
 		margin-left: 0;
@@ -114,10 +114,6 @@ header{
 		display: block;
 		flex: 1 1 100%;
 	}
-	
-	.stuff {
-		margin: 1rem auto;
-	}
 
   main{
     max-width: 100%;
@@ -130,7 +126,7 @@ header{
   main{
     position: relative;
     top: 70px;
-    margin: 20px;
+    margin: px;
   }
   
   .images {
@@ -143,11 +139,12 @@ header{
 figure {
     text-align: center;
     margin: 20px;
+
+    width: 100%;
 }
 figure img {
     width: 300px;
     height: 200px;
-    padding-left: 20px;
 }
 }
 
