@@ -1,5 +1,5 @@
 /* Large view header and navigation */
-@media (min-width: 37.5em) {
+@media (min-width: 794px) {
     header {
         background-color: #333;
         padding-top: 20px;
@@ -58,4 +58,24 @@
         flex: 1;
         align-items: right;
       }
+
+      .images {
+        gap: 20px;
+        display: grid; 
+        grid-template-columns: repeat(3, minmax(300px, 1fr)); 
+        grid-gap: 20px;
+        justify-content: center;
+      
+        place-items: center;
+    }
+
+    main{
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+
+    figure img{
+        height: 300px;
+    }
+      
 }
