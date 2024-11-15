@@ -95,6 +95,17 @@ footer {
         display: none; /* Hide the menu button */
     }
 
+   
+  }
+  
+  /* Only apply additional padding when the menu is open in the small view */
+  @media (max-width: 1005px) {
+      header.menu-open {
+          padding-bottom: 200px; /* Add more padding for the open menu */
+      }
+  }
+  
+
     .navigation {
         display: flex; /* Show the navigation inline */
         flex-direction: row;
@@ -118,4 +129,3 @@ footer {
     .images {
         grid-template-columns: repeat(3, 1fr); /* Three images per row */
     }
-}
