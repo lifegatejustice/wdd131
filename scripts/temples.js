@@ -10,14 +10,12 @@ const formattedDate = `${currentDay}/${currentMonth}/${currentYear}`;
 
 if (lastModified) lastModified.textContent = formattedDate;
 
+const hamButton = document.querySelector('#menu');
+const navigation = document.querySelector('.navigation');
 
-
-// JavaScript to toggle the navigation menu
-const menuButton = document.getElementById('menu');
-const nav = document.querySelector('.navigation');
-const header = document.querySelector('header');
-
-menuButton.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    header.classList.toggle('menu-open');
+hamButton.addEventListener('click', () => {
+	navigation.classList.toggle('open');
+	hamButton.classList.toggle('open');
 });
+
+  
