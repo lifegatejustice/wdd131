@@ -6,14 +6,17 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: relative;
+  background-color: #007AA1;
+  position: relative;
+  z-index: 2;
+  padding: 10px 20px; /* Default padding */
+  transition: padding 0.3s ease; /* Smooth transition */
 }
+
+header.menu-open {
+  padding-bottom: 200px; /* Add more padding when the menu is open */
+}
+
 
 #menu {
     font-size: 2rem;
@@ -21,7 +24,9 @@ header {
     border: none;
     color: white;
     cursor: pointer;
-    z-index: 10; /* Ensure the menu button stays on top */
+    z-index: 10;
+    position: relative; 
+    bottom: 85px;/* Ensure the menu button stays on top */
 }
 
 .navigation {

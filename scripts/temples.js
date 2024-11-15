@@ -13,8 +13,11 @@ if (lastModified) lastModified.textContent = formattedDate;
 
 
 // JavaScript to toggle the navigation menu
-document.getElementById('menu').addEventListener('click', function () {
-    const nav = document.querySelector('.navigation');
-    nav.classList.toggle('open');
-});
+const menuButton = document.getElementById('menu');
+const nav = document.querySelector('.navigation');
+const header = document.querySelector('header');
 
+menuButton.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    header.classList.toggle('menu-open');
+});
