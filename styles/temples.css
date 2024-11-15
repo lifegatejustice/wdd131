@@ -118,4 +118,39 @@ header{
 	.stuff {
 		margin: 1rem auto;
 	}
+
+  main{
+    max-width: 100%;
+    position: relative;
+    bottom: 60px;
+    
+  }
+  
+  
+  main{
+    position: relative;
+    top: 70px;
+  }
+  
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+figure {
+    text-align: center;
+}
+figure img {
+    width: 300px;
+    height: 200px;
+}
+}
+
+
+
+section h2{
+  text-align: center;
+  
 }

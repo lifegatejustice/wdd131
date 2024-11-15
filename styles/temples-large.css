@@ -1,49 +1,46 @@
-/* Large screen styles - temple-large.css */
-body {
-    font-family: "Poppins", sans-serif;
-    padding: 20px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-        "header header"
-        "main aside"
-        "footer footer";
-}
+/* Large view header and navigation */
+@media (min-width: 37.5em) {
+    header {
+        background-color: #333;
+        padding-top: 20px;
+        padding-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-nav {
-    background-color: #36454f;
-    text-align: right;
-    padding: 20px;
-    z-index: 1;
-}
+    h1 {
+        color: white;
+        font-size: 2.5rem;
+        margin-left: 0;
+        text-align: left;
+        font-family: 'Outfit', sans-serif;
+    }
 
-nav ul {
-    list-style-type: none;
-    display: flex; /* Flexbox for horizontal layout */
-    justify-content: flex-end;
-    padding: 0;
-}
+    #menu {
+        display: none; /* Hide hamburger menu in large view */
+    }
 
-nav a {
-    display: inline-flex;
-    color: #fff;
-    padding: 20px;
-    text-decoration: none;
-}
+    .navigation {
+        display: flex;
+        gap: 20px;
+        justify-content: flex-end;
+        list-style: none;
+    }
 
-nav a:hover {
-    text-decoration: overline;
-}
+    .navigation a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+    }
 
-footer {
-    padding: 10px;
-    text-align: center;
-    background-color: #36454f;
-    margin-top: 10px;
-    box-shadow: 0 0 30px gray;
-}
+    .navigation a:hover {
+        background-color: #bbb;
+        color: #333;
+        font-weight: 700;
+    }
 
-footer p {
-    color: white;
+    .stuff {
+        margin: 1rem auto;
+    }
 }
