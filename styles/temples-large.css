@@ -1,28 +1,49 @@
-/* General Reset for Large Screens */
-@media (min-width: 1005px) {
-    header {
-        padding: 90px 20px;
-    }
+/* Large screen styles - temple-large.css */
+body {
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+}
 
-    nav {
-        display: flex;
-        align-items: center;
-        background-color: transparent; /* Remove background for large view */
-        position: relative;
-        padding: 0;
-    }
+nav {
+    background-color: #36454f;
+    text-align: right;
+    padding: 20px;
+    z-index: 1;
+}
 
-    nav ul {
-        display: flex;
-        gap: 20px; /* Space between items */
-        list-style: none;
-    }
+nav ul {
+    list-style-type: none;
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: flex-end;
+    padding: 0;
+}
 
-    .menu-button {
-        display: none; /* Hide menu button on large screens */
-    }
+nav a {
+    display: inline-flex;
+    color: #fff;
+    padding: 20px;
+    text-decoration: none;
+}
 
-    header.menu-open {
-        padding: 10px 20px; /* Reset padding for large screens */
-    }
+nav a:hover {
+    text-decoration: overline;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #36454f;
+    margin-top: 10px;
+    box-shadow: 0 0 30px gray;
+}
+
+footer p {
+    color: white;
 }
