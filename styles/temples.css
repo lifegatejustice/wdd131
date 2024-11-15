@@ -232,9 +232,7 @@ figure img{
 		text-align: center;
 	}
 
-	#menu {
-		 /* hide hamburger button */
-	}
+	
 
 	.navigation {
 		flex-direction: row;
@@ -285,4 +283,32 @@ figure img {
 section h2{
   text-align: center;
   
+}
+
+
+@media (min-width: 794px) {
+
+    #menu {
+      display: none; /* Hide hamburger menu in large view */
+  }
+
+  .navigation {
+      display: flex;
+      gap: 20px;
+      justify-content: flex-end;
+      list-style: none;
+  }
+
+  .navigation a {
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+  }
+
+  .navigation a:hover {
+      background-color: #bbb;
+      color: #333;
+      font-weight: 700;
+  }
+
 }
