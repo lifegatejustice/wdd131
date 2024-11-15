@@ -12,10 +12,9 @@ if (lastModified) lastModified.textContent = formattedDate;
 
 
 
-const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
-
-hamButton.addEventListener('click', () => {
-	navigation.classList.toggle('open');
-	hamButton.classList.toggle('open');
+// JavaScript to toggle the navigation menu
+document.getElementById('menu').addEventListener('click', function () {
+    const nav = document.querySelector('.navigation');
+    nav.classList.toggle('open');
 });
+

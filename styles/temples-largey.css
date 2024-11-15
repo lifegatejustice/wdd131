@@ -1,0 +1,46 @@
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+    gap: 10px; /* Space between items */
+}
+
+.images div {
+    text-align: center; /* Center-align the image captions */
+}
+
+section h2 {
+    text-align: center;
+}
+
+footer {
+    grid-area: footer; 
+    padding: 10px;
+    text-align: center;
+    background-color: #36454f;
+    margin-top: 10px;
+    box-shadow: 0 0 30px gray;
+}
+
+footer p {
+    color: white;
+}
+
+.lm {
+    color: yellow;
+}
+
+/* Responsive column adjustments */
+@media (max-width: 1024px) {
+    .images {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium viewports */
+    }
+    
+
+    
+}
+
+@media (max-width: 768px) {
+    .images {
+        grid-template-columns: 1fr; /* 1 column for smaller screens */
+    }
+}

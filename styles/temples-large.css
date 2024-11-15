@@ -1,0 +1,49 @@
+/* Large screen styles - temple-large.css */
+body {
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+}
+
+nav {
+    background-color: #007AA1;
+    text-align: right;
+    padding: 20px;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: flex-end;
+    padding: 0;
+}
+
+nav a {
+    display: inline-flex;
+    color: #fff;
+    padding: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: overline;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #007AA1;
+    margin-top: 10px;
+    box-shadow: 0 0 30px gray;
+}
+
+footer p {
+    color: white;
+}
