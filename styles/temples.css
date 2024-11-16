@@ -106,6 +106,20 @@
   font-style: italic;
 }
 
+:root {
+  --primary-color: #004d1a;
+  --secondary-color: #E2DEDE;
+  --accent1-color: #003311;
+  --accent2-color: #006622; 
+  --heading-font: 'Outfit', serif;
+  --paragraph-font: 'Poppins', sans-serif;
+
+  --nav-background-color: #003311; 
+  --nav-link-color: #ffffff;
+  --nav-hover-link-color: #ffffff;
+  --nav-hover-background-color: #006622; 
+}
+
 body {
   font-family: "Poppins", sans-serif;
   padding: 20px;
@@ -176,6 +190,7 @@ header{
 
 #menu.open::before {
 	content: "❎";
+
 }
 
 .navigation {
@@ -184,6 +199,7 @@ header{
 	list-style: none;
 	background-color: #333;
 	color: #fff;
+  justify-content: center;
 }
 
 .navigation a {
@@ -202,6 +218,7 @@ header{
 /* when the button is clicked - the open class is toggled (added/removed) */
 .open a {
 	display: block;
+  text-align: center;
 }
 
 .active::before {
