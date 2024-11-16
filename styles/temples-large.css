@@ -1,7 +1,21 @@
+:root {
+    --primary-color: #004d1a;
+    --secondary-color: #E2DEDE;
+    --accent1-color: #003311;
+    --accent2-color: #006622; 
+    --heading-font: 'Outfit', serif;
+    --paragraph-font: 'Poppins', sans-serif;
+
+    --nav-background-color: #003311; 
+    --nav-link-color: #ffffff;
+    --nav-hover-link-color: #ffffff;
+    --nav-hover-background-color: #006622; 
+}
+
 /* Large view header and navigation */
 @media (min-width: 794px) {
     header {
-        background-color: #333;
+        background-color: var(--accent1-color);
         padding-top: 20px;
         padding-right: 50px;
         width: 100%;
@@ -38,7 +52,7 @@
 
     .navigation a:hover {
         background-color: #bbb;
-        color: #333;
+        color: var(--accent1-color);
         font-weight: 700;
     }
 
@@ -93,7 +107,7 @@ footer {
     grid-area: footer; 
     padding: 10px;
     text-align: center;
-    background-color: #36454f;
+    background-color: var(--accent1-color);
     margin-top: 80px;
     box-shadow: 0 0 30px gray;
 }

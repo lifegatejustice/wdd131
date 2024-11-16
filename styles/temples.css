@@ -151,7 +151,7 @@ h1,h2,h3,h4,h5,h6{
 
 h2 {
 		font-size: 1.2rem;
-		color: navy;
+		color: var(--accent1-color);
 		text-align: left;
 		margin: 1rem;
 	}
@@ -166,7 +166,7 @@ nav {
 }
 
 header{
-  background-color: #333;
+  background-color: var(--accent1-color);
   padding-top: 20px;
   padding-right: 20px;
 }
@@ -176,15 +176,16 @@ header{
 	font-size: 1.5rem;
 	border: 0;
 	background: none;
-	color: #000;
+	color: var(--accent1-color);
  	position: relative;
 	float: right;
 	bottom: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #menu::before {
 	content: "☰";
-  color: #bbb;
+  color: var(--nav-link-color);
 	
 }
 
@@ -197,7 +198,7 @@ header{
 	display: flex;
 	flex-direction: column;
 	list-style: none;
-	background-color: #333;
+	background-color: var(--accent1-color);
 	color: #fff;
   justify-content: center;
 }
@@ -210,9 +211,10 @@ header{
 	color: #fff;
 }
 .navigation a:hover {
-	background-color: #bbb;
-	color: #333;
+	background-color: var(--accent2-color);
+	color: var(--accent1-color);
 	font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* when the button is clicked - the open class is toggled (added/removed) */
@@ -296,6 +298,7 @@ figure img {
     width: 98%;
     margin-right: 20px;
     height: 400px;
+    box-shadow: 0 0 30px gray;
 }
 
 
@@ -327,8 +330,8 @@ section h2{
   }
 
   .navigation a:hover {
-      background-color: #bbb;
-      color: #333;
+      background-color: var(--accent2-color);
+      color: var(--accent1-color);
       font-weight: 700;
   }
 
@@ -338,7 +341,7 @@ footer {
   grid-area: footer; 
   padding: 10px;
   text-align: center;
-  background-color: #36454f;
+  background-color: var(--accent1-color);
   margin-top: 10px;
   box-shadow: 0 0 30px gray;
 }
