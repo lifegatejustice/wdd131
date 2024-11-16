@@ -79,7 +79,7 @@
 
       .images {
         gap: 20px;
-        display: grid; 
+        
         grid-template-columns: repeat(3, minmax(auto, 2fr));
         place-items: center;
     }
@@ -98,7 +98,8 @@
       }
 
     figure img{
-        height: 300px;
+        width: 100%;
+        height: auto;
     }
       
 }
