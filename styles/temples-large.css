@@ -51,9 +51,10 @@
     }
 
     .navigation a:hover {
-        background-color: #bbb;
-        color: var(--accent1-color);
-        font-weight: 700;
+        background-color: var(--nav-hover-background-color);
+	color: var(--nav-hover-link-color);
+	font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .stuff {
