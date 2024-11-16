@@ -79,7 +79,6 @@
 
       .images {
         gap: 20px;
-        
         grid-template-columns: repeat(3, minmax(auto, 2fr));
         place-items: center;
     }
