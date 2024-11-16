@@ -3,7 +3,8 @@
     header {
         background-color: #333;
         padding-top: 20px;
-        padding-right: 20px;
+        padding-right: 50px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -23,14 +24,15 @@
 
     .navigation {
         display: flex;
+        flex-direction: row;
         gap: 20px;
         justify-content: flex-end;
         list-style: none;
     }
 
     .navigation a {
+        display: flex;
         color: white;
-        font-size: 18px;
         text-decoration: none;
     }
 
@@ -52,6 +54,10 @@
         flex: 1;
 
       }
+
+      header h2{
+        text-align: center;
+      }
       
       nav {
         flex: 1;
@@ -61,20 +67,43 @@
       .images {
         gap: 20px;
         display: grid; 
-        grid-template-columns: repeat(3, minmax(300px, 1fr)); 
-        grid-gap: 20px;
-        justify-content: center;
-      
+        grid-template-columns: repeat(3, minmax(auto, 2fr));
         place-items: center;
     }
 
     main{
-        margin-right: 2%;
-        margin-left: 2%;
-    }
+        max-width: 100%;
+        position: relative;
+        bottom: 60px;
+        
+      }
+      
+      
+      main{
+        position: relative;
+        top: 70px;
+        margin: px;
+      }
 
     figure img{
         height: 300px;
     }
       
+}
+
+footer {
+    grid-area: footer; 
+    padding: 10px;
+    text-align: center;
+    background-color: #36454f;
+    margin-top: 80px;
+    box-shadow: 0 0 30px gray;
+}
+
+footer p {
+    color: white;
+}
+
+.lm {
+    color: yellow;
 }

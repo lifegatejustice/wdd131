@@ -142,6 +142,10 @@ h2 {
 		margin: 1rem;
 	}
 
+main h2 {
+  text-align: center;
+}
+
 nav {
 	max-width: 700px;
 	margin: 1rem auto;
@@ -204,11 +208,18 @@ header{
 	  /* just a wayfinding symbol for the user */
 }
 
+figcaption{
+  padding: 20px;
+  font-weight: 400px;
+}
+
 figure img{
-  width: auto;
+  width: 300px;
   height: auto;
   justify-content: center;
-  margin-left: 5%;
+  margin-left: 3px;
+  
+  
 }
 .images {
   gap: 20px;
@@ -234,14 +245,7 @@ figure img{
 
 	
 
-	.navigation {
-		flex-direction: row;
-	}
-
-	.navigation a {
-		display: block;
-		flex: 1 1 100%;
-	}
+	
 
   main{
     max-width: 100%;
@@ -311,4 +315,21 @@ section h2{
       font-weight: 700;
   }
 
+}
+
+footer {
+  grid-area: footer; 
+  padding: 10px;
+  text-align: center;
+  background-color: #36454f;
+  margin-top: 10px;
+  box-shadow: 0 0 30px gray;
+}
+
+footer p {
+  color: white;
+}
+
+.lm {
+  color: yellow;
 }
