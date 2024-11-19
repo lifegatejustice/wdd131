@@ -20,9 +20,9 @@ h1 {
 
 main {
 	display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-}
+	grid-template-columns: 1fr 200px;
+	grid-gap: 1.5rem;
+  }
 
 h2 {
 	color: navy;
