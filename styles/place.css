@@ -139,7 +139,6 @@
   * {
       padding: 0;
       box-sizing: border-box;
-      background-color: rgb(217, 219, 222);
   }
 
 .hero img{
@@ -162,6 +161,18 @@ header h1{
 header{
     position: relative;
     z-index: 2;
+}
+
+.data h2{
+    text-align: center;
+}
+
+.datadetails {
+    text-align: center;
+}
+
+.datadetails b{
+    text-align: center;
 }
 
 
