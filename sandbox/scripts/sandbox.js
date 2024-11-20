@@ -3,3 +3,8 @@ let lastName = 'Francesca';
 function fullName(first, lastName) {
   return `${first} ${lastName}`
 }
+
+const fullName = function (first, lastName) {
+  return `${first} ${lastName}`;
+  
+};
