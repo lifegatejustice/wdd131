@@ -167,12 +167,18 @@ header{
     text-align: center;
 }
 
-.datadetails {
-    text-align: center;
+.datadetails{
+    font-display: flex;
 }
 
+.datadetails p{
+    text-align: left;
+}
+
+
+
 .datadetails b{
-    text-align: center;
+    text-align: right;
 }
 
 
