@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
     <title>Nigeria</title>
     <meta name="description" content="A collection of information about Nigeria.">
     <meta name="author" content="Lifegate Justice De-Tom">
-    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place2.css">
     <script src="scripts/place.js" defer></script>
     <link rel="icon" href="images/profile.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,40 +17,41 @@
 <body>
     <header>
         <h1>Nigeria</h1>
+        <img class="hero"
+            src="images/9495.webp"
+            alt="photo of a beautiful beach and some bangalos in Nigeria"
+            srcset="
+                images/9495.webp 1275w,
+                images/Abeokuta_Forest_Nursery.webp 1920w"
+            sizes="(max-width: 768px) 100vw, 1920px"
+            loading="lazy">
     </header>
     <main>
-        <section class="hero">
-            <picture>
-                <source srcset="images/Abeokuta_Forest_Nursery.webp" media="(min-width: 794px)">
-                <img src="images/9495.webp" alt="Nigeria Image" loading="lazy">
-              </picture>
-              
-        </section>
-        <section class="data">
+        <section class="cards">
             <h2>Data</h2>
-            <div class="datadetails">
-            <p><span>Area:</span> 923,768 km²</p>
-            <p><span>Population:</span> 213 million</p>
-            <p><span>Capital:</span> Abuja</p>
-            <p><span>Languages:</span> English, Hausa, Yoruba, Igbo</p>
-            <p><span>Currency:</span> Nigerian Naira (₦)</p>
-            <p><span>Time Zone:</span> WAT (UTC+1)</p>
-            <p><span>Calling Code:</span> +234</p>
-            <p><span>Internet TLD:</span> .ng</p></div>
+            <ul class="info">
+                <li>Area: 923,768 km²</li>
+                <li>Population: 202,915,907</li>
+                <li>Languages: English, Hausa, Yoruba, Igbo</li>
+                <li>Currency: Nigerian Naira (NGN)</li>
+                <li>Time Zone: 	WAT (UTC+1)</li>
+                <li>Calling Code: +234</li>
+                <li>Internet TLD: .ng</li>
+            </ul>
         </section>
-
-        <section class="weather">
+        <section class="cards">
             <h2>Weather</h2>
-            <div class="weatherdetails">
-            <img src="images/1530374_weather_day_sand_sandstorm_sun_icon.svg" alt="Weather Icon" loading="lazy">
-            <p><span>Temperature:</span> 28°C</p>
-            <p><span>Conditions:</span> Sunny</p>
-            <p><span>Wind:</span> 15 km/h</p>
-            <p><span>Wind Chill:</span> 25°C</p></div>
+            <img src="images/weather-icon.svg" alt="icon of a sun and a cloud with the intention of ilustrating the weather">
+            <ul class="weather">
+                <li>Temperature: 28°C</li>
+                <li>Conditions: Sunny</li>
+                <li>Wind: 15km/h</li>
+                <li>Wind Chill: </li>
+            </ul>
         </section>
-
     </main>
     <footer>
-        <p>&copy; 2024 Lifegate Justice De-Tom Nigeria</p>
-        <p class="lm">Last Modified: <span id="last-modified"</p>
+        <p>&copy; <span id="current-year"></span> &#128105; Lifegate Justice De-Tom &#128105; Nigeria</p>
+        <p>Last modified: <span id="last-modified"></span></p>
     </footer>
+</body>

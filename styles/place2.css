@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #004d1a;
+    --secondary-color: #fdfdfd;
+    --accent1-color: #003311;
+    --accent2-color: #006622; 
+    --heading-font: 'Outfit', serif;
+    --paragraph-font: 'Poppins', sans-serif;
+
+    --nav-background-color: #003311; 
+    --nav-link-color: #ffffff;
+    --nav-hover-link-color: #ffffff;
+    --nav-hover-background-color: #006622; 
+    --transparent-boxes-color: rgba(255, 255, 255, 0.785);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit", serif;
+}
+
+.hero {
+    
+    width: 100%;
+    border-bottom: solid var(--color1) 0.5rem;
+    position: relative;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+   
+}
+
+h1 {
+    font-weight: 400;
+    color: var(--accent1-color);
+    background-color: var(--color1);
+    text-align: center;
+    border-bottom: solid var(--color2) 1rem;
+}
+
+header h1{
+    padding: 2.5rem;
+    text-align: center;
+    background-color: var(--accent1-color);
+
+    color: var(--secondary-color);
+    position: relative;
+    border-bottom: 30px solid var(--accent2-color);
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: var(--accent1-color);
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.cards img {
+    width: 8rem;    
+}
+
+.info, .weather {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+}
+
+footer {
+    background-color: rgb(148, 14, 36);
+    color: var(--color3);
+    padding: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+@media (min-width: 769px) {
+    h1  {
+        font-weight: 800;
+        font-size: 5rem;
+    }
+    
+    .cards {
+      flex-direction: column;
+      background-color:rgba(247, 243, 243, 0.9);
+      max-width: 300px;
+      position: absolute;
+    }
+    
+    .cards:first-of-type {
+        top: 200px;
+        left: 20px;
+    }
+
+    .cards:last-of-type {
+        position: absolute;
+        bottom: 100px;
+        right: 20px;
+    }
+
+    .cards:last-of-type h2::after {
+        content: "⛅";
+        opacity: 0.8;
+        font-size: 2rem;
+        margin-left: 10px;
+
+    }
+        
+    h2 {
+        background-color: var(--color2);
+        width: 15rem;
+        color: var(--color3);
+    }
+
+    .cards img {
+        display: none;
+    }
+
+    .info, .weather {
+        margin-top: 10px;
+    }
+    
+    
+
+
+}
