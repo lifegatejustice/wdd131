@@ -28,7 +28,7 @@ function calculateWindChill(temp, windSpeed) {
 
 // Function to update wind chill dynamically
 function updateWeatherData(temp, windSpeed) {
-    const windChillElement = document.querySelector(".weatherdetails li:last-child span");
+    const windChillElement = document.querySelector(".weatherdetails: li span:last-child");
     if (temp <= 10 && windSpeed > 4.8) {
         windChillElement.textContent = `${calculateWindChill(temp, windSpeed)}℃`;
     } else {
