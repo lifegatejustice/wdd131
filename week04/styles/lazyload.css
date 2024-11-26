@@ -1,0 +1,13 @@
+main img{
+    display: block;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-content: center;
+    vertical-align: middle ;
+
+}
+
+body{
+    align-items: center;
+    align-content: center;
+}
