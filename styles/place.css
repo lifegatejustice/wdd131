@@ -128,6 +128,10 @@
     padding: 0;
 }
 
+.hero img{
+  position: relative;
+}
+
 .hero {
     
     width: 100%;
@@ -248,9 +252,7 @@ footer p {
       padding: 0;
   }
   
-  .hero {
-  
-  }
+
 
     .datas span{
         font-weight: bold;
@@ -329,17 +331,11 @@ footer p {
 
     @media (min-width: 1024px) {
       .datas:last-of-type {
-        bottom: 10px;
+        bottom: 200px;
         right: 20px;
     }
     }
 
-    @media (min-width: 1278px) {
-      .datas:last-of-type {
-        bottom: -150px;
-        right: 20px;
-    }
-    }
     
 
 
