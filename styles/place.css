@@ -126,7 +126,6 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Outfit", serif;
 }
 
 .hero {
@@ -241,6 +240,7 @@ footer p {
       position: absolute;
       border-bottom: transparent;
       box-shadow: 0 0 15px gray;
+      
     }
 
   header, main, footer {
@@ -249,7 +249,7 @@ footer p {
   }
   
   .hero {
-      display: block;
+  
   }
 
     .datas span{
@@ -275,8 +275,7 @@ footer p {
     }
 
     .datas:last-of-type {
-        position: absolute;
-        bottom: 200px;
+        bottom: 100px;
         right: 20px;
     }
 
@@ -325,6 +324,21 @@ footer p {
 
     .hero{
       border-bottom: transparent;
+    }
+
+
+    @media (min-width: 1024px) {
+      .datas:last-of-type {
+        bottom: 10px;
+        right: 20px;
+    }
+    }
+
+    @media (min-width: 1278px) {
+      .datas:last-of-type {
+        bottom: -150px;
+        right: 20px;
+    }
     }
     
 
