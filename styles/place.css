@@ -231,19 +231,19 @@ footer p {
 }
 
 
-@media (min-width: 769px) {
+@media screen and  (min-width: 768px) {
     h1  {
         font-weight: 800;
         font-size: 5rem;
     }
     
     .datas {
-      flex-direction: column;
       background-color: var(--transparent-boxes-color);
       max-width: 300px;
       position: absolute;
       border-bottom: transparent;
       box-shadow: 0 0 15px gray;
+      display: flex;
       
     }
 
@@ -251,6 +251,13 @@ footer p {
       margin: 0;
       padding: 0;
   }
+
+
+  section {
+    position: absolute;
+    background-color: rgba(256, 256, 256, .8);
+    width: max-content;
+}
   
 
 
@@ -270,6 +277,8 @@ footer p {
             top: 9rem;
             z-index: 2;
     }
+
+    
     
     .datas:first-of-type {
         top: 200px;
@@ -277,15 +286,16 @@ footer p {
     }
 
     .datas:last-of-type {
-        bottom: 100px;
-        right: 20px;
-    }
+      bottom: 150px;
+        right: 20px; /* Add margin to create space between the last .datas and the footer */
+  }
 
     .datas:last-of-type h2::after {
         content: "⛅";
         opacity: 0.8;
         font-size: 2rem;
         margin-left: 10px;
+        margin-bottom: 20px;
 
     }
         
@@ -299,6 +309,8 @@ footer p {
         display: none;
     }
 
+    
+
     .datadetails, .weatherdetails {
         margin-top: 10px;
     }
@@ -307,14 +319,15 @@ footer p {
     }
     
     footer {
-      bottom: 10px;
-      padding-top: 30px;
-      padding-bottom: 30px;
+      position: relative; /* Ensure the footer is positioned relative to the normal flow */
+      z-index: 1; /* Bring the footer above other elements if needed */
+      padding: 10px;
+      padding-top: 25px;
+      padding-bottom: 25px;
       text-align: center;
       background-color: var(--accent1-color);
-      box-shadow: none;
-      
-    }
+      box-shadow: 0 0 30px gray;
+  }
     
     footer p {
       color: white;
@@ -326,17 +339,21 @@ footer p {
 
     .hero{
       border-bottom: transparent;
+      position: relative;
+      width: 100%;
     }
 
-
-    @media (min-width: 1024px) {
-      .datas:last-of-type {
-        bottom: 200px;
-        right: 20px;
-    }
-    }
 
     
 
 
+}
+
+
+@media screen and (min-width: 1024px) {
+  .datas:last-of-type{
+    position: absolute;
+    bottom: 0;
+  }
+  
 }
