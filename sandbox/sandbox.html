@@ -1,47 +1,32 @@
+<!-- courses.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles/sandbox.css">
-</head>
-<body>
-  <table>
-    <thead>
-      <tr>
-        <th colspan="4">ACME Wildwest Services</th>
-      </tr>
-      <tr>
-        <td class="blank"></td>
-        <th>Basic</th>
-        <th>Premium</th>
-        <th>Deluxe</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Feature 1</th>
-        <td>✔️</td>
-        <td>✔️</td>
-        <td>✔️</td>
-      </tr>
-      <tr>
-        <th>Feature 2</th>
-        <td>❌</td>
-        <td>✔️</td>
-        <td>✔️</td>
-  
-      </tr>
-      <tr>
-        <th>Feature 3</th>
-        <td>❌</td>
-        <td>❌</td>
-        <td>✔️</td>
-      </tr>
-    </tbody>
-  
-    <caption>Table 1: Account Feature Comparison</caption>
-  </table>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses and sections</title>
+    <script src="scripts/sandbox.js" defer></script>
+  </head>
+  <body>
+    <h1 id="courseName"></h1>
+    <h2 id="courseCode"></h2>
+    <label for="sectionNumber">Section Number</label>
+    <input id="sectionNumber" />
+    <button id="enrollStudent">Enroll Student</button>
+    <button id="dropStudent">Drop Student</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Section#</th>
+          <th>Room#</th>
+          <th>#Enrolled</th>
+          <th>Days</th>
+          <th>Instructor</th>
+        </tr>
+      </thead>
+      <tbody id="sections"></tbody>
+    </table>
+  </body>
 </html>
