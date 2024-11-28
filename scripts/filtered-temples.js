@@ -13,6 +13,7 @@ hamButton.addEventListener('click', () => {
 	hamButton.classList.toggle('open');
 });
 
+
 const temples = [
 	{
 	  templeName: "Aba Nigeria",
@@ -70,130 +71,84 @@ const temples = [
 	  imageUrl:
 	  "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
 	},
+	// Additional temple objects
 	{
-		templeName: "Salt Lake Temple",
-		location: "Salt Lake City, Utah, United States",
-		dedicated: "1893, April, 6",
-		area: 185000,
-		imageUrl: "images/salt-lake.png" // Changed to imageUrl
-	  },
-	  {
-		templeName: "Provo Utah Temple",
-		location: "Provo, Utah, United States",
-		dedicated: "2016, March, 20",
-		area: 85000,
-		imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-utah-temple/400x250/provo-utah-temple-exterior-1416671-wallpaper.jpg"
-	  },
-	  {
-		templeName: "San Antonio Texas Temple",
-		location: "San Antonio, Texas, United States",
-		dedicated: "2005, May, 22",
-		area: 16000,
-		imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-antonio-texas-temple/400x250/san-antonio-texas-temple-exterior-1416671-wallpaper.jpg"
-	  }
-	  
+	  templeName: "Salt Lake Utah",
+	  location: "Salt Lake City, Utah, United States",
+	  dedicated: "1893, April, 6",
+	  area: 253016,
+	  imageUrl:
+	  "images/salt-lake.webp"
+	},
+	{
+	  templeName: "San Diego California",
+	  location: "San Diego, California, United States",
+	  dedicated: "1993, June, 30",
+	  area: 120000,
+	  imageUrl:
+	  "images/san-diego.webp"
+	},
+	{
+	  templeName: "Tucson Arizona",
+	  location: "Tucson, Arizona, United States",
+	  dedicated: "2017, December, 10",
+	  area: 6000,
+	  imageUrl:
+	  "images/tucson-arizona.webp"
+	}
   ];
   
-  // Call the function to create cards
-  createTempleCards();
-  function createTempleCards(filteredTemples) {
-	const templeSection = document.querySelector(".images");
-	templeSection.innerHTML = ""; // Clear existing content
+  // Function to create temple cards
+  function createTempleCards(templeArray) {
+	const imagesSection = document.querySelector('.images');
+	imagesSection.innerHTML = ''; // clear previous content
   
-	filteredTemples.forEach((temple) => {
-	  // Create card container
-	  const templeCard = document.createElement("div");
-	  templeCard.classList.add("temple-card");
+	templeArray.forEach(temple => {
+	  const templeCard = document.createElement('div');
+	  templeCard.classList.add('temple-card');
   
-	  // Temple name
-	  const templeName = document.createElement("h3");
-	  templeName.textContent = temple.templeName;
+	  templeCard.innerHTML = `
+		<h3>${temple.templeName}</h3>
+		<p><span class="location">Location:</span> ${temple.location}</p>
+		<p><span class="dedicated">Dedicated:</span> ${temple.dedicated}</p>
+		<p><span class="area">Area:</span> ${temple.area} sq ft</p>
+		<img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+	  `;
   
-	  // Temple location
-	  const templeLocation = document.createElement("p");
-	  templeLocation.textContent = `Location: ${temple.location}`;
-  
-	  // Dedicated date
-	  const templeDedicated = document.createElement("p");
-	  templeDedicated.textContent = `Dedicated: ${temple.dedicated}`;
-  
-	  // Temple area
-	  const templeArea = document.createElement("p");
-	  templeArea.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
-  
-	  // Temple image
-	  const templeImage = document.createElement("img");
-	  templeImage.src = temple.imageUrl;
-	  templeImage.alt = `${temple.templeName} Temple`;
-	  templeImage.loading = "lazy";
-  
-	  // Append elements to card
-	  templeCard.appendChild(templeImage);
-	  templeCard.appendChild(templeName);
-	  templeCard.appendChild(templeLocation);
-	  templeCard.appendChild(templeDedicated);
-	  templeCard.appendChild(templeArea);
-  
-	  // Append card to section
-	  templeSection.appendChild(templeCard);
+	  imagesSection.appendChild(templeCard);
 	});
   }
   
-  // Filter functions
-  function filterOldTemples() {
-	return temples.filter((temple) => {
-	  const year = parseInt(temple.dedicated.split(",")[0]);
-	  return year < 1900;
-	});
+  // Function to filter temples based on category
+  function filterTemples(category) {
+	let filteredTemples;
+  
+	switch (category) {
+	  case 'Old':
+		filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+		break;
+	  case 'New':
+		filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+		break;
+	  case 'Large':
+		filteredTemples = temples.filter(temple => temple.area > 90000);
+		break;
+	  case 'Small':
+		filteredTemples = temples.filter(temple => temple.area < 10000);
+		break;
+	  default:
+		filteredTemples = temples;
+	}
+  
+	createTempleCards(filteredTemples);
   }
   
-  function filterNewTemples() {
-	return temples.filter((temple) => {
-	  const year = parseInt(temple.dedicated.split(",")[0]);
-	  return year > 2000;
-	});
-  }
+  // Event listeners for navigation menu
+  document.getElementById('Home').addEventListener('click', () => filterTemples('Home'));
+  document.getElementById('Old').addEventListener('click', () => filterTemples('Old'));
+  document.getElementById('New').addEventListener('click', () => filterTemples('New'));
+  document.getElementById('Large').addEventListener('click', () => filterTemples('Large'));
+  document.getElementById('Small').addEventListener('click', () => filterTemples('Small'));
   
-  function filterLargeTemples() {
-	return temples.filter((temple) => temple.area > 90000);
-  }
-  
-  function filterSmallTemples() {
-	return temples.filter((temple) => temple.area < 10000);
-  }
-  
-  // Event Listeners for navigation menu
-  const navigationLinks = document.querySelectorAll(".navigation a");
-  
-  navigationLinks.forEach((link) => {
-	link.addEventListener("click", (e) => {
-	  e.preventDefault(); // Prevent default anchor behavior
-  
-	  // Remove 'active' class from all links and add it to the clicked link
-	  navigationLinks.forEach((nav) => nav.classList.remove("active"));
-	  link.classList.add("active");
-  
-	  // Filter and display temples based on the clicked link
-	  switch (link.textContent) {
-		case "Old":
-		  createTempleCards(filterOldTemples());
-		  break;
-		case "New":
-		  createTempleCards(filterNewTemples());
-		  break;
-		case "Large":
-		  createTempleCards(filterLargeTemples());
-		  break;
-		case "Small":
-		  createTempleCards(filterSmallTemples());
-		  break;
-		case "Home":
-		default:
-		  createTempleCards(temples); // Display all temples
-	  }
-	});
-  });
-  
-  // Display all temples by default on page load
+  // Initial load of all temples
   createTempleCards(temples);
-  
