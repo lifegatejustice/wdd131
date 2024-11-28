@@ -109,9 +109,9 @@ const temples = [
   
 	  templeCard.innerHTML = `
 		<h3>${temple.templeName}</h3>
-		<p><span class="location">Location:</span> ${temple.location}</p>
-		<p><span class="dedicated">Dedicated:</span> ${temple.dedicated}</p>
-		<p><span class="area">Area:</span> ${temple.area} sq ft</p>
+		<p><span class="location">LOCATION:</span> <span class="ps">${temple.location}</span></p>
+		<p><span class="dedicated">DEDICATED:</span> <span class="ps">${temple.dedicated}</span></p>
+		<p><span class="area">AREA:</span> <span class="ps">${temple.area} sq ft</span></p>
 		<img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
 	  `;
   

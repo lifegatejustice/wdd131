@@ -158,6 +158,7 @@ h2 {
 
 main h2 {
   text-align: center;
+  font-size: 1.5rem;
 }
 
 nav {
@@ -190,7 +191,7 @@ header{
 }
 
 #menu.open::before {
-	content: "❎";
+	content: "X";
 
 }
 
@@ -231,16 +232,17 @@ header{
 
   .temple-card {
     padding: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    background-color: #fff;
+    background-color: #d1cece66;
 }
 
 .temple-card img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    box-shadow: 0 0 15px gray;
 }
 
 .temple-card h3 {
@@ -249,20 +251,23 @@ header{
 }
 
 .temple-card p {
-    font-size: 1rem;
-    margin-bottom: 5px;
+
+    font-size: 0.98rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    
 }
 
-.location{
+.location, .area, .dedicated {
   font-weight: bold;
+  grid-column: 1;
+  color: var(--accent1-color);
+  
 }
 
-.area{
-  font-weight: bold;
-}
-
-.dedicated{
-  font-weight: bold;
+.ps {
+  grid-column: 2;
   
 }
 
@@ -296,6 +301,12 @@ header{
     position: relative;
     top: 70px;
    
+  }
+
+  main h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
   }
   
   .images {
