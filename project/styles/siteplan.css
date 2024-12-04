@@ -1,7 +1,7 @@
 :root {
-    --rosewood: #640d14ff;
-    --falu-red: #E50914;
-    --auburn: #ad2831ff;
+    --goldenrod-yellow: #D1B400ff;
+    --lemon-yellow: #E5D914;
+    --amber-yellow: #D8A700ff;
     --white: #ffffff;
     --black: #000000;
     --black-variant: #1c1c1c;
@@ -15,17 +15,17 @@ body{
     background-color: var(--black);
 }
 
-.rosewood{
-    color: var(--rosewood);
+.goldenrod-yellow{
+    color: var(--goldenrod-yellow);
 }
 
 
 .falured{
-    color: var(--falu-red);
+    color: var(--lemon-yellow);
 }
 
-.auburn{
-    color: var(--auburn);
+.amber-yellow{
+    color: var(--amber-yellow);
 
 }
 
@@ -58,13 +58,13 @@ span{
 header{
     width: 100%;
     padding: 1rem;
-    border-bottom: 1px solid var(--auburn);
+    border-bottom: 1px solid var(--amber-yellow);
     text-align: center;
 
 }
 
 header h1{
-    color: var(--falu-red);
+    color: var(--lemon-yellow);
 }
 
 section{
@@ -96,5 +96,5 @@ footer {
   }
   
   .lm {
-    color: var(--auburn);
+    color: var(--amber-yellow);
   }
