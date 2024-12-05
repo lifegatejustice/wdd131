@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="styles/form.css"> <!-- Link to CSS for styling -->
+</head>
+<body>
+    <h1>Product Review</h1>
+    <form>
+        <label for="product-name">Product Name</label>
+        <select id="product-name" name="product-name">
+            <option value="">Choose a Product ...</option>
+            <!-- Add product options here -->
+        </select>
+
+        <label>Overall Rating</label>
+        <div>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1">★</label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2">★★</label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3">★★★</label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4">★★★★</label>
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5">★★★★★</label>
+        </div>
+
+        <label for="installation-date">Date of Installation</label>
+        <input type="text" id="installation-date" name="installation-date" placeholder="mm/dd/yyyy">
+
+        <fieldset>
+            <legend>Which features did you find useful in the product? (Check all that apply)</legend>
+            <label><input type="checkbox" name="features" value="durability"> Durability</label><br>
+            <label><input type="checkbox" name="features" value="ease-of-use"> Ease of Use</label><br>
+            <label><input type="checkbox" name="features" value="performance"> Performance</label><br>
+            <label><input type="checkbox" name="features" value="design"> Design</label>
+        </fieldset>
+
+        <label for="written-review">Written Review (Optional)</label>
+        <textarea id="written-review" name="written-review"></textarea>
+
+        <label for="your-name">Your Name (Optional)</label>
+        <input type="text" id="your-name" name="your-name">
+
+        <button type="submit">Post Review</button>
+    </form>
+
+    <footer>
+        <p>©2024 🌸 Rubia Magdelena Francesco 🌸 Madagascar</p>
+        <p>Last Modification: 02/26/2024 13:56:10</p>
+    </footer>
+</body>
+</html>
