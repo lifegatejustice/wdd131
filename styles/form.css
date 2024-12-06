@@ -7,9 +7,10 @@
 
 :root {
   --goldenrod-yellow: #d1b400ff;
-  --lemon-yellow: #e5d914;
+  --lemon-yellow: #e1c700;
   --amber-yellow: #d8a700ff;
   --white: #ffffff;
+  --whitetrans: #ffffffd8;
   --black: #000000;
   --black-variant: #1c1c1c;
 
@@ -26,7 +27,9 @@ body {
 .container {
   max-width: 600px;
   border-radius: 20px;
-  margin: 20px auto; /* Increased margin for better spacing */
+  margin: auto;
+  padding-bottom: 20px;
+   /* Increased margin for better spacing */
 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
 }
@@ -37,11 +40,16 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--white);
+  color: var(--lemon-yellow);
+  
 }
 
 p {
   color: var(--white);
+}
+
+main{
+  margin: 10px;
 }
 
 h1 {
@@ -51,34 +59,42 @@ h1 {
   color: var(--white); /* Increased font size for emphasis */
 }
 
+legend{
+  color: var(--white);
+}
+
 form {
   background-color: var(--black-variant);
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 20px;
 }
 .container h1 {
-  background-color: var(--lemon-yellow);
+  color: var(--lemon-yellow);
   position: relative;
   padding: 20px;
   
 }
 
 .form-group {
-  margin-bottom: 20px;
   border-radius: 20px;
   background-color: var(--black-variant);
-  padding: 25px; /* Increased spacing between form groups */
+  padding: 25px;
+   /* Increased spacing between form groups */
 }
 
 label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-  color: var(--white);
+  color: var(--lemon-yellow);
 }
 
 input[type="text"],
 input[type="date"],
 select,
 textarea {
+  background-color: var(--whitetrans);
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -104,13 +120,13 @@ fieldset label {
   margin-bottom: 10px; /* Space between rows */
 }
 
-
 .rating {
   display: flex;
   flex-direction: row;
   align-items: flex-start; /* Align labels and buttons */
-  gap: 10px; 
-  justify-content: space-between;/* Add space between stars */
+  gap: 20px; /* Add spacing between stars */
+  justify-content: space-between;
+/* Add space between stars */
 }
 
 .star {
@@ -121,17 +137,23 @@ fieldset label {
 
 .star label {
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1rem; /* Adjust the star size */
   color: #ccc;
   margin-bottom: 5px; /* Add space between label and input */
+  transition: color 0.3s ease; /* Smooth color change */
 }
 
 .star input {
+  display: block; /* Make the radio button visible */
+  width: 20px; /* Set size for radio buttons */
+  height: 20px; /* Set size for radio buttons */
+  margin-bottom: 5px; /* Space between radio and label */
   cursor: pointer;
 }
 
-.star input:checked ~ label {
-  color: gold; /* Highlight selected stars */
+.star input:checked + label,
+.star input:checked + label ~ label {
+  color: gold; /* Highlight label when input is checked */
 }
 
 .star label:hover,
@@ -140,34 +162,50 @@ fieldset label {
 }
 
 
+
+
 fieldset {
   border: none;
-  padding: 10px 0;
+  padding: 10px;
 }
 
 textarea {
   min-height: 80px; /* Set a minimum height for text areas */
 }
 
-button {
-  width: 100%;
-  padding: 12px; /* Slightly larger button padding */
-  background-color: #5cb85c;
-  color: white;
+input[type="submit"] {
+  padding: 20px; /* Slightly larger button padding */
+  background-color: var(--lemon-yellow);
+  font-weight: bold;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  margin: 20px; /* Center the button horizontally */
+  display: block; /* Make the button a block element */
+  width: 93%; /* Adjust the width to fit the content */
+  font-size: 1.4rem;
+
 }
 
-button:hover {
-  background-color: #4cae4c;
+
+
+input[type="submit"]:hover {
+
+  background-color: var(--amber-yellow);
 }
 
 footer {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 60px;
+  border-top: 1px solid var(--lemon-yellow);
+  padding: 25px;
+
   font-size: 0.9em;
-  color: #666;
+}
+
+footer p{
+  font-size: 1.2rem;
+  color: var(--amber-yellow);
 }
 
