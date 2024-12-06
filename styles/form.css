@@ -124,7 +124,6 @@ fieldset label {
   display: flex;
   flex-direction: row;
   align-items: flex-start; /* Align labels and buttons */
-  gap: 20px; /* Add spacing between stars */
   justify-content: space-between;
 /* Add space between stars */
 }
@@ -137,7 +136,7 @@ fieldset label {
 
 .star label {
   cursor: pointer;
-  font-size: 1rem; /* Adjust the star size */
+  font-size: 2.5vmax; /* Adjust the star size */
   color: #ccc;
   margin-bottom: 5px; /* Add space between label and input */
   transition: color 0.3s ease; /* Smooth color change */
@@ -174,7 +173,7 @@ textarea {
 }
 
 input[type="submit"] {
-  padding: 20px; /* Slightly larger button padding */
+  padding: 2.5vmax; /* Slightly larger button padding */
   background-color: var(--lemon-yellow);
   font-weight: bold;
   border: none;
