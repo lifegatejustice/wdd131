@@ -26,9 +26,7 @@ body {
 .container {
   max-width: 600px;
   border-radius: 20px;
-  margin: 20px auto;
-  margin-left: 10px;
-  margin-right: 10px; /* Increased margin for better spacing */
+  margin: 20px auto; /* Increased margin for better spacing */
 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
 }
@@ -67,9 +65,7 @@ form {
   margin-bottom: 20px;
   border-radius: 20px;
   background-color: var(--black-variant);
-  padding: 25px; 
-  
-  width: 100%;/* Increased spacing between form groups */
+  padding: 25px; /* Increased spacing between form groups */
 }
 
 label {
@@ -102,7 +98,7 @@ input[type="checkbox"] {
 
 .rating,
 fieldset label {
-  
+  display: flex;
   align-items: center; /* Align label text vertically */
   gap: 10px; /* Space between items */
   margin-bottom: 10px; /* Space between rows */
