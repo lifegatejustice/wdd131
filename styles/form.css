@@ -331,7 +331,7 @@ footer p{
   color: var(--amber-yellow);
 }
 
-@media (max-width: 272px) { 
+@media (max-width: 314px) { 
   .star label {
     cursor: pointer;
     font-size: 2vmax; /* Adjust the star size */
@@ -345,7 +345,7 @@ footer p{
   }
 
   input[type="submit"] {
-    padding: 2.5vmax; /* Slightly larger button padding */
+    padding: 2.5vmax;/* Slightly larger button padding */
     background-color: var(--lemon-yellow);
     font-weight: bold;
     border: none;
@@ -357,6 +357,14 @@ footer p{
     width: 93%; /* Adjust the width to fit the content */
     font-size: 1.4rem;
   
+  }
+
+  .star label {
+    cursor: pointer;
+    font-size: 1.5vmax; /* Adjust the star size */
+    color: #ccc;
+    margin-bottom: 5px; /* Add space between label and input */
+    transition: color 0.3s ease; /* Smooth color change */
   }
   
   
