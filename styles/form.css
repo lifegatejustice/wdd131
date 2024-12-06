@@ -202,7 +202,6 @@ form {
   border-radius: 20px;
   background-color: var(--black-variant);
   padding: 25px;
-  padding-left: ;
   
    /* Increased spacing between form groups */
 }
@@ -353,7 +352,7 @@ footer p{
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    margin: auto; /* Center the button horizontally */
+    margin: auto;/* Center the button horizontally */
     display: block; /* Make the button a block element */
     width: 93%; /* Adjust the width to fit the content */
     font-size: 1.4rem;
