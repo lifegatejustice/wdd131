@@ -331,7 +331,7 @@ footer p{
   color: var(--amber-yellow);
 }
 
-@media (max-width: 314px) { 
+@media screen and (max-width: 314px) { 
   .star label {
     cursor: pointer;
     font-size: 2vmax; /* Adjust the star size */
