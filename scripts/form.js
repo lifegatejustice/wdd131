@@ -24,15 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
         option.textContent = product.name; // Display the product name
         productSelect.appendChild(option);
     });
-    
 
     let reviewCount = parseInt(localStorage.getItem('reviewCount') || '0', 10);
     localStorage.setItem('reviewCount', reviewCount);
 
     document.querySelector('form').onsubmit = function (event) {
-        event.preventDefault();
+        event.preventDefault(); // Optional: Remove if default behavior is desired
         reviewCount++;
         localStorage.setItem('reviewCount', reviewCount);
         alert(`Review submitted! Total reviews: ${reviewCount}`);
+        // Redirect to review.html manually
+        window.location.href = "review.html";
     };
 });
+

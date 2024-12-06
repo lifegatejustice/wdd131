@@ -148,13 +148,26 @@ h3,
 h4,
 h5,
 h6 {
-  
+
   color: var(--lemon-yellow);
   
 }
 
 p {
   color: var(--white);
+}
+
+section{
+  background-color: var(--black-variant);
+  padding: 3vmax;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+section a{
+  color: #e1c700;
 }
 
 main{
