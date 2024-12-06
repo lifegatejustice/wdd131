@@ -14,21 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: "ac-2000", name: "low voltage reactor", averagerating: 3.9 },
         { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
     ];
-
+    
     const productSelect = document.getElementById("product-name");
-    const placeholder = document.createElement("option");
-    placeholder.value = "";
-    placeholder.disabled = true;
-    placeholder.selected = true;
-    placeholder.textContent = "Select a Product ...";
-    productSelect.appendChild(placeholder);
-
+    
+    // Populate the select options dynamically (excluding the placeholder)
     products.forEach(product => {
         const option = document.createElement("option");
-        option.value = product.id;
-        option.textContent = product.name;
+        option.value = product.id; // Use the product id as the value
+        option.textContent = product.name; // Display the product name
         productSelect.appendChild(option);
     });
+    
 
     let reviewCount = parseInt(localStorage.getItem('reviewCount') || '0', 10);
     localStorage.setItem('reviewCount', reviewCount);

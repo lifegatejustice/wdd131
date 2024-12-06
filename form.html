@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review</title>
     <script src="scripts/form.js"></script>
-    <link rel="stylesheet" href="styles/form.css"> <!-- Link to CSS for styling -->
-</head>
-<body>
+    <link rel="stylesheet" href="styles/form.css"> 
+<body> 
+    <main>
     <div class="container">
         <h1>Product Review</h1>
         <form action="review.html" method="get">
@@ -19,9 +19,11 @@
                 </select>
             </div>
 
+           
+
             <div class="form-group">
                 <label>Overall Rating</label>
-                <div class="rating">
+                <div class="rating"><br>
                     <input type="radio" id="star1" name="rating" value="1">
                     <label for="star1">★</label>
                     <input type="radio" id="star2" name="rating" value="2">
@@ -37,7 +39,7 @@
 
             <div class="form-group">
                 <label for="installation-date">Date of Installation</label>
-                <input type="text" id="installation-date" name="installation-date" placeholder="mm/dd/yyyy">
+                <input type="date" id="installation-date" name="installation-date" placeholder="mm/dd/yyyy">
             </div>
 
             <fieldset class="form-group">
@@ -66,5 +68,6 @@
             <p class="lm">Last Modified: <span id="last-modified"></span></p>
         </footer>
     </div>
+</main>
 </body>
 </html>

@@ -1,14 +1,146 @@
-/* General Styles */
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --goldenrod-yellow: #D1B400ff;
+    --lemon-yellow: #E5D914;
+    --amber-yellow: #D8A700ff;
+    --white: #ffffff;
+    --black: #000000;
+    --black-variant: #1c1c1c;
+
+    --heading-font: 'Outfit', serif;
+    --paragraph-font: 'Poppins', sans-serif;
+ 
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
+    background-color: var(--black);
+    color: #333;
 }
 
 .container {
     max-width: 600px;
-    margin: auto;
-    background: white;
+    border-radius: 20px;
+    margin: 20px ; /* Increased margin for better spacing */
+    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--white);
+}
+
+p{
+    color: var(--white);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px; /* Slightly larger gap */
+    font-size: 1.8em; 
+    color: var(--white);/* Increased font size for emphasis */
+}
+
+
+form{
+    background-color: var(--black-variant);
+}
+.container h1{
+    background-color: var(--lemon-yellow);
+    position: relative;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 20px 20px 0 0;
+    
+}
+
+.form-group {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background-color: var(--black-variant);
+    padding: 25px; /* Increased spacing between form groups */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--white);
+}
+
+input[type="text"],
+input[type="date"],
+
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    appearance: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 20px;
+    height: 20px;
+    margin-right: -1px; 
+    /* Space between input and label */
+}
+
+
+.rating,
+fieldset label {
+    display: flex;
+    align-items: center; /* Align label text vertically */
+    gap: 10px; /* Space between items */
+    margin-bottom: 10px; /* Space between rows */
+}
+
+fieldset {
+    border: none;
+    padding: 10px 0;
+}
+
+textarea {
+    min-height: 80px; /* Set a minimum height for text areas */
+}
+
+button {
+    width: 100%;
+    padding: 12px; /* Slightly larger button padding */
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
