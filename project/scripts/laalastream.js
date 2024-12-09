@@ -24,116 +24,139 @@ function changeImage() {
 // Automatically change the image every 3 seconds
 setInterval(changeImage, 3000);
 
-const movies = [
-  {
-    id: 1,
-    movieName: "Deadpool X Wolverine",
-    type: "movie",
-    imageUrl: "deadpoolxwolverine.webp",
-    rating: 4.5,
-    description: "Action-packed movie featuring Deadpool and Wolverine"
-  },
-  {
-    id: 2,
-    movieName: "The Avengers",
-    type: "movie",
-    imageUrl: "images/Avengers.webp",
-    rating: 4.8,
-    description: "Superhero movie featuring the Avengers team"
-  },
-  {
-    id: 3,
-    movieName: "The Dark Knight",
-    type: "movie",
-    imageUrl: "batman.webp",
-    rating: 4.9,
-    description: "Superhero thriller movie featuring Batman"
-  },
-  {
-    id: 4,
-    movieName: "Spider-Man: No Way Home",
-    type: "movie",
-    imageUrl: "spiderman.webp",
-    rating: 4.7,
-    description: "Superhero movie featuring Spider-Man"
-  }
-];
 
-const series = [
-  {
-    id: 1,
-    seriesName: "Stranger Things",
-    type: "series",
-    imageUrl: "strangerthings.webp",
-    rating: 4.6,
-    description: "Mystery and sci-fi series set in the 1980s"
+// Data arrays
+const movies = [
+  { 
+    title: "Inception", 
+    year: 2010, 
+    genre: "Sci-Fi", 
+    rating: 8.8, 
+    imageUrl: "https://via.placeholder.com/150",
+    description: "A mind-bending thriller by Christopher Nolan." 
   },
-  {
-    id: 2,
-    seriesName: "Game of Thrones",
-    type: "series",
-    imageUrl: "gameofthrones.webp",
-    rating: 4.9,
-    description: "Epic fantasy series based on George R.R. Martin's novels"
+  { 
+    title: "Titanic", 
+    year: 1997, 
+    genre: "Romance", 
+    rating: 7.8, 
+    imageUrl: "https://via.placeholder.com/150",
+    description: "A tragic love story aboard the ill-fated RMS Titanic." 
   },
-  {
-    id: 3,
-    seriesName: "The Witcher",
-    type: "series",
-    imageUrl: "thewitcher.webp",
-    rating: 4.7,
-    description: "Fantasy drama series based on the popular video game"
+  { 
+    title: "Avengers", 
+    year: 2012, 
+    genre: "Action", 
+    rating: 8.0, 
+    imageUrl: "https://via.placeholder.com/150",
+    description: "Earth's mightiest heroes team up to save the world." 
   },
-  {
-    id: 4,
-    seriesName: "Breaking Bad",
-    type: "series",
-    imageUrl: "breakingbad.webp",
-    rating: 4.9,
-    description: "Crime drama series about a high school chemistry teacher turned meth kingpin"
+  { 
+    title: "The Dark Knight", 
+    year: 2008, 
+    genre: "Action", 
+    rating: 9.0, 
+    imageUrl: "https://via.placeholder.com/150",
+    description: "Batman faces the Joker in Gotham City." 
   }
 ];
 
 const sports = [
-  {
-    id: 1,
-    sportName: "Formula 1",
-    type: "sport",
-    imageUrl: "formula1.webp",
-    rating: 4.5,
-    description: "High-speed racing sport"
+  { 
+    title: "FIFA World Cup", 
+    year: 2022, 
+    type: "Football", 
+    location: "Qatar", 
+    imageUrl: "https://via.placeholder.com/150",
+    description: "The biggest football tournament held in Qatar." 
   },
-  {
-    id: 2,
-    sportName: "NBA",
-    type: "sport",
-    imageUrl: "nba.webp",
-    rating: 4.7,
-    description: "Professional basketball league"
+  { 
+    title: "NBA Finals", 
+    year: 2023, 
+    type: "Basketball", 
+    location: "USA", 
+    imageUrl: "https://via.placeholder.com/150",
+    description: "The championship series of the NBA." 
   },
-  {
-    id: 3,
-    sportName: "Tennis",
-    type: "sport",
-    imageUrl: "tennis.webp",
-    rating: 4.3,
-    description: "Individual or team sport played with rackets and a ball"
+  { 
+    title: "Super Bowl", 
+    year: 2023, 
+    type: "American Football", 
+    location: "USA", 
+    imageUrl: "https://via.placeholder.com/150",
+    description: "The NFL's biggest game of the year." 
   },
-  {
-    id: 4,
-    sportName: "Cricket",
-    type: "sport",
-    imageUrl: "cricket.webp",
-    rating: 4.6,
-    description: "Team sport played with a bat and ball"
-  },
-  {
-    id: 5,
-    sportName: "Football",
-    type: "sport",
-    imageUrl: "football.webp",
-    rating: 4.8,
-    description: "Team sport played with a ball and goals"
+  { 
+    title: "Wimbledon", 
+    year: 2023, 
+    type: "Tennis", 
+    location: "UK", 
+    imageUrl: "https://via.placeholder.com/150",
+    description: "The oldest and most prestigious tennis tournament." 
   }
 ];
 
+const series = [
+  { 
+    title: "Breaking Bad", 
+    year: 2008, 
+    genre: "Crime", 
+    seasons: 5, 
+    imageUrl: "https://via.placeholder.com/150",
+    description: "A chemistry teacher turns to making methamphetamine." 
+  },
+  { 
+    title: "Stranger Things", 
+    year: 2016, 
+    genre: "Sci-Fi", 
+    seasons: 4, 
+    imageUrl: "https://via.placeholder.com/150",
+    description: "A group of kids encounters supernatural forces in their town." 
+  },
+  { 
+    title: "Game of Thrones", 
+    year: 2011, 
+    genre: "Fantasy", 
+    seasons: 8, 
+    imageUrl: "https://via.placeholder.com/150",
+    description: "A battle for the Iron Throne in the Seven Kingdoms." 
+  },
+  { 
+    title: "The Crown", 
+    year: 2016, 
+    genre: "Historical", 
+    seasons: 6, 
+    imageUrl: "https://via.placeholder.com/150",
+    description: "The reign of Queen Elizabeth II." 
+  }
+];
+
+// Function to create cards
+function createCards(items, sectionId) {
+  const section = document.getElementById(sectionId);
+  section.innerHTML = ""; // Clear previous content
+
+  items.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.onclick = () => alert(`${item.title}: ${item.description}`);
+
+    // Populate card content dynamically
+    card.innerHTML = `
+      <img src="${item.imageUrl}" alt="${item.title}" />
+      <h3>${item.title}</h3>
+      <p><strong>Year:</strong> ${item.year}</p>
+      <p><strong>Genre/Type:</strong> ${item.genre || item.type}</p>
+      <p><strong>Details:</strong> ${item.rating ? "Rating: " + item.rating : item.seasons ? "Seasons: " + item.seasons : "Location: " + item.location}</p>
+    `;
+
+    section.appendChild(card);
+  });
+}
+
+// Populate all sections by default
+document.addEventListener("DOMContentLoaded", () => {
+  createCards(movies, "moviesSection");
+  createCards(sports, "sportsSection");
+  createCards(series, "seriesSection");
+});
