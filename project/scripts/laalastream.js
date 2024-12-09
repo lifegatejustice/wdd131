@@ -134,7 +134,8 @@ const series = [
 // Function to create cards
 function createCards(items, sectionId) {
   const section = document.getElementById(sectionId);
-  section.innerHTML = ""; // Clear previous content
+  const cardWrapper = section.querySelector(".card-wrapper");
+  cardWrapper.innerHTML = ""; // Clear previous cards
 
   items.forEach(item => {
     const card = document.createElement("div");
@@ -150,7 +151,7 @@ function createCards(items, sectionId) {
       <p><strong>Details:</strong> ${item.rating ? "Rating: " + item.rating : item.seasons ? "Seasons: " + item.seasons : "Location: " + item.location}</p>
     `;
 
-    section.appendChild(card);
+    cardWrapper.appendChild(card);
   });
 }
 
