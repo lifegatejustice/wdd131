@@ -173,6 +173,7 @@
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
     text-align: center;
+    height: 300px;
   }
 
   .card img {
