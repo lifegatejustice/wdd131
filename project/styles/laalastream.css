@@ -204,5 +204,13 @@
 
   nav a{
     color: var(--white);
+    font-weight: bold;
     
+  }
+
+  .sign {
+    background-color: var(--lemon-yellow);
+    padding: 1vmax;
+    border-radius: 5px;
+
   }
