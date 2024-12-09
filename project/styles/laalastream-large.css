@@ -228,3 +228,7 @@
     background-color: var(--amber-yellow);
   }
 
+section h2{
+    color: var(--white)
+}
+
