@@ -1,0 +1,18 @@
+.image-container {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.image-container img.swipe-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
