@@ -1,107 +1,201 @@
+/* Basic Reset */
+.poppins-thin {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .poppins-extralight {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-light {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold {
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-black {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-thin-italic {
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .poppins-extralight-italic {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .poppins-light-italic {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .poppins-medium-italic {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .poppins-bold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .poppins-extrabold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .poppins-black-italic {
+    font-family: "Poppins", serif;
+    font-weight: 900;
+    font-style: italic;
+  } 
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  :root {
+    --goldenrod-yellow: #d1b400ff;
+    --lemon-yellow: #e1c700;
+    --amber-yellow: #d8a700ff;
+    --white: #ffffff;
+    --whitetrans: #ffffffd8;
+    --black: #000000;
+    --black-variant: #1c1c1c;
+  
+    --heading-font: "Outfit", serif;
+    --paragraph-font: "Poppins", sans-serif;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--black);
+    color: #333;
+  }
+
 @media (min-width: 794px) {
-    header {
-        background-color: var(--accent1-color);
-        padding-top: 20px;
-        padding-right: 50px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    h1 {
-        color: white;
-        font-size: 2.5rem;
-        margin-left: 0;
-        text-align: left;
-        font-family: 'Outfit', sans-serif;
-    }
-
-    #menu {
-        display: none; /* Hide hamburger menu in large view */
-    }
-
-    .navigation {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        justify-content: flex-end;
-        list-style: none;
-    }
-
-    .navigation a {
-        display: flex;
-        color: white;
-        text-decoration: none;
-    }
-
-    .navigation a:hover {
-        background-color: var(--nav-hover-background-color);
-	color: var(--nav-hover-link-color);
-	font-weight: 700;
-  transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .stuff {
-        margin: 1rem auto;
-    }
-
     .headercontainer {
         display: flex;
-      }
-      
-      h1 {
-        flex: 1;
-
-      }
-
-      header h2{
-        text-align: center;
-      }
-      
-      nav {
-        flex: 1;
-      }
-
-      .images {
-        gap: 20px;
-        grid-template-columns: repeat(3, minmax(auto, 2fr));
-        place-items: center;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px;
+        background-color: var(--black-variant); /* Adjust as needed */
     }
-
-    main{
-        max-width: 100%;
-        position: relative;
-        bottom: 60px;
-        
-      }
-      
-      
-      main{
-        position: relative;
-        top: 70px;
-      }
-
-    figure img{
-        width: 100%;
-        height: auto;
+    
+    .navigation {
+        display: flex;
+        align-items: center;
+        gap: 16px; /* Adds space between items */
+        list-style: none;
     }
-      
-}
-
-footer {
-    grid-area: footer; 
-    padding: 10px;
-    text-align: center;
-    background-color: var(--accent1-color);
-    margin-top: 80px;
-    box-shadow: 0 0 30px gray;
-}
-
-footer p {
-    color: white;
-}
-
-.lm {
-    color: yellow;
+    
+    .navigation a {
+        text-decoration: none;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-weight: 500;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .navigation a:hover {
+        background-color: var(--lemon-yellow);
+        color: var(--black);
+    }
+    
+    .search-container {
+        display: flex;
+        align-items: center;
+        border-radius: 25px;
+        background-color: white;
+        width: 300px; /* Adjust width as needed */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .search-container input {
+        border: none;
+        flex: 1;
+        border-radius: 25px 0 0 25px;
+        font-size: 16px;
+        outline: none;
+    }
+    
+    .search-container button {
+        background-color: var(--lemon-yellow); /* Auburn */
+        border: none;
+        padding: 10px 15px;
+        border-radius: 0 25px 25px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .search-container button img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .search-container button:hover {
+        background-color: var(--amber-yellow); /* Falu Red */
+    }
 }
