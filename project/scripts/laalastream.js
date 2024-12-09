@@ -146,8 +146,7 @@ function createCards(items, sectionId) {
     card.innerHTML = `
       <img src="${item.imageUrl}" alt="${item.title}" />
       <h3>${item.title}</h3>
-      <p><strong>Year:</strong> ${item.year}</p>
-      <p><strong>Genre/Type:</strong> ${item.genre || item.type}</p>
+    
       <p><strong>Details:</strong> ${item.rating ? "Rating: " + item.rating : item.seasons ? "Seasons: " + item.seasons : "Location: " + item.location}</p>
     `;
 
