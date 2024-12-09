@@ -135,8 +135,8 @@
 
 .image-container {
     position: relative;
-    width: 300px; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
+    width: auto; /* Adjust as needed */
+    height: 60vmax; /* Adjust as needed */
     overflow: hidden;
 }
 
@@ -214,3 +214,5 @@
     border-radius: 5px;
 
   }
+
+  

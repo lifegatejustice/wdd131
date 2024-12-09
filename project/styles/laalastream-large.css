@@ -200,3 +200,30 @@
         background-color: var(--amber-yellow); /* Falu Red */
     }
 }
+
+.watch{
+    background-color: var(--lemon-yellow);
+    padding-left: 4vmax;
+    padding-right: 4vmax;
+    padding-top: 2vmax;
+    padding-bottom: 2vmax;
+    position: relative;
+    bottom: 40vmax;
+    left: 40vmax;
+    right: 40vmax;
+    top: -10vmax;
+    border-radius: 5px;
+
+  }
+
+  .watch a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 2vmax;
+  }
+
+  .watch:hover{
+    background-color: var(--amber-yellow);
+  }
+
