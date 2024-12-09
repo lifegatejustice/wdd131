@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Laala Site Plan</title>
         <link rel="stylesheet" href="styles/laalastream.css">
+        <link rel="stylesheet" href="styles/laalastream-large.css">
         <script src="scripts/laalastream.js" defer></script>
         <link rel="icon" href="images/laalaflix_logo.svg" type="image/svg">
     
@@ -17,18 +18,20 @@
     </head>
 <body>
     <header>
-        <div class="headercontainer">
-        <img src="images/laalaflix_logo.svg" alt="laala stream logo">
-        <input type="text" class="searchTerm" placeholder="What are you looking for?">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-     </button>
-          <a href="#" title="Home">Home</a>
-          <a href="#" title="About Us" class="active">About Us</a>
-          <a href="#" title="Sign">Sign In/Sign Up</a>
-        </nav>
+      <div class="headercontainer">
+      <img src="images/laalaflix_logo.svg" alt="laala stream logo">
+      <button id="menu" aria-label="Toggle navigation"></button>
+      <nav class="navigation" aria-label="Main navigation">
+        <div class="search-container">
+          <input type="text" id="search" placeholder="Search..." />
+          <button type="submit"><img src="images/search-icon.svg" alt="Search"></button>
         </div>
-    </header>
+        <a href="#" title="Home">Home</a>
+        <a href="#" title="About Us" class="active">About Us</a>
+        <a href="#" title="Sign">Sign In/Sign Up</a>
+      </nav>
+      </div>
+  </header>
 
     <main>
         <div class="image-container">
@@ -53,7 +56,7 @@
 
         <section>
           <h2>There’s even more to watch.</h2>
-          <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+          <p>Laala Stream has an extensive library of feature films, documentaries, TV shows, anime, award-winning Laala Stream originals, and more. Watch as much as you want, anytime you want.</p>
         </section>
 
 
