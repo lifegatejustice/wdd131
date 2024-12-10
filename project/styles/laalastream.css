@@ -164,23 +164,22 @@
   }
 
   .card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    background-color: #f9f9f9;
+    border: 1px solid var(--black-variant);
+    padding: 5px;
+    background-color: var(--black-variant);
     width: calc(25% - 20px); /* Four cards per row */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
     text-align: center;
-    height: 300px;
+    height: auto;
   }
 
   .card img {
     max-width: 100%;
-    border-radius: 8px;
+    width: auto;
     margin-bottom: 8px;
-    height: 200px;
+    height: auto;
   }
 
   .card:hover {
@@ -190,7 +189,13 @@
 
   .card h3 {
     margin: 0 0 8px;
+    color: var(--amber-yellow);
   }
+
+  .card p{
+    color: var(--white);
+  }
+
 
 
   header img{
@@ -217,4 +222,97 @@
 
   }
 
+  .beforefooter {
+    background-color: var(--black-variant);
+    padding: 1vmax;
+    text-align: center;
+
+  }
+
+  .beforefooter h2{
+    font-size: 3.5vmax;
+    margin-bottom: 4vmax;
+    margin-top: 2vmax;
+  }
+
+  .beforefooter p{
+    color: var(--white);
+    font-size: 1.5vmax;
+    margin-left: 20vmax;
+    margin-right: 20vmax;
+  }
+
+  form {
+    background-color: var(--black-variant);
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .container h1 {
+    color: var(--lemon-yellow);
+    position: relative;
+    padding: 20px;
+    
+  }
   
+  .form-group {
+    border-radius: 20px;
+    background-color: var(--black);
+    padding-top: 25px;
+    padding-: 25px;
+    padding-left: 0px;
+    padding-right: 0px;
+     
+     /* Increased spacing between form groups */
+  }
+  
+  label {
+    display: block;
+    
+    margin-bottom: 8px;
+    margin-top: 8px;
+    font-weight: bold;
+    color: var(--lemon-yellow);
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    background-color: var(--whitetrans);
+    width: 40vmax;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+  }
+
+  input[type="submit"] {
+    padding: 1vmax; /* Slightly larger button padding */
+
+    background-color: var(--lemon-yellow);
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: auto; /* Center the button horizontally */
+    display: block; /* Make the button a block element */
+    width: 50%; /* Adjust the width to fit the content */
+    font-size: 1.4rem;
+  
+  }
+  
+  
+  
+  input[type="submit"]:hover {
+  
+    background-color: var(--amber-yellow);
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid var(--lemon-yellow);
+    padding: 25px;
+  
+    font-size: 0.9em;
+  }

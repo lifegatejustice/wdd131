@@ -32,15 +32,15 @@ const movies = [
     year: 2010, 
     genre: "Sci-Fi", 
     rating: 8.8, 
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "images/Inception.webp",
     description: "A mind-bending thriller by Christopher Nolan." 
   },
   { 
-    title: "Titanic", 
+    title: "Deadpool And Wolverine", 
     year: 1997, 
     genre: "Romance", 
     rating: 7.8, 
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "images/deadpoolandwolverine.webp",
     description: "A tragic love story aboard the ill-fated RMS Titanic." 
   },
   { 
