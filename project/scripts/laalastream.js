@@ -7,7 +7,7 @@ const images = [
     "images/movies2.webp",
     "images/tvseries2.webp",
     "images/sport2.webp",
-    "images/sport.webp",
+    "images/movies3.webp",
 
 
 ];
@@ -184,5 +184,11 @@ document.querySelector('.message a').addEventListener('click', function () {
 
 $('.message a').click(function(){
    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+
+document.getElementById('showFormButton').addEventListener('click', function() {
+  const form = document.querySelector('.form');
+  form.classList.toggle('visible'); // Toggle the 'visible' class
+  this.classList.toggle('hidden'); // Hide the button after clicking
 });
 

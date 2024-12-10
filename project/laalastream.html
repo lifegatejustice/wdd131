@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Laala Site Plan</title>
-        <link rel="stylesheet" href="styles/laalastream.css">
-        <link rel="stylesheet" href="styles/laalastream-large.css">
-        <script src="scripts/laalastream.js" defer></script>
-        <link rel="icon" href="images/laalaflix_logo.svg" type="image/svg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laala Site Plan</title>
+    <link rel="stylesheet" href="styles/laalastream.css">
+    <link rel="stylesheet" href="styles/laalastream-large.css">
+    <script src="scripts/laalastream.js" defer></script>
+    <link rel="icon" href="images/laalaflix_logo.svg" type="image/svg">
     
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-      
-        <meta name="description" content="A movie streaming website site. Home to your favorite tv series and movies and sport">
-        <meta name="author" content="Lifegate Justice">
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="A movie streaming website site. Home to your favorite tv series and movies and sport">
+    <meta name="author" content="Lifegate Justice">
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
 <body>
     <header>
-    <div class="headercontainer">
-        <img src="images/laalaflix_logo.svg" alt="laala stream logo">
-        <nav class="navigation" aria-label="Main navigation">
-          <div class="search-container">
-            <input type="text" id="search" placeholder="Search..." />
-            <button type="submit"><img src="images/search-icon.svg" alt="Search"></button>
+        <div class="headercontainer">
+            <img src="images/laalaflix_logo.svg" alt="laala stream logo">
+            <nav class="navigation" aria-label="Main navigation">
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search..." />
+                    <button type="submit"><img src="images/search-icon.svg" alt="Search"></button>
+                </div>
+                <a href="#" title="Home">Home</a>
+                <a href="#" title="About Us" class="active">About Us</a>
+                <div class="sign">
+                    <a href="#" title="Sign">Sign In/Sign Up</a>
+                </div>
+            </nav>
         </div>
-            <a href="#" title="Home">Home</a>
-            <a href="#" title="About Us" class="active">About Us</a>
-            <div class="sign">
-            <a href="#" title="Sign">Sign In/Sign Up</a></div>
-        </nav>
-    </div>
-</header>
-
+    </header>
 
     <main>
         <div class="image-container">
@@ -40,53 +50,48 @@
             <div class="gradient-overlay"></div>
         </div>
         <span class="watch">
-        <a href="watchbutton">Watch Now</a></span>
+            <a href="watchbutton">Watch Now</a>
+        </span>
 
-        <section id="moviesSection" class="section">
-          <h2>Movies</h2>
-          <div class="card-wrapper"></div>
-        </section>
-    
-        <section id="sportsSection" class="section">
-          <h2>Sports</h2>
-          <div class="card-wrapper"></div>
-        </section>
-    
-        <section id="seriesSection" class="section">
-          <h2>Series</h2>
-          <div class="card-wrapper"></div>
-        </section>
+        <section class="beforefooter">
+            <h2>There’s even more to watch.</h2>
+            <p>Laala Stream has an extensive library of feature films, documentaries, TV shows, anime, award-winning Laala Stream originals, and more. Watch as much as you want, anytime you want.</p>
+            
 
-<section class="beforefooter">
-  <h2>There’s even more to watch.</h2>
-  <p>Laala Stream has an extensive library of feature films, documentaries, TV shows, anime, award-winning Laala Stream originals, and more. Watch as much as you want, anytime you want.</p>
-
-  <div class="login-page">
-    <div class="form">
-      <form class="register-form">
-        <input type="text" placeholder="name"/>
-        <input type="password" placeholder="password"/>
-        <input type="text" placeholder="email address"/>
-        <button>create</button>
-        <p class="message">Already registered? <a href="#">Sign In</a></p>
-      </form>
-      <form class="login-form">
-        <input type="text" placeholder="username"/>
-        <input type="password" placeholder="password"/>
-        <input type="submit" value="Join Now">
-        <p class="message">Not registered? <a href="#">Create an account</a></p>
-      </form>
-    </div>
-  </div>
-        <footer>
-          <p>Facebook</p>
-          <p>Mail</p>
-          <p>LinkedIn</p>
-          <p>Instagram</p>
-          <p>&copy; 2024 Lifegate Justice De-Tom Nigeria</p>
-        </footer>
-        
+            <div class="login-page">
+                <div class="form">
+                    <form class="register-form hidden" id="registerForm">
+                        <input type="text" placeholder="name" />
+                        <input type="password" placeholder="password" />
+                        <input type="text" placeholder="email address" />
+                        <button type="submit">create</button>
+                        <p class="message">Already registered? <a href="#">Sign In</a></p>
+                    </form>
+                    <form class="login-form hidden" id="loginForm">
+                        <input type="text" placeholder="username" />
+                        <input type="password" placeholder="password" />
+                        <input type="submit" value="Join Now">
+                        <p class="message">Not registered? <a href="#">Create an account</a></p>
+                    </form>
+                    <button id="showFormButton">Join Now</button>
+                </div>
+            </div>
+            <footer>
+                <p>Facebook</p>
+                <p>Mail</p>
+                <p>LinkedIn</p>
+                <p>Instagram</p>
+                <p>&copy; 2024 Lifegate Justice De-Tom Nigeria</p>
+            </footer>
+        </section>
     </main>
-    
+
+    <script>
+        document.getElementById('showFormButton').addEventListener('click', function() {
+            document.getElementById('registerForm').classList.toggle('hidden');
+            document.getElementById('loginForm').classList.toggle('hidden');
+            this.classList.toggle('hidden'); // Hide the button after clicking
+        });
+    </script>
 </body>
 </html>
