@@ -5,8 +5,8 @@ const images = [
     "images/movies.webp",
     "images/sport.webp",
     "images/movies2.webp",
-    "images/sport.webp",
-    "images/sport.webp",
+    "images/tvseries2.webp",
+    "images/sport2.webp",
     "images/sport.webp",
 
 
