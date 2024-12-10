@@ -408,7 +408,7 @@ footer p {
 footer a {
   color: var(--lemon-yellow);
   text-decoration: none;
-  margin: 0 10px;
+  
 }
 
 footer a:hover {
