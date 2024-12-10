@@ -140,6 +140,13 @@
         padding: 0 16px;
         background-color: var(--black-variant); /* Adjust as needed */
     }
+
+    header img {
+      width: auto;
+      height: 5vmax;
+      padding: 4px;
+      
+    }
     
     .navigation {
         display: flex;

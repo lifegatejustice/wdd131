@@ -1,8 +1,15 @@
+
 const image = document.getElementById('myImage');
 const images = [
     "images/tvseries.webp",
     "images/movies.webp",
-    "images/sport.webp"
+    "images/sport.webp",
+    "images/movies2.webp",
+    "images/sport.webp",
+    "images/sport.webp",
+    "images/sport.webp",
+
+
 ];
 let currentIndex = 0;
 
@@ -44,11 +51,11 @@ const movies = [
     description: "A tragic love story aboard the ill-fated RMS Titanic." 
   },
   { 
-    title: "Avengers", 
+    title: "Avengers: Age of Ultron", 
     year: 2012, 
     genre: "Action", 
     rating: 8.0, 
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "images/avengers.webp",
     description: "Earth's mightiest heroes team up to save the world." 
   },
   { 
@@ -56,7 +63,7 @@ const movies = [
     year: 2008, 
     genre: "Action", 
     rating: 9.0, 
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "images/darkknight.webp",
     description: "Batman faces the Joker in Gotham City." 
   }
 ];
@@ -67,7 +74,7 @@ const sports = [
     year: 2022, 
     type: "Football", 
     location: "Qatar", 
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "images/worldcup.webp",
     description: "The biggest football tournament held in Qatar." 
   },
   { 
@@ -75,7 +82,7 @@ const sports = [
     year: 2023, 
     type: "Basketball", 
     location: "USA", 
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "images/nba.webp",
     description: "The championship series of the NBA." 
   },
   { 
@@ -83,7 +90,7 @@ const sports = [
     year: 2023, 
     type: "American Football", 
     location: "USA", 
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "images/superbowl.webp",
     description: "The NFL's biggest game of the year." 
   },
   { 
@@ -91,7 +98,7 @@ const sports = [
     year: 2023, 
     type: "Tennis", 
     location: "UK", 
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "images/winbeldon.webp",
     description: "The oldest and most prestigious tennis tournament." 
   }
 ];
@@ -102,7 +109,7 @@ const series = [
     year: 2008, 
     genre: "Crime", 
     seasons: 5, 
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "images/breakingbad.webp",
     description: "A chemistry teacher turns to making methamphetamine." 
   },
   { 
@@ -110,24 +117,24 @@ const series = [
     year: 2016, 
     genre: "Sci-Fi", 
     seasons: 4, 
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "images/strangerthings.webp",
     description: "A group of kids encounters supernatural forces in their town." 
   },
   { 
-    title: "Game of Thrones", 
+    title: "Witcher", 
     year: 2011, 
     genre: "Fantasy", 
-    seasons: 8, 
-    imageUrl: "https://via.placeholder.com/150",
-    description: "A battle for the Iron Throne in the Seven Kingdoms." 
+    seasons: 4, 
+    imageUrl: "images/witcher.webp",
+    description: "The Witcher follows Geralt, a monster hunter in a dark, magical world." 
   },
   { 
-    title: "The Crown", 
+    title: "Superman and Lois", 
     year: 2016, 
-    genre: "Historical", 
-    seasons: 6, 
-    imageUrl: "https://via.placeholder.com/150",
-    description: "The reign of Queen Elizabeth II." 
+    genre: "Fantasy", 
+    seasons: 4, 
+    imageUrl: "images/superman.webp",
+    description: "Superman Series" 
   }
 ];
 
@@ -147,7 +154,7 @@ function createCards(items, sectionId) {
       <img src="${item.imageUrl}" alt="${item.title}" />
       <h3>${item.title}</h3>
     
-      <p><strong>Details:</strong> ${item.rating ? "Rating: " + item.rating : item.seasons ? "Seasons: " + item.seasons : "Location: " + item.location}</p>
+      <p><strong></strong> ${item.rating ? "Rating: " + item.rating : item.seasons ? "Seasons: " + item.seasons : "" + item.type}</p>
     `;
 
     cardWrapper.appendChild(card);
@@ -160,3 +167,22 @@ document.addEventListener("DOMContentLoaded", () => {
   createCards(sports, "sportsSection");
   createCards(series, "seriesSection");
 });
+
+document.querySelector('.message a').addEventListener('click', function () {
+  const form = document.querySelector('.form');
+  const loginForm = document.querySelector('.login-form');
+  const registerForm = document.querySelector('.register-form');
+
+  loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
+  registerForm.style.display = registerForm.style.display === 'none' ? 'block' : 'none';
+
+  // Add animation class
+  form.classList.add('fade-in');
+  setTimeout(() => form.classList.remove('fade-in'), 800); // Remove class after animation
+});
+
+
+$('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+

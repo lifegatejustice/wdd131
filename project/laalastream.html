@@ -37,6 +37,7 @@
     <main>
         <div class="image-container">
             <img src="images/series.webp" alt="dynamic images containing sports, series and movies" id="myImage">
+            <div class="gradient-overlay"></div>
         </div>
         <span class="watch">
         <a href="watchbutton">Watch Now</a></span>
@@ -56,27 +57,27 @@
           <div class="card-wrapper"></div>
         </section>
 
-        <section class="beforefooter">
-          <h2>There’s even more to watch.</h2>
-          <p>Laala Stream has an extensive library of feature films, documentaries, TV shows, anime, award-winning Laala Stream originals, and more. Watch as much as you want, anytime you want.</p>
+<section class="beforefooter">
+  <h2>There’s even more to watch.</h2>
+  <p>Laala Stream has an extensive library of feature films, documentaries, TV shows, anime, award-winning Laala Stream originals, and more. Watch as much as you want, anytime you want.</p>
 
-          <form  method="get" action="review.html">
-            <div class="form-group">
-                <label for="user-name">Name</label><br>
-                <input type="text"><br>
-                    
-                    <label for="user-email">Email</label><br>
-                    <input type="email" name="" value="">
-            </div>
-
-            </fieldset>
-            <input type="submit" value="Join Now">
-          </form>
-
-          <a href="">Join Now</a>
-        </section>
-
-
+  <div class="login-page">
+    <div class="form">
+      <form class="register-form">
+        <input type="text" placeholder="name"/>
+        <input type="password" placeholder="password"/>
+        <input type="text" placeholder="email address"/>
+        <button>create</button>
+        <p class="message">Already registered? <a href="#">Sign In</a></p>
+      </form>
+      <form class="login-form">
+        <input type="text" placeholder="username"/>
+        <input type="password" placeholder="password"/>
+        <input type="submit" value="Join Now">
+        <p class="message">Not registered? <a href="#">Create an account</a></p>
+      </form>
+    </div>
+  </div>
         <footer>
           <p>Facebook</p>
           <p>Mail</p>

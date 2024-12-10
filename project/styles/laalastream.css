@@ -1,318 +1,360 @@
 /* Basic Reset */
 .poppins-thin {
-    font-family: "Poppins", serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .poppins-extralight {
-    font-family: "Poppins", serif;
-    font-weight: 200;
-    font-style: normal;
-  }
-  
-  .poppins-light {
-    font-family: "Poppins", serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .poppins-regular {
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .poppins-medium {
-    font-family: "Poppins", serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .poppins-semibold {
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .poppins-bold {
-    font-family: "Poppins", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .poppins-extrabold {
-    font-family: "Poppins", serif;
-    font-weight: 800;
-    font-style: normal;
-  }
-  
-  .poppins-black {
-    font-family: "Poppins", serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .poppins-thin-italic {
-    font-family: "Poppins", serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .poppins-extralight-italic {
-    font-family: "Poppins", serif;
-    font-weight: 200;
-    font-style: italic;
-  }
-  
-  .poppins-light-italic {
-    font-family: "Poppins", serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .poppins-regular-italic {
-    font-family: "Poppins", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .poppins-medium-italic {
-    font-family: "Poppins", serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .poppins-semibold-italic {
-    font-family: "Poppins", serif;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-  .poppins-bold-italic {
-    font-family: "Poppins", serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .poppins-extrabold-italic {
-    font-family: "Poppins", serif;
-    font-weight: 800;
-    font-style: italic;
-  }
-  
-  .poppins-black-italic {
-    font-family: "Poppins", serif;
-    font-weight: 900;
-    font-style: italic;
-  } 
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  :root {
-    --goldenrod-yellow: #d1b400ff;
-    --lemon-yellow: #e1c700;
-    --amber-yellow: #d8a700ff;
-    --white: #ffffff;
-    --whitetrans: #ffffffd8;
-    --black: #000000;
-    --black-variant: #1c1c1c;
-  
-    --heading-font: "Outfit", serif;
-    --paragraph-font: "Poppins", sans-serif;
-  }
-  
-  body {
-    font-family: "Poppins", sans-serif;
-    background-color: var(--black);
-    color: #333;
-  }
-  
+  font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --goldenrod-yellow: #d1b400ff;
+  --lemon-yellow: #e1c700;
+  --amber-yellow: #d8a700ff;
+  --white: #ffffff;
+  --whitetrans: #ffffffd8;
+  --black: #000000;
+  --black-variant: #1c1c1c;
+
+  --heading-font: "Outfit", serif;
+  --paragraph-font: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--black);
+  color: #333;
+
+}
 
 .image-container {
-    position: relative;
-    width: auto; /* Adjust as needed */
-    height: 60vmax; /* Adjust as needed */
-    overflow: hidden;
+  position: relative;
+  width: auto;
+  height: 60vmax;
+  overflow: hidden;
 }
 
 .image-container img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 .image-container img.swipe-left {
-    transform: translateX(-100%);
-    opacity: 0;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Gradient overlay using a div */
+.gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Adjust as needed */
+  background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  pointer-events: none;
 }
 
 .section {
-    padding: 16px;
+  padding: 16px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.card {
+  border: 1px solid var(--black-variant);
+  padding: 5px;
+  background-color: var(--black-variant);
+  width: calc(25% - 20px); /* Four cards per row */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  height: auto;
+}
+
+.card img {
+  max-width: 100%;
+  width: auto;
+  margin-bottom: 8px;
+  height: auto;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--amber-yellow);
+}
+
+.card p {
+  color: var(--white);
+}
+
+input[type="text"] {
+  padding: 10px;
+  padding-right: 40px;
+}
+
+nav a {
+  color: var(--white);
+  font-weight: bold;
+}
+
+.sign {
+  background-color: var(--lemon-yellow);
+  padding: 1vmax;
+  border-radius: 5px;
+}
+
+.beforefooter {
+  background-color: var(--black-variant);
+  padding: 1vmax;
+  text-align: center;
+}
+
+.beforefooter h2 {
+  font-size: 3.5vmax;
+  margin-bottom: 4vmax;
+  margin-top: 2vmax;
+}
+
+.beforefooter p {
+  color: var(--white);
+  font-size: 1.5vmax;
+  margin-left: 20vmax;
+  margin-right: 20vmax;
+}
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-
-  .card-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 16px;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
-  .card {
-    border: 1px solid var(--black-variant);
-    padding: 5px;
-    background-color: var(--black-variant);
-    width: calc(25% - 20px); /* Four cards per row */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    text-align: center;
-    height: auto;
-  }
-
-  .card img {
-    max-width: 100%;
-    width: auto;
-    margin-bottom: 8px;
-    height: auto;
-  }
-
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  }
-
-  .card h3 {
-    margin: 0 0 8px;
-    color: var(--amber-yellow);
-  }
-
-  .card p{
-    color: var(--white);
-  }
-
-
-
-  header img{
-    width: auto;
-    height: 10vmax;
-  }
-
-  input[type="text"] {
-
-    padding: 10px;
-    padding-right: 40px;
-  }
-
-  nav a{
-    color: var(--white);
-    font-weight: bold;
-    
-  }
-
-  .sign {
-    background-color: var(--lemon-yellow);
-    padding: 1vmax;
-    border-radius: 5px;
-
-  }
-
-  .beforefooter {
-    background-color: var(--black-variant);
-    padding: 1vmax;
-    text-align: center;
-
-  }
-
-  .beforefooter h2{
-    font-size: 3.5vmax;
-    margin-bottom: 4vmax;
-    margin-top: 2vmax;
-  }
-
-  .beforefooter p{
-    color: var(--white);
-    font-size: 1.5vmax;
-    margin-left: 20vmax;
-    margin-right: 20vmax;
-  }
-
-  form {
-    background-color: var(--black-variant);
-    margin-bottom: 20px;
-    border-radius: 20px;
-    padding: 20px;
-  }
-  .container h1 {
-    color: var(--lemon-yellow);
-    position: relative;
-    padding: 20px;
-    
-  }
+.form {
+  position: relative;
+  z-index: 1;
+  background: var(--black-variant);
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   
-  .form-group {
-    border-radius: 20px;
-    background-color: var(--black);
-    padding-top: 25px;
-    padding-: 25px;
-    padding-left: 0px;
-    padding-right: 0px;
-     
-     /* Increased spacing between form groups */
-  }
-  
-  label {
-    display: block;
-    
-    margin-bottom: 8px;
-    margin-top: 8px;
-    font-weight: bold;
-    color: var(--lemon-yellow);
-  }
-  
-  input[type="text"],
-  input[type="email"] {
-    background-color: var(--whitetrans);
-    width: 40vmax;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    
-  }
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
 
-  input[type="submit"] {
-    padding: 1vmax; /* Slightly larger button padding */
+input[type="submit"] {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: var(--lemon-yellow);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: var(--black);
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+input[type="submit"]:hover,input[type="submit"]:active,.form button:focus {
+  background: var(--amber-yellow);
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: var(--amber-yellow);
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
 
-    background-color: var(--lemon-yellow);
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: auto; /* Center the button horizontally */
-    display: block; /* Make the button a block element */
-    width: 50%; /* Adjust the width to fit the content */
-    font-size: 1.4rem;
-  
-  }
-  
-  
-  
-  input[type="submit"]:hover {
-  
-    background-color: var(--amber-yellow);
-  }
-  
-  footer {
-    text-align: center;
-    margin-top: 60px;
-    border-top: 1px solid var(--lemon-yellow);
-    padding: 25px;
-  
-    font-size: 0.9em;
-  }
+
+input[type="submit"]:hover {
+  background-color: var(--amber-yellow);
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  border-top: 1px solid var(--lemon-yellow);
+  padding: 25px;
+
+  font-size: 0.9em;
+}
