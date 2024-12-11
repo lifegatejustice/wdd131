@@ -133,6 +133,10 @@ body {
 
 }
 
+main{
+  margin: auto;
+}
+
 .image-container {
   position: relative;
   width: auto;
@@ -429,34 +433,47 @@ footer a {
     z-index: 1000; /* Ensure it appears above other content */
 }
 
-.swipe-container {
+.section {
+  padding: 16px;
+  margin-top: 2vw;
+}
+
+
+.card-wrapper {
   display: flex;
-  overflow-y: scroll; /* Enable horizontal scroll */
-  scroll-snap-type: x mandatory; /* Ensure snapping to cards */
-  gap: 16px;
+  flex-wrap: nowrap; /* Prevent wrapping for smooth horizontal scrolling */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap to individual cards */
+  gap: 16px; /* Space between cards */
   padding: 10px;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
 }
 
-.swipe-container .card {
-  flex: 0 0 calc(50% - 16px); /* Two cards per view on mobile */
-  scroll-snap-align: center; /* Ensure proper snapping */
+.card-wrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for better aesthetics */
 }
 
-.navigation-buttons {
-  display: none; /* Hidden by default, for large screens only */
-  justify-content: space-between;
-  margin-top: 10px;
+.card {
+  flex: 0 0 calc(50% - 16px); /* Two cards per view */
+  scroll-snap-align: start; /* Align each card when scrolling */
+  background-color: var(--black-variant);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
 }
 
-.navigation-buttons button {
-  background-color: var(--amber-yellow);
-  color: var(--black);
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+.card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--amber-yellow);
+}
+
+.card p {
+  color: var(--white);
+}
 
 .navigation.open {
     display: flex; /* Show the navigation when open */
