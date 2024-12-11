@@ -222,6 +222,7 @@ nav a {
   background-color: var(--lemon-yellow);
   padding: 1vw;
   border-radius: 5px;
+  text-align: center;
 }
 
 .beforefooter {
@@ -417,60 +418,68 @@ footer a {
 
 @media (max-width: 426px) {
   /* Basic styles for the navigation */
-.navigation {
-  display: none; /* Hide navigation by default */
-  flex-direction: column; /* Stack items vertically */
-  background-color: #333; /* Background color for the menu */
-  position: absolute; /* Position it absolutely */
-  top: 50px; /* Adjust based on your layout */
-  right: 0; /* Align to the right */
-  width: 200px; /* Set a width for the menu */
-  z-index: 1000; /* Ensure it appears above other content */
+  .navigation {
+    display: none; /* Hide navigation by default */
+    flex-direction: column;
+    padding: 2vw; /* Stack items vertically */
+    background-color: var(--black); /* Background color for the menu */
+    position: absolute; /* Position it absolutely */
+     /* Adjust based on your layout */
+    right: 0; /* Align to the right */
+    width: 200px; /* Set a width for the menu */
+    z-index: 1000; /* Ensure it appears above other content */
 }
 
 .navigation.open {
-  display: flex; /* Show the navigation when open */
+    display: flex; /* Show the navigation when open */
 }
 
 .navigation a {
-  color: white; /* Link color */
-  padding: 10px; /* Padding for links */
-  text-decoration: none; /* Remove underline */
-  transition: background 0.3s; /* Smooth background transition */
+    color: white; /* Link color */
+    padding: 10px; /* Padding for links */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s; /* Smooth background transition */
 }
 
 .navigation a:hover {
-  background-color: #555; /* Change background on hover */
+    background-color: #555; /* Change background on hover */
 }
 
 /* Hamburger button styles */
-#menu {
+#menu
+{
   background: none; /* No background */
   border: none; /* No border */
   cursor: pointer; /* Pointer cursor */
   position: relative;
   left: 80vw; 
-  bottom: 3vw;/* Position relative for the icon */
+  bottom: 2.5vw; /* Position relative for the icon */
 }
 
 .hamburger-icon {
-  width: 10px; /* Width of the hamburger icon */
+  display: block;
+  width: 30px; /* Width of the hamburger icon */
   height: 3px; /* Height of the hamburger lines */
-  background-color: white; /* Color of the hamburger lines */
+  background-color: var(--white); /* Color of the hamburger lines */
   position: relative; 
-  z-index: 1;/* Position relative for stacking */
+  z-index: 1; /* Position relative for stacking */
 }
 
+/* Create three lines for the hamburger icon */
 .hamburger-icon::before,
 .hamburger-icon::after {
-  content: ''; /* Create pseudo-elements */
+  content: ''; 
+  /* Create pseudo-elements */
   width: 30px; /* Same width as the main line */
   height: 3px; /* Same height as the main line */
   background-color: white; /* Color of the lines */
   position: absolute; /* Position absolute for stacking */
   left: 0; /* Align to the left */
-  transition: all 0.3s; /* Smooth transition */
+  transition: all 0.3s; 
+  /* Smooth transition */
 }
+
+
 
 .hamburger-icon::before {
   top: -10px; /* Position above the main line */
@@ -494,9 +503,58 @@ footer a {
   transform: rotate(-45deg); /* Rotate the bottom line */
   top: 0; /* Align to the center */
 }
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  background-color: white;
+  width: 100%; /* Adjust width as needed */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2vw;
+}
+
+.search-container input {
+  border: none;
+  flex: 1;
+  border-radius: 25px 0 0 25px;
+  font-size: 1.8vw;
+  outline: none;
+}
+
+.search-container button {
+  background-color: var(--lemon-yellow); /* Auburn */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container button img {
+  font-size: large;
+  width: 2vw;
+  height: 4vw;
+}
+
+.search-container button:hover {
+  background-color: var(--amber-yellow); /* Falu Red */
+}
+
   header img{
     width: auto;
     height: 30px;
+    margin-left: 1vw;
+  }
+
+  .sign {
+    background-color: var(--lemon-yellow);
+    padding: 2vw;
+    border-radius: 5px;
+    margin-top: 2vw;
+    text-align: center;
   }
   
 
