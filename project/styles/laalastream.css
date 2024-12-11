@@ -388,9 +388,14 @@ input[type="submit"]:hover {
 }
 
 footer {
+<<<<<<< HEAD
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: space-evenly;
+=======
+  
+  
+>>>>>>> cec249e964747d9a70b9325930c8be694b02e9ee
   align-items: center;
   text-align: center;
   margin-top: 60px;
@@ -409,7 +414,7 @@ footer p {
 footer a {
   color: var(--lemon-yellow);
   text-decoration: none;
-  margin: 0 10px;
+  
 }
 
 @media (max-width: 426px) {
