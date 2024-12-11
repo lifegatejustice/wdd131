@@ -1,4 +1,4 @@
-/* Basic Reset */
+hhhhg /* Basic Reset */
 .poppins-thin {
   font-family: "Poppins", serif;
   font-weight: 100;
@@ -388,8 +388,9 @@ input[type="submit"]:hover {
 }
 
 footer {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
   margin-top: 60px;
@@ -411,6 +412,81 @@ footer a {
   margin: 0 10px;
 }
 
-footer a:hover {
-  color: var(--amber-yellow);
+@media (max-width: 426px) {
+  #menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: var(--white);
+     position: relative;
+    float: right;
+    right: 1vmax;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  #menu::before {
+    content: "☰";
+    color: var(--white);
+    
+  }
+  
+  #menu.open::before {
+    content: "❎";
+  
+  }
+  
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: var(--accent1-color);
+    color: #fff;
+    justify-content: center;
+  }
+  
+  .navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+  }
+  .navigation a:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* when the button is clicked - the open class is toggled (added/removed) */
+  .open a {
+    display: block;
+    text-align: center;
+  }
+
+  header img{
+    width: auto;
+    height: 30px;
+  }
+  
+
 }
+
+.review{
+  background-color: var(--black-variant);
+  padding: 3vmax;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 1vmax;
+  text-align: center;
+  color: var(--white);
+}
+
+.review a{
+  color: #e1c700;
+}
+footer{
+  color: var(--amber-yellow);
+  background-color: var(--black);
+}
+

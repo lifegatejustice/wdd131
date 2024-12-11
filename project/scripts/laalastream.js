@@ -1,4 +1,3 @@
-
 const image = document.getElementById('myImage');
 const images = [
     "images/tvseries.webp",
@@ -183,8 +182,10 @@ document.querySelector('.message a').addEventListener('click', function () {
 
 
 $('.message a').click(function(){
-   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+   $('form').animate({ opacity: "toggle"}, "slow");
 });
+
+
 
 document.getElementById('showFormButton').addEventListener('click', function() {
   const form = document.querySelector('.form');
@@ -192,3 +193,16 @@ document.getElementById('showFormButton').addEventListener('click', function() {
   this.classList.toggle('hidden'); // Hide the button after clicking
 });
 
+document.getElementById('showFormButton').addEventListener('click', function() {
+  document.getElementById('register-form hidden').classList.toggle('hidden');
+  document.getElementById('login-form hidden').classList.toggle('hidden');
+  this.classList.toggle('hidden'); // Hide the button after clicking
+});
+
+const hamButton = document.querySelector('#menu');
+const navigation = document.querySelector('.navigation');
+
+hamButton.addEventListener('click', () => {
+	navigation.classList.toggle('open');
+	hamButton.classList.toggle('open');
+});

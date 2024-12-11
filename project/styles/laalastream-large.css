@@ -145,7 +145,6 @@
       width: auto;
       height: 5vmax;
       padding: 4px;
-      
     }
     
     .navigation {
@@ -206,6 +205,9 @@
     .search-container button:hover {
         background-color: var(--amber-yellow); /* Falu Red */
     }
+    #menu{
+      display: none;
+    }
 }
 
 .watch{
@@ -238,4 +240,5 @@
 section h2{
     color: var(--white)
 }
+
 
