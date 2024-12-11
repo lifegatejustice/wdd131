@@ -1,4 +1,4 @@
-hhhhg /* Basic Reset */
+/* Basic Reset */
 .poppins-thin {
   font-family: "Poppins", serif;
   font-weight: 100;
@@ -168,6 +168,7 @@ body {
   margin-top: 2vw;
 }
 
+
 .card-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -227,7 +228,8 @@ nav a {
 
 .beforefooter {
   background-color: var(--black-variant);
-  padding: 1vw;
+  
+  width: 100vw;
   text-align: center;
   margin-top: 3vw;
 }
@@ -264,15 +266,12 @@ nav a {
 }
 
 .form {
-  position: relative;
-  z-index: 1;
-  background: var(--black-variant);
-  max-width: 360px;
-  margin: 0 auto 100px;
-  
-  text-align: center;
-  box-shadow: none; /* Remove shadow when hidden */
-  display: none; /* Hide the form by default */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hidden {
+  display: none;
 }
 
 .form.visible {
@@ -288,7 +287,7 @@ nav a {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
-  width: 100%;
+  width: 100vw;
   border: 0;
   margin: 0 0 15px;
   padding: 15px;
@@ -301,7 +300,7 @@ input[type="submit"] {
   text-transform: uppercase;
   outline: 0;
   background: var(--lemon-yellow);
-  width: 100%;
+  width: 100vw;
   border: 0;
   padding: 15px;
   color: var(--black);
@@ -323,7 +322,7 @@ input[type="submit"]:hover,input[type="submit"]:active,.form button:focus {
   text-transform: uppercase;
   outline: 0;
   background: var(--lemon-yellow);
-  width: 100%;
+  
   border: 0;
   padding: 15px;
   color: var(--black);
@@ -429,6 +428,35 @@ footer a {
     width: 200px; /* Set a width for the menu */
     z-index: 1000; /* Ensure it appears above other content */
 }
+
+.swipe-container {
+  display: flex;
+  overflow-y: scroll; /* Enable horizontal scroll */
+  scroll-snap-type: x mandatory; /* Ensure snapping to cards */
+  gap: 16px;
+  padding: 10px;
+}
+
+.swipe-container .card {
+  flex: 0 0 calc(50% - 16px); /* Two cards per view on mobile */
+  scroll-snap-align: center; /* Ensure proper snapping */
+}
+
+.navigation-buttons {
+  display: none; /* Hidden by default, for large screens only */
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.navigation-buttons button {
+  background-color: var(--amber-yellow);
+  color: var(--black);
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 
 .navigation.open {
     display: flex; /* Show the navigation when open */

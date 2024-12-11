@@ -183,14 +183,20 @@ document.querySelector('.message a').addEventListener('click', function () {
 
 
 document.getElementById('showFormButton').addEventListener('click', function() {
-  const form = document.querySelector('.form');
-  form.classList.toggle('visible'); // Toggle the 'visible' class
+  const registerForm = document.getElementById('registerForm');
+  const loginForm = document.getElementById('loginForm');
+  
+  registerForm.classList.toggle('hidden');
+  loginForm.classList.toggle('hidden');
   this.classList.toggle('hidden'); // Hide the button after clicking
 });
 
 document.getElementById('showFormButton').addEventListener('click', function() {
-  document.getElementById('register-form hidden').classList.toggle('hidden');
-  document.getElementById('login-form hidden').classList.toggle('hidden');
+  const registerForm = document.getElementById('registerForm');
+  const loginForm = document.getElementById('loginForm');
+  
+  registerForm.classList.toggle('hidden');
+  loginForm.classList.toggle('hidden');
   this.classList.toggle('hidden'); // Hide the button after clicking
 });
 
@@ -203,3 +209,5 @@ document.addEventListener("DOMContentLoaded", () => {
       hamButton.classList.toggle('open'); // Toggle the 'open' class on the button
   });
 });
+
+
