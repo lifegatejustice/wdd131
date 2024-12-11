@@ -136,7 +136,7 @@ body {
 .image-container {
   position: relative;
   width: auto;
-  height: 60vmax;
+  height: 60vw;
   overflow: hidden;
 }
 
@@ -165,7 +165,7 @@ body {
 
 .section {
   padding: 16px;
-  margin-top: 2vmax;
+  margin-top: 2vw;
 }
 
 .card-wrapper {
@@ -220,29 +220,29 @@ nav a {
 
 .sign {
   background-color: var(--lemon-yellow);
-  padding: 1vmax;
+  padding: 1vw;
   border-radius: 5px;
 }
 
 .beforefooter {
   background-color: var(--black-variant);
-  padding: 1vmax;
+  padding: 1vw;
   text-align: center;
-  margin-top: 3vmax;
+  margin-top: 3vw;
 }
 
 .beforefooter h2 {
-  font-size: 3.5vmax;
-  margin-bottom: 4vmax;
-  margin-top: 3vmax;
+  font-size: 3.5vw;
+  margin-bottom: 4vw;
+  margin-top: 3vw;
 
 }
 
 .beforefooter p {
   color: var(--white);
-  font-size: 1.5vmax;
-  margin-left: 20vmax;
-  margin-right: 20vmax;
+  font-size: 1.5vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
 }
 
 .login-page {
@@ -388,14 +388,12 @@ input[type="submit"]:hover {
 }
 
 footer {
-<<<<<<< HEAD
-  display: grid;
+
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: space-evenly;
-=======
   
   
->>>>>>> cec249e964747d9a70b9325930c8be694b02e9ee
+
   align-items: center;
   text-align: center;
   margin-top: 60px;
@@ -418,57 +416,84 @@ footer a {
 }
 
 @media (max-width: 426px) {
-  #menu {
-    font-size: 1.5rem;
-    border: 0;
-    background: none;
-    color: var(--white);
-     position: relative;
-    float: right;
-    right: 1vmax;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  #menu::before {
-    content: "☰";
-    color: var(--white);
-    
-  }
-  
-  #menu.open::before {
-    content: "❎";
-  
-  }
-  
-  .navigation {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    background-color: var(--accent1-color);
-    color: #fff;
-    justify-content: center;
-  }
-  
-  .navigation a {
-    display: none;
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-  }
-  .navigation a:hover {
-    background-color: var(--nav-hover-background-color);
-    color: var(--nav-hover-link-color);
-    font-weight: 700;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  /* when the button is clicked - the open class is toggled (added/removed) */
-  .open a {
-    display: block;
-    text-align: center;
-  }
+  /* Basic styles for the navigation */
+.navigation {
+  display: none; /* Hide navigation by default */
+  flex-direction: column; /* Stack items vertically */
+  background-color: #333; /* Background color for the menu */
+  position: absolute; /* Position it absolutely */
+  top: 50px; /* Adjust based on your layout */
+  right: 0; /* Align to the right */
+  width: 200px; /* Set a width for the menu */
+  z-index: 1000; /* Ensure it appears above other content */
+}
 
+.navigation.open {
+  display: flex; /* Show the navigation when open */
+}
+
+.navigation a {
+  color: white; /* Link color */
+  padding: 10px; /* Padding for links */
+  text-decoration: none; /* Remove underline */
+  transition: background 0.3s; /* Smooth background transition */
+}
+
+.navigation a:hover {
+  background-color: #555; /* Change background on hover */
+}
+
+/* Hamburger button styles */
+#menu {
+  background: none; /* No background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  position: relative;
+  left: 80vw; 
+  bottom: 3vw;/* Position relative for the icon */
+}
+
+.hamburger-icon {
+  width: 10px; /* Width of the hamburger icon */
+  height: 3px; /* Height of the hamburger lines */
+  background-color: white; /* Color of the hamburger lines */
+  position: relative; 
+  z-index: 1;/* Position relative for stacking */
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: ''; /* Create pseudo-elements */
+  width: 30px; /* Same width as the main line */
+  height: 3px; /* Same height as the main line */
+  background-color: white; /* Color of the lines */
+  position: absolute; /* Position absolute for stacking */
+  left: 0; /* Align to the left */
+  transition: all 0.3s; /* Smooth transition */
+}
+
+.hamburger-icon::before {
+  top: -10px; /* Position above the main line */
+}
+
+.hamburger-icon::after {
+  top: 10px; /* Position below the main line */
+}
+
+/* Change the hamburger icon to an 'X' when open */
+#menu.open .hamburger-icon {
+  background-color: transparent; /* Hide the main line */
+}
+
+#menu.open .hamburger-icon::before {
+  transform: rotate(45deg); /* Rotate the top line */
+  top: 0; /* Align to the center */
+}
+
+#menu.open .hamburger-icon::after {
+  transform: rotate(-45deg); /* Rotate the bottom line */
+  top: 0; /* Align to the center */
+}
   header img{
     width: auto;
     height: 30px;
@@ -479,10 +504,10 @@ footer a {
 
 .review{
   background-color: var(--black-variant);
-  padding: 3vmax;
+  padding: 3vw;
   border-radius: 20px;
   max-width: 600px;
-  margin: 1vmax;
+  margin: 1vw;
   text-align: center;
   color: var(--white);
 }

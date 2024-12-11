@@ -181,11 +181,6 @@ document.querySelector('.message a').addEventListener('click', function () {
 });
 
 
-$('.message a').click(function(){
-   $('form').animate({ opacity: "toggle"}, "slow");
-});
-
-
 
 document.getElementById('showFormButton').addEventListener('click', function() {
   const form = document.querySelector('.form');
@@ -199,10 +194,12 @@ document.getElementById('showFormButton').addEventListener('click', function() {
   this.classList.toggle('hidden'); // Hide the button after clicking
 });
 
-const hamButton = document.querySelector('#menu');
-const navigation = document.querySelector('.navigation');
+document.addEventListener("DOMContentLoaded", () => {
+  const hamButton = document.querySelector('#menu');
+  const navigation = document.querySelector('.navigation');
 
-hamButton.addEventListener('click', () => {
-	navigation.classList.toggle('open');
-	hamButton.classList.toggle('open');
+  hamButton.addEventListener('click', () => {
+      navigation.classList.toggle('open'); // Toggle the 'open' class
+      hamButton.classList.toggle('open'); // Toggle the 'open' class on the button
+  });
 });

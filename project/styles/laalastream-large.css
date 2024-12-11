@@ -143,7 +143,7 @@
 
     header img {
       width: auto;
-      height: 5vmax;
+      height: 5vw;
       padding: 4px;
     }
     
@@ -166,7 +166,7 @@
     .navigation a:hover {
         background-color: var(--lemon-yellow);
         color: var(--black);
-        padding: 1vmax;
+        padding: 1vw;
     }
     
     .search-container {
@@ -212,15 +212,15 @@
 
 .watch{
     background-color: var(--lemon-yellow);
-    padding-left: 4vmax;
-    padding-right: 4vmax;
-    padding-top: 2vmax;
-    padding-bottom: 2vmax;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
     position: relative;
-    bottom: 40vmax;
-    left: 40vmax;
-    right: 40vmax;
-    top: -10vmax;
+    bottom: 40vw;
+    left: 40vw;
+    right: 40vw;
+    top: -10vw;
     border-radius: 5px;
 
   }
@@ -229,7 +229,7 @@
     text-decoration: none;
     color: var(--black);
     font-weight: bold;
-    font-size: 2vmax;
+    font-size: 2vw;
     text-align: center;
   }
 
