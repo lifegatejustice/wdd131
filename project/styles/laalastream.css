@@ -130,10 +130,9 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--black);
   color: #333;
-
 }
 
-main{
+main {
   margin: auto;
 }
 
@@ -172,12 +171,12 @@ main{
   margin-top: 2vw;
 }
 
-
 .card-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
+  justify-content: space-between;
 }
 
 .card {
@@ -218,36 +217,25 @@ input[type="text"] {
   padding-right: 40px;
 }
 
-nav a {
-  color: var(--white);
-  font-weight: bold;
-}
-
-.sign {
-  background-color: var(--lemon-yellow);
-  padding: 1vw;
-  border-radius: 5px;
-  text-align: center;
-}
 
 .beforefooter {
   background-color: var(--black-variant);
-  
+
   width: 100vw;
   text-align: center;
   margin-top: 3vw;
 }
 
 .beforefooter h2 {
-  font-size: 3.5vw;
+  font-size: 2rem;
   margin-bottom: 4vw;
   margin-top: 3vw;
-
+  padding-top: 30px;
 }
 
 .beforefooter p {
   color: var(--white);
-  font-size: 1.5vw;
+  font-size: 1rem;
   margin-left: 20vw;
   margin-right: 20vw;
 }
@@ -291,12 +279,13 @@ nav a {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #f2f2f2;
-  width: 100vw;
+  width: 80vw;
   border: 0;
   margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
   font-size: 14px;
+  max-width: 600px;
 }
 
 input[type="submit"] {
@@ -304,7 +293,7 @@ input[type="submit"] {
   text-transform: uppercase;
   outline: 0;
   background: var(--lemon-yellow);
-  width: 100vw;
+  width: 80vw;
   border: 0;
   padding: 15px;
   color: var(--black);
@@ -313,7 +302,9 @@ input[type="submit"] {
   transition: all 0.3 ease;
   cursor: pointer;
 }
-input[type="submit"]:hover,input[type="submit"]:active,.form button:focus {
+input[type="submit"]:hover,
+input[type="submit"]:active,
+.form button:focus {
   background: var(--amber-yellow);
 }
 .form .message {
@@ -326,7 +317,7 @@ input[type="submit"]:hover,input[type="submit"]:active,.form button:focus {
   text-transform: uppercase;
   outline: 0;
   background: var(--lemon-yellow);
-  
+
   border: 0;
   padding: 15px;
   color: var(--black);
@@ -337,13 +328,13 @@ input[type="submit"]:hover,input[type="submit"]:active,.form button:focus {
 }
 
 #showFormButton:hover {
-  background-color: var(--amber-yellow); 
-  font-weight: 20px;/* Change background on hover */
+  background-color: var(--amber-yellow);
+  font-weight: 20px; /* Change background on hover */
 }
 
 #showFormButton p:hover {
-  background-color: var(--amber-yellow); 
-  font-weight: 20px;/* Change background on hover */
+  background-color: var(--amber-yellow);
+  font-weight: 20px; /* Change background on hover */
 }
 .form .message a {
   color: var(--amber-yellow);
@@ -358,7 +349,8 @@ input[type="submit"]:hover,input[type="submit"]:active,.form button:focus {
   max-width: 300px;
   margin: 0 auto;
 }
-.container:before, .container:after {
+.container:before,
+.container:after {
   content: "";
   display: block;
   clear: both;
@@ -383,20 +375,16 @@ input[type="submit"]:hover,input[type="submit"]:active,.form button:focus {
   text-decoration: none;
 }
 .container .info span .fa {
-  color: #EF3B3A;
+  color: #ef3b3a;
 }
-
 
 input[type="submit"]:hover {
   background-color: var(--amber-yellow);
 }
 
 footer {
-
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: space-evenly;
-  
-  
 
   align-items: center;
   text-align: center;
@@ -416,7 +404,11 @@ footer p {
 footer a {
   color: var(--lemon-yellow);
   text-decoration: none;
+}
+
+@media  (max-width: 769px) {
   
+
 }
 
 @media (max-width: 426px) {
@@ -427,168 +419,165 @@ footer a {
     padding: 2vw; /* Stack items vertically */
     background-color: var(--black); /* Background color for the menu */
     position: absolute; /* Position it absolutely */
-     /* Adjust based on your layout */
+    /* Adjust based on your layout */
     right: 0; /* Align to the right */
     width: 200px; /* Set a width for the menu */
     z-index: 1000; /* Ensure it appears above other content */
-}
+  }
 
-.section {
-  padding: 16px;
-  margin-top: 2vw;
-}
+  .section {
+    padding: 16px;
+    padding-right: 0px;
+    margin-top: 2vw;
+  }
 
+  .card-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping for smooth horizontal scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap to individual cards */
+    gap: 16px; /* Space between cards */
+    padding: 10px;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+  }
 
-.card-wrapper {
-  display: flex;
-  flex-wrap: nowrap; /* Prevent wrapping for smooth horizontal scrolling */
-  overflow-x: auto; /* Enable horizontal scrolling */
-  scroll-snap-type: x mandatory; /* Snap to individual cards */
-  gap: 16px; /* Space between cards */
-  padding: 10px;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-}
+  .card-wrapper::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for better aesthetics */
+  }
 
-.card-wrapper::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for better aesthetics */
-}
+  .card {
+    flex: 0 0 calc(50% - 16px); /* Two cards per view */
+    scroll-snap-align: start; /* Align each card when scrolling */
+    background-color: var(--black-variant);
 
-.card {
-  flex: 0 0 calc(50% - 16px); /* Two cards per view */
-  scroll-snap-align: start; /* Align each card when scrolling */
-  background-color: var(--black-variant);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
-}
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
 
-.card:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
+  .card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
 
-.card h3 {
-  margin: 0 0 8px;
-  color: var(--amber-yellow);
-}
+  .card h3 {
+    margin: 0 0 8px;
+    color: var(--amber-yellow);
+  }
 
-.card p {
-  color: var(--white);
-}
+  .card p {
+    color: var(--white);
+  }
 
-.navigation.open {
+  .navigation.open {
     display: flex; /* Show the navigation when open */
-}
+  }
 
-.navigation a {
+  .navigation a {
     color: white; /* Link color */
     padding: 10px; /* Padding for links */
     text-decoration: none; /* Remove underline */
     transition: background 0.3s; /* Smooth background transition */
-}
+  }
 
-.navigation a:hover {
+  .navigation a:hover {
     background-color: #555; /* Change background on hover */
-}
+  }
 
-/* Hamburger button styles */
-#menu
-{
-  background: none; /* No background */
-  border: none; /* No border */
-  cursor: pointer; /* Pointer cursor */
-  position: relative;
-  left: 80vw; 
-  bottom: 2.5vw; /* Position relative for the icon */
-}
+  /* Hamburger button styles */
+  #menu {
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    position: relative;
+    left: 80vw;
+    bottom: 2.5vw; /* Position relative for the icon */
+  }
 
-.hamburger-icon {
-  display: block;
-  width: 30px; /* Width of the hamburger icon */
-  height: 3px; /* Height of the hamburger lines */
-  background-color: var(--white); /* Color of the hamburger lines */
-  position: relative; 
-  z-index: 1; /* Position relative for stacking */
-}
+  .hamburger-icon {
+    display: block;
+    width: 30px; /* Width of the hamburger icon */
+    height: 3px; /* Height of the hamburger lines */
+    background-color: var(--white); /* Color of the hamburger lines */
+    position: relative;
+    z-index: 1; /* Position relative for stacking */
+  }
 
-/* Create three lines for the hamburger icon */
-.hamburger-icon::before,
-.hamburger-icon::after {
-  content: ''; 
-  /* Create pseudo-elements */
-  width: 30px; /* Same width as the main line */
-  height: 3px; /* Same height as the main line */
-  background-color: white; /* Color of the lines */
-  position: absolute; /* Position absolute for stacking */
-  left: 0; /* Align to the left */
-  transition: all 0.3s; 
-  /* Smooth transition */
-}
+  /* Create three lines for the hamburger icon */
+  .hamburger-icon::before,
+  .hamburger-icon::after {
+    content: "";
+    /* Create pseudo-elements */
+    width: 30px; /* Same width as the main line */
+    height: 3px; /* Same height as the main line */
+    background-color: white; /* Color of the lines */
+    position: absolute; /* Position absolute for stacking */
+    left: 0; /* Align to the left */
+    transition: all 0.3s;
+    /* Smooth transition */
+  }
 
+  .hamburger-icon::before {
+    top: -10px; /* Position above the main line */
+  }
 
+  .hamburger-icon::after {
+    top: 10px; /* Position below the main line */
+  }
 
-.hamburger-icon::before {
-  top: -10px; /* Position above the main line */
-}
+  /* Change the hamburger icon to an 'X' when open */
+  #menu.open .hamburger-icon {
+    background-color: transparent; /* Hide the main line */
+  }
 
-.hamburger-icon::after {
-  top: 10px; /* Position below the main line */
-}
+  #menu.open .hamburger-icon::before {
+    transform: rotate(45deg); /* Rotate the top line */
+    top: 0; /* Align to the center */
+  }
 
-/* Change the hamburger icon to an 'X' when open */
-#menu.open .hamburger-icon {
-  background-color: transparent; /* Hide the main line */
-}
+  #menu.open .hamburger-icon::after {
+    transform: rotate(-45deg); /* Rotate the bottom line */
+    top: 0; /* Align to the center */
+  }
 
-#menu.open .hamburger-icon::before {
-  transform: rotate(45deg); /* Rotate the top line */
-  top: 0; /* Align to the center */
-}
+  .search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    background-color: white;
+    width: 100%; /* Adjust width as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2vw;
+  }
 
-#menu.open .hamburger-icon::after {
-  transform: rotate(-45deg); /* Rotate the bottom line */
-  top: 0; /* Align to the center */
-}
+  .search-container input {
+    border: none;
+    flex: 1;
+    border-radius: 25px 0 0 25px;
+    font-size: 1.8vw;
+    outline: none;
+  }
 
-.search-container {
-  display: flex;
-  align-items: center;
-  border-radius: 25px;
-  background-color: white;
-  width: 100%; /* Adjust width as needed */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2vw;
-}
+  .search-container button {
+    background-color: var(--lemon-yellow); /* Auburn */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.search-container input {
-  border: none;
-  flex: 1;
-  border-radius: 25px 0 0 25px;
-  font-size: 1.8vw;
-  outline: none;
-}
+  .search-container button img {
+    font-size: large;
+    width: 2vw;
+    height: 4vw;
+  }
 
-.search-container button {
-  background-color: var(--lemon-yellow); /* Auburn */
-  border: none;
-  padding: 10px 15px;
-  border-radius: 0 25px 25px 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .search-container button:hover {
+    background-color: var(--amber-yellow); /* Falu Red */
+  }
 
-.search-container button img {
-  font-size: large;
-  width: 2vw;
-  height: 4vw;
-}
-
-.search-container button:hover {
-  background-color: var(--amber-yellow); /* Falu Red */
-}
-
-  header img{
+  header img {
     width: auto;
     height: 30px;
     margin-left: 1vw;
@@ -601,11 +590,50 @@ footer a {
     margin-top: 2vw;
     text-align: center;
   }
-  
+}
+
+
+.watch{
+background-color: var(--lemon-yellow);
+padding-left: 4vw;
+padding-right: 4vw;
+padding-top: 2vw;
+padding-bottom: 2vw;
+position: relative;
+bottom: 40vw;
+left: 40vw;
+right: 40vw;
+top: -10vw;
+border-radius: 5px;
 
 }
 
-.review{
+.watch a{
+text-decoration: none;
+color: var(--black);
+font-weight: bold;
+font-size: 2vw;
+text-align: center;
+}
+
+.watch:hover{
+background-color: var(--amber-yellow);
+}
+  header img {
+    width: auto;
+    height: 30px;
+    margin-left: 1vw;
+  }
+
+  .sign {
+    background-color: var(--lemon-yellow);
+    padding: 2vw;
+    border-radius: 5px;
+    margin-top: 2vw;
+    text-align: center;
+  }
+
+.review {
   background-color: var(--black-variant);
   padding: 3vw;
   border-radius: 20px;
@@ -614,12 +642,12 @@ footer a {
   text-align: center;
   color: var(--white);
 }
+}
 
-.review a{
+.review a {
   color: #e1c700;
 }
-footer{
+footer {
   color: var(--amber-yellow);
   background-color: var(--black);
 }
-

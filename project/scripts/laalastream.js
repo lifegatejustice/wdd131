@@ -28,7 +28,7 @@ function changeImage() {
 }
 
 // Automatically change the image every 3 seconds
-setInterval(changeImage, 3000);
+setInterval(changeImage, 5000);
 
 
 // Data arrays
@@ -92,6 +92,7 @@ const sports = [
     imageUrl: "images/superbowl.webp",
     description: "The NFL's biggest game of the year." 
   },
+  
   { 
     title: "Wimbledon", 
     year: 2023, 
@@ -210,34 +211,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const cardWrapper = document.querySelector(".card-wrapper");
 
-  let startX; // Starting X position
-  let scrollLeft; // Initial scroll position
 
-  // Event: Touch start
-  cardWrapper.addEventListener("touchstart", (e) => {
-      startX = e.touches[0].pageX - cardWrapper.offsetLeft; // Get touch starting point
-      scrollLeft = cardWrapper.scrollLeft; // Store initial scroll position
-  });
-
-  // Event: Touch move
-  cardWrapper.addEventListener("touchmove", (e) => {
-      const x = e.touches[0].pageX - cardWrapper.offsetLeft; // Current touch position
-      const walk = (startX - x) * 1.5; // Distance moved (adjust speed multiplier if needed)
-      cardWrapper.scrollLeft = scrollLeft + walk; // Update scroll position
-  });
-
-  // Optional: Smooth snapping back to a card
-  cardWrapper.addEventListener("scroll", () => {
-      const cardWidth = cardWrapper.querySelector(".card").offsetWidth + 16; // Card width + gap
-      const scroll = cardWrapper.scrollLeft;
-      const index = Math.round(scroll / cardWidth); // Calculate nearest card
-      cardWrapper.scrollTo({
-          left: index * cardWidth,
-          behavior: "smooth",
-      });
-  });
-});
 

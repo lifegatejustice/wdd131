@@ -194,6 +194,7 @@
         cursor: pointer;
         display: flex;
         align-items: center;
+        margin-bottom: 3px;
         justify-content: center;
     }
     
@@ -238,7 +239,7 @@
   }
 
 section h2{
-    color: var(--white)
+    color: var(--white);
 }
 
 
