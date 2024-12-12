@@ -224,7 +224,7 @@ main {
 }
 
 .aboutcard img {
-  max-width: 100%;
+  max-width: 300px;
   width: auto;
   margin-bottom: 8px;
   height: auto;
