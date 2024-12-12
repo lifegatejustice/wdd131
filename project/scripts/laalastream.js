@@ -6,7 +6,7 @@ const images = [
     "images/movies2.webp",
     "images/tvseries2.webp",
     "images/sport2.webp",
-    "images/movies3.webp", loading="lazy"
+    "images/movies3.webp"
 
 
 ];
@@ -168,46 +168,71 @@ document.addEventListener("DOMContentLoaded", () => {
   createCards(series, "seriesSection");
 });
 
-document.querySelector('.message a').addEventListener('click', function () {
-  const form = document.querySelector('.form');
-  const loginForm = document.querySelector('.login-form');
-  const registerForm = document.querySelector('.register-form');
+document.querySelector('.sign').addEventListener('click', (e) => {
+  e.preventDefault(); // Prevent default jump behavior
 
-  loginForm.style.display = loginForm.style.display === 'none' ? 'block' : 'none';
-  registerForm.style.display = registerForm.style.display === 'none' ? 'block' : 'none';
+  const registerForm = document.getElementById('registerForm');
+  const joinNowButton = document.getElementById('showFormButton');
 
-  // Add animation class
-  form.classList.add('fade-in');
-  setTimeout(() => form.classList.remove('fade-in'), 800); // Remove class after animation
+  if (registerForm.classList.contains('hidden')) {
+      // Scroll to the Join Now button if the register form is hidden
+      joinNowButton.scrollIntoView({ behavior: 'smooth' });
+  } else {
+      // Scroll to the register form if visible
+      registerForm.scrollIntoView({ behavior: 'smooth' });
+  }
 });
 
-
-
-document.getElementById('showFormButton').addEventListener('click', function() {
+document.getElementById('showFormButton').addEventListener('click', function () {
   const registerForm = document.getElementById('registerForm');
   const loginForm = document.getElementById('loginForm');
-  
-  registerForm.classList.toggle('hidden');
-  loginForm.classList.toggle('hidden');
-  this.classList.toggle('hidden'); // Hide the button after clicking
+
+  registerForm.classList.toggle('hidden'); // Toggle register form visibility
+  loginForm.classList.toggle('hidden');   // Toggle login form visibility
+  this.classList.add('hidden');          // Hide the Join Now button
 });
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const hamButton = document.querySelector('#menu');
   const navigation = document.querySelector('.navigation');
 
+  // Toggle navigation visibility
   hamButton.addEventListener('click', () => {
-      navigation.classList.toggle('open'); // Toggle the 'open' class
-      hamButton.classList.toggle('open'); // Toggle the 'open' class on the button
+      navigation.classList.toggle('open'); // Toggle navigation
+      hamButton.classList.toggle('open'); // Toggle button state
+  });
+
+  const showFormButton = document.getElementById('showFormButton');
+  const registerForm = document.getElementById('registerForm');
+  const loginForm = document.getElementById('loginForm');
+  const messageLinks = document.querySelectorAll('.message a'); // Select the "Already registered?" and "Create an account?" links
+
+  // Show the Register Form when 'Join Now' button is clicked
+  showFormButton.addEventListener('click', () => {
+    registerForm.classList.remove('hidden'); // Show register form
+    registerForm.classList.add('visible'); // Trigger fade-in and slide-in
+    loginForm.classList.add('hidden'); // Hide login form
+    loginForm.classList.remove('visible'); // Reset the transition for login form
+  });
+
+  // Toggle between Login and Register forms when the message link is clicked
+  messageLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent default link behavior
+
+      // Toggle the visibility of forms with smooth transition
+      registerForm.classList.toggle('visible');
+      loginForm.classList.toggle('visible');
+
+      // Toggle the hidden class to make sure the form is shown/hidden correctly
+      registerForm.classList.toggle('hidden');
+      loginForm.classList.toggle('hidden');
+    });
   });
 });
 
-document.getElementById('.showFormButton').addEventListener('click', function() {
-  document.getElementById('.registerForm').classList.toggle('hidden');
-  document.getElementById('.loginForm').classList.toggle('hidden');
-  this.classList.toggle('hidden'); // Hide the button after clicking
-});
+
+
+
 
 
