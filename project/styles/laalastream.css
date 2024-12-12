@@ -117,6 +117,23 @@ html {
   scroll-behavior: smooth;
 }
 
+p,li{
+  color: var(--white);
+}
+
+.aboutsection {
+  background-color: var(--black-variant);
+  padding: 16px;
+  margin-top: 2vw;
+  border-radius: 10px;
+  margin: 20px;
+}
+li{
+  margin-left: 5px;
+}
+
+
+
 :root {
   --goldenrod-yellow: #d1b400ff;
   --lemon-yellow: #e1c700;
