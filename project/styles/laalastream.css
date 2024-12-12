@@ -1001,7 +1001,6 @@ background-color: var(--amber-yellow);
   
 }
 .footer a {
-  margin: 0 15px;
   text-decoration: none;
   color: var(--amber-yellow);
   font-size: 14px;
