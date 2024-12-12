@@ -222,12 +222,24 @@ main {
   height: auto;
 }
 
+.aboutcard img {
+  max-width: 100%;
+  width: auto;
+  margin-bottom: 8px;
+  height: auto;
+}
+
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .card h3 {
+  margin: 0 0 8px;
+  color: var(--amber-yellow);
+}
+
+.aboutcard h3 {
   margin: 0 0 8px;
   color: var(--amber-yellow);
 }
@@ -244,7 +256,6 @@ input[type="text"] {
 
 .beforefooter {
   background-color: var(--black-variant);
-
   width: 100vw;
   text-align: center;
   margin-top: 3vw;
