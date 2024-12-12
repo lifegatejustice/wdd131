@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laala Stream - About Us</title>
+    <link rel="stylesheet" href="styles/laalastream.css">
+    <link rel="stylesheet" href="styles/laalastream-large.css">
+    <script src="scripts/laalastream.js" defer></script>
+    <link rel="icon" href="images/laalaflix_logo.svg" type="image/svg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="Laala Stream, your ultimate entertainment destination.">
+    <meta name="author" content="Lifegate Justice">
+</head>
+<body>
+    <header>
+        <div class="headercontainer">
+            <img src="images/laalaflix_logo.svg" alt="laala stream logo">
+            <button id="menu" aria-label="Toggle navigation">
+                <span class="hamburger-icon"></span>
+            </button>
+            <nav class="navigation" aria-label="Main navigation">
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search..." />
+                    <button type="submit"><img src="images/search-icon.svg" alt="Search"></button>
+                </div>
+                <a href="laalastream.html" title="Home">Home</a>
+                <a href="aboutus.html" title="About Us" class="active">About Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>About Laala Stream</h2>
+            <p>Laala Stream is your premier destination for all things entertainment. We offer a vast library of movies, TV shows, documentaries, anime, and award-winning Laala Stream originals, all at your fingertips. Our mission is to provide you with an unparalleled viewing experience, packed with endless possibilities and tailored to your unique tastes.</p>
+            <p>We are passionate about bringing the world's best entertainment to your screens. Our team of dedicated professionals works tirelessly to curate a diverse and captivating catalog that caters to every mood and preference. Whether you're in the mood for a heart-pounding thriller, a heartwarming comedy, or a thought-provoking documentary, we have something for everyone.</p>
+        </section>
+
+        <section class="section">
+            <h2>Our Features</h2>
+            <p>Laala Stream stands out with a range of features designed to elevate your entertainment experience:</p>
+            <ul>
+                <li>
+                    <span>Extensive Library:</span> Explore an unparalleled collection of movies, TV shows, documentaries, anime, and more.
+                </li>
+                <li>
+                    <span>Personalized Recommendations:</span> Discover new favorites based on your viewing history and preferences.
+                </li>
+                <li>
+                    <span>Multiple Devices:</span> Enjoy Laala Stream on your TV, computer, tablet, or smartphone.
+                </li>
+                <li>
+                    <span>Offline Viewing:</span> Download movies and shows to watch offline, even without internet access.
+                </li>
+                <li>
+                    <span>Multiple Profiles:</span> Create separate profiles for family members to enjoy personalized content.
+                </li>
+                <li>
+                    <span>High-Quality Streaming:</span> Experience crystal-clear video and audio quality.
+                </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Our Team</h2>
+            <p>Meet the passionate individuals behind Laala Stream, dedicated to bringing you the best entertainment experience.</p>
+            <div class="card-wrapper">
+                <div class="card">
+                    <img src="images/team-member-1.jpg" alt="Team member 1">
+                    <h3>[Team Member Name 1]</h3>
+                    <p>[Team Member Role 1 ]</p>
+                </div>
+                <div class="card">
+                    <img src="images/team-member-2.jpg" alt="Team member 2">
+                    <h3>[Team Member Name 2]</h3>
+                    <p>[Team Member Role 2]</p>
+                </div>
+                <div class="card">
+                    <img src="images/team-member-3.jpg" alt="Team member 3">
+                    <h3>[Team Member Name 3]</h3>
+                    <p>[Team Member Role 3]</p>
+                </div>
+                <div class="card">
+                    <img src="images/team-member-4.jpg" alt="Team member 4">
+                    <h3>[Team Member Name 4]</h3>
+                    <p>[Team Member Role 4]</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="beforefooter">
+            <h2>Join Us Today!</h2>
+            <p>Experience the best in entertainment with Laala Stream. Sign up now and start your journey with us!</p>
+            <div class="login-page">
+                <div class="form">
+                    <form id="registerForm" class="hidden" action="review.html" method="get">
+                        <input type="text" placeholder="name" required/>
+                        <input type="password" placeholder="password" required/>
+                        <input type="text" placeholder="email address" required/>
+                        <input type="submit" value="Join Now">
+                        <p class="message">Already registered? <a href="#loginForm">Sign In</a></p>
+                    </form>
+                    <form id="loginForm" class="hidden" action="review.html" method="get">
+                        <input type="text" placeholder="username" required/>
+                        <input type="password" placeholder="password" required/>
+                        <input type="submit" value="Sign In">
+                        <p class="message">Don't have an account? <a href="#">Create an account</a></p>
+                    </form>
+
+                    <button id="showFormButton">Join Now</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; 2023 Laala Stream. All rights reserved.</p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>
