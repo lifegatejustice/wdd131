@@ -764,7 +764,12 @@ footer a {
   .aboutcard h3 {
     margin: 0 0 8px;
     color: var(--amber-yellow);
-    font-size: em;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .aboutcard p{
+    text-align: center;
   }
 
   .card p {
