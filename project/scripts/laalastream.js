@@ -231,6 +231,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Save selected movie to localStorage
+function saveSelectedMovie(movieTitle) {
+  localStorage.setItem('selectedMovie', movieTitle);
+}
+
+// Get saved movie from localStorage
+function getSelectedMovie() {
+  return localStorage.getItem('selectedMovie');
+}
+
+
 
 
 
