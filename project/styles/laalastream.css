@@ -204,6 +204,14 @@ main {
   justify-content: space-between;
 }
 
+.aboutcard-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
 .card {
   border: 1px solid var(--black-variant);
   padding: 5px;
@@ -228,6 +236,7 @@ main {
   width: auto;
   margin-bottom: 8px;
   height: auto;
+  
 }
 
 .card:hover {
@@ -243,10 +252,16 @@ main {
 .aboutcard h3 {
   margin: 0 0 8px;
   color: var(--amber-yellow);
+  text-align: center;
 }
 
 .card p {
   color: var(--white);
+}
+
+.aboutcard p {
+  color: var(--white);
+  text-align: center;
 }
 
 input[type="text"] {
