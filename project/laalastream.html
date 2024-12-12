@@ -32,7 +32,7 @@
                 <a href="#" title="Home">Home</a>
                 <a href="#" title="About Us" class="active">About Us</a>
                 <div class="sign">
-                    <a href="#" title="Sign">Sign In/Sign Up</a>
+                    <a href="#registerForm" title="Sign">Sign In/Sign Up</a>
                 </div>
             </nav>
         </div>
@@ -75,33 +75,30 @@
                         <input type="password" placeholder="password" required/>
                         <input type="text" placeholder="email address" required/>
                         <button type="submit">create</button>
-                        <p class="message">Already registered? <a href="#">Sign In</a></p>
+                        <p class="message">Already registered? <a href="#loginForm">Sign In</a></p>
                     </form>
                     <form class="login-form hidden" id="loginForm" action="review.html" method="get">
                         <input type="text" placeholder="username" required/>
                         <input type="password" placeholder="password" required/>
                         <input type="submit" value="Join Now">
-                        <p class="message">Not registered? <a href="#">Create an account</a></p>
+                        <p class="message">Not registered? <a href="#registerForm">Create an account</a></p>
                     </form>
                     <button id="showFormButton">Join Now</button>
                 </div>
+            </div></section>
+            <div class="footer">
+                <a href="#">FACEBOOK</a>
+                <a href="#">MAIL</a>
+                <a href="#">LINKEDIN</a>
+                <a href="#">INSTAGRAM</a>
+                <p>© 2024 LAALA STREAM | Nigeria</p>
             </div>
-            <footer>
-                <p>Facebook</p>
-                <p>Mail</p>
-                <p>LinkedIn</p>
-                <p>Instagram</p>
-                <p>&copy; 2024 Lifegate Justice De-Tom Nigeria</p>
-            </footer>
-        </section>
+        </body>
+        </html>
+        
+        
     </main>
 
-    <script>
-        document.getElementById('showFormButton').addEventListener('click', function() {
-            document.getElementById('registerForm').classList.toggle('hidden');
-            document.getElementById('loginForm').classList.toggle('hidden');
-            this.classList.toggle('hidden'); // Hide the button after clicking
-        });
-    </script>
+    
 </body>
 </html>

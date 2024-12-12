@@ -6,7 +6,7 @@ const images = [
     "images/movies2.webp",
     "images/tvseries2.webp",
     "images/sport2.webp",
-    "images/movies3.webp",
+    "images/movies3.webp", loading="lazy"
 
 
 ];
@@ -44,10 +44,10 @@ const movies = [
   { 
     title: "Deadpool And Wolverine", 
     year: 1997, 
-    genre: "Romance", 
+    genre: "Sci-Fi", 
     rating: 7.8, 
     imageUrl: "images/deadpoolandwolverine.webp",
-    description: "A tragic love story aboard the ill-fated RMS Titanic." 
+    description: "The Mech with the mouth meets Wolverine" 
   },
   { 
     title: "Avengers: Age of Ultron", 
@@ -151,7 +151,7 @@ function createCards(items, sectionId) {
 
     // Populate card content dynamically
     card.innerHTML = `
-      <img src="${item.imageUrl}" alt="${item.title}" />
+      <img src="${item.imageUrl}" alt="${item.title}" loading="lazy"/>
       <h3>${item.title}</h3>
     
       <p><strong></strong> ${item.rating ? "Rating: " + item.rating : item.seasons ? "Seasons: " + item.seasons : "" + item.type}</p>
@@ -192,14 +192,7 @@ document.getElementById('showFormButton').addEventListener('click', function() {
   this.classList.toggle('hidden'); // Hide the button after clicking
 });
 
-document.getElementById('showFormButton').addEventListener('click', function() {
-  const registerForm = document.getElementById('registerForm');
-  const loginForm = document.getElementById('loginForm');
-  
-  registerForm.classList.toggle('hidden');
-  loginForm.classList.toggle('hidden');
-  this.classList.toggle('hidden'); // Hide the button after clicking
-});
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const hamButton = document.querySelector('#menu');
@@ -211,6 +204,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
+document.getElementById('.showFormButton').addEventListener('click', function() {
+  document.getElementById('.registerForm').classList.toggle('hidden');
+  document.getElementById('.loginForm').classList.toggle('hidden');
+  this.classList.toggle('hidden'); // Hide the button after clicking
+});
 
 

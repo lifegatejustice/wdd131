@@ -224,6 +224,7 @@ input[type="text"] {
   width: 100vw;
   text-align: center;
   margin-top: 3vw;
+  padding-bottom: 3vw;
 }
 
 .beforefooter h2 {
@@ -406,22 +407,16 @@ footer a {
   text-decoration: none;
 }
 
-@media  (max-width: 769px) {
-  
-
-}
-
-@media (max-width: 426px) {
-  /* Basic styles for the navigation */
+@media (max-width: 793px) {
   .navigation {
     display: none; /* Hide navigation by default */
     flex-direction: column;
-    padding: 2vw; /* Stack items vertically */
+    padding: 3vw; /* Stack items vertically */
     background-color: var(--black); /* Background color for the menu */
     position: absolute; /* Position it absolutely */
     /* Adjust based on your layout */
     right: 0; /* Align to the right */
-    width: 200px; /* Set a width for the menu */
+    width: 300px; /* Set a width for the menu */
     z-index: 1000; /* Ensure it appears above other content */
   }
 
@@ -488,8 +483,219 @@ footer a {
     border: none; /* No border */
     cursor: pointer; /* Pointer cursor */
     position: relative;
-    left: 80vw;
-    bottom: 2.5vw; /* Position relative for the icon */
+    top: 40px; 
+    display: flex;
+    float: right;
+    right: 40px;
+    /* Position relative for the icon */
+  }
+
+  .hamburger-icon {
+    display: block;
+    width: 60px; /* Width of the hamburger icon */
+    height: 6px; /* Height of the hamburger lines */
+    background-color: var(--white); /* Color of the hamburger lines */
+    position: relative;
+    z-index: 1; /* Position relative for stacking */
+  }
+
+  /* Create three lines for the hamburger icon */
+  .hamburger-icon::before,
+  .hamburger-icon::after {
+    content: "";
+    /* Create pseudo-elements */
+    width: 60px; /* Same width as the main line */
+    height: 6px; /* Same height as the main line */
+    background-color: white; /* Color of the lines */
+    position: absolute; /* Position absolute for stacking */
+    left: 0; /* Align to the left */
+    transition: all 0.3s;
+    /* Smooth transition */
+  }
+
+  .hamburger-icon::before {
+    top: -10px; /* Position above the main line */
+  }
+
+  .hamburger-icon::after {
+    top: 10px; /* Position below the main line */
+  }
+
+  /* Change the hamburger icon to an 'X' when open */
+  #menu.open .hamburger-icon {
+    background-color: transparent; /* Hide the main line */
+  }
+
+  #menu.open .hamburger-icon::before {
+    transform: rotate(45deg); /* Rotate the top line */
+    top: 0; /* Align to the center */
+  }
+
+  #menu.open .hamburger-icon::after {
+    transform: rotate(-45deg); /* Rotate the bottom line */
+    top: 0; /* Align to the center */
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    background-color: white;
+    width: 100%; /* Adjust width as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2vw;
+  }
+
+  .search-container input {
+    border: none;
+    flex: 1;
+    border-radius: 25px 0 0 25px;
+    font-size: 1.8vw;
+    outline: none;
+  }
+
+  .search-container button {
+    background-color: var(--lemon-yellow); /* Auburn */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-container button img {
+    font-size: large;
+    width: 2vw;
+    height: 4vw;
+  }
+
+  .search-container button:hover {
+    background-color: var(--amber-yellow); /* Falu Red */
+  }
+
+  header img {
+    width: auto;
+    height: 80px;
+    margin-left: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+
+  }
+
+  .sign {
+    background-color: var(--lemon-yellow);
+    padding: 2vw;
+    border-radius: 5px;
+    margin-top: 2vw;
+    text-align: center;
+    color: var(--black);
+  }
+
+  .sign a{
+    text-decoration: none;
+    color: var(--black);
+  }
+
+  .sign a:hover {
+    background-color: var(--amber-yellow); /* Falu Red */
+    padding: 2vw;
+    color: var(--black);
+    font-weight: bold;
+    
+  }
+
+  .sign:hover {
+    background-color: var(--amber-yellow); /* Falu Red */
+    padding: 2vw;
+    
+  }
+  
+}
+
+
+@media (max-width: 426px) {
+  /* Basic styles for the navigation */
+  .navigation {
+    display: none; /* Hide navigation by default */
+    flex-direction: column;
+    padding: 2vw; /* Stack items vertically */
+    background-color: var(--black); /* Background color for the menu */
+    position: absolute; /* Position it absolutely */
+    /* Adjust based on your layout */
+    right: 0; /* Align to the right */
+    width: 200px; /* Set a width for the menu */
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+
+  .section {
+    padding: 16px;
+    padding-right: 0px;
+    margin-top: 2vw;
+  }
+
+  .card-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping for smooth horizontal scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap to individual cards */
+    gap: 16px; /* Space between cards */
+    padding: 10px;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+  }
+
+  .card-wrapper::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for better aesthetics */
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 16px); /* Two cards per view */
+    scroll-snap-align: start; /* Align each card when scrolling */
+    background-color: var(--black-variant);
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+
+  .card h3 {
+    margin: 0 0 8px;
+    color: var(--amber-yellow);
+    font-size: 1em;
+  }
+
+  .card p {
+    color: var(--white);
+  }
+
+  .navigation.open {
+    display: flex; /* Show the navigation when open */
+  }
+
+  .navigation a {
+    color: white; /* Link color */
+    padding: 10px; /* Padding for links */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s; /* Smooth background transition */
+  }
+
+  .navigation a:hover {
+    background-color: #555; /* Change background on hover */
+  }
+
+  /* Hamburger button styles */
+  #menu {
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    position: relative;
+    float: right;
+    top: 20px; 
+    right: 10px;/* Position relative for the icon */
   }
 
   .hamburger-icon {
@@ -577,10 +783,17 @@ footer a {
     background-color: var(--amber-yellow); /* Falu Red */
   }
 
+  .sign:hover {
+    background-color: var(--amber-yellow); /* Falu Red */
+  }
+
   header img {
     width: auto;
     height: 30px;
     margin-left: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+
   }
 
   .sign {
@@ -595,14 +808,13 @@ footer a {
 
 .watch{
 background-color: var(--lemon-yellow);
-padding-left: 4vw;
+padding-left: 10vw;
 padding-right: 4vw;
 padding-top: 2vw;
 padding-bottom: 2vw;
 position: relative;
 bottom: 40vw;
-left: 40vw;
-right: 40vw;
+
 top: -10vw;
 border-radius: 5px;
 
@@ -614,22 +826,20 @@ color: var(--black);
 font-weight: bold;
 font-size: 2vw;
 text-align: center;
+
 }
 
 .watch:hover{
 background-color: var(--amber-yellow);
 }
-  header img {
-    width: auto;
-    height: 30px;
-    margin-left: 1vw;
-  }
+
 
   .sign {
     background-color: var(--lemon-yellow);
     padding: 2vw;
     border-radius: 5px;
     margin-top: 2vw;
+    margin-bottom: 2vw;
     text-align: center;
   }
 
@@ -642,12 +852,26 @@ background-color: var(--amber-yellow);
   text-align: center;
   color: var(--white);
 }
-}
+
 
 .review a {
   color: #e1c700;
 }
-footer {
-  color: var(--amber-yellow);
+.footer {
   background-color: var(--black);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  
+}
+.footer a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--amber-yellow);
+  font-size: 14px;
+}
+.footer p {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--goldenrod-yellow)
 }

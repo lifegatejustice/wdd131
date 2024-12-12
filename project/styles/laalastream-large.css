@@ -194,7 +194,7 @@
         cursor: pointer;
         display: flex;
         align-items: center;
-        margin-bottom: 3px;
+        
         justify-content: center;
     }
     
@@ -209,6 +209,10 @@
     #menu{
       display: none;
     }
+    .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
 }
 
 .watch{
@@ -217,12 +221,12 @@
     padding-right: 4vw;
     padding-top: 2vw;
     padding-bottom: 2vw;
-    position: relative;
     bottom: 40vw;
     left: 40vw;
     right: 40vw;
     top: -10vw;
     border-radius: 5px;
+    
 
   }
 
@@ -232,6 +236,8 @@
     font-weight: bold;
     font-size: 2vw;
     text-align: center;
+    
+    
   }
 
   .watch:hover{
