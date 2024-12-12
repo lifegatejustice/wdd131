@@ -132,6 +132,9 @@ li{
   margin-left: 5px;
 }
 
+.card-wrapper{
+  justify-content: flex-start;
+}
 
 
 :root {
@@ -462,7 +465,18 @@ footer a {
     scroll-snap-type: x mandatory; /* Snap to individual cards */
     gap: 16px; /* Space between cards */
     padding: 10px;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    -webkit-overflow-scrolling: touch;/* Smooth scrolling for iOS */
+  }
+
+  .aboutcard-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping for smooth horizontal scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap to individual cards */
+    gap: 16px; /* Space between cards */
+    padding: 10px;
+    -webkit-overflow-scrolling: touch;
+    justify-content: center;/* Smooth scrolling for iOS */
   }
 
   .card-wrapper::-webkit-scrollbar {
@@ -478,6 +492,16 @@ footer a {
     transition: transform 0.2s ease-in-out;
   }
 
+  .aboutcard {
+    flex: 0 0 calc(50% - 16px); /* Two cards per view */
+    scroll-snap-align: start; /* Align each card when scrolling */
+    background-color: var(--black-variant);
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  
+  }
+
   .card:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
   }
@@ -487,7 +511,16 @@ footer a {
     color: var(--amber-yellow);
   }
 
+  .aboutcard h3 {
+    margin: 0 0 8px;
+    color: var(--amber-yellow);
+  }
+
   .card p {
+    color: var(--white);
+  }
+
+  .aboutcard p {
     color: var(--white);
   }
 
@@ -674,11 +707,31 @@ footer a {
     -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
   }
 
+  .aboutcard-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping for smooth horizontal scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Snap to individual cards */
+    gap: 16px; /* Space between cards */
+    padding: 10px;
+    -webkit-overflow-scrolling: touch;
+    justify-content: center; /* Smooth scrolling for iOS */
+  }
+
   .card-wrapper::-webkit-scrollbar {
     display: none; /* Hide scrollbar for better aesthetics */
   }
 
   .card {
+    flex: 0 0 calc(50% - 16px); /* Two cards per view */
+    scroll-snap-align: start; /* Align each card when scrolling */
+    background-color: var(--black-variant);
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .aboutcard {
     flex: 0 0 calc(50% - 16px); /* Two cards per view */
     scroll-snap-align: start; /* Align each card when scrolling */
     background-color: var(--black-variant);
@@ -695,6 +748,12 @@ footer a {
     margin: 0 0 8px;
     color: var(--amber-yellow);
     font-size: 1em;
+  }
+
+  .aboutcard h3 {
+    margin: 0 0 8px;
+    color: var(--amber-yellow);
+    font-size: 0.1em;
   }
 
   .card p {
