@@ -290,6 +290,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const description = params.get('description');
   const year = params.get('year');
   const rating = parseFloat(params.get('rating')); // Parse rating as a number
+  const detailedSummary = params.get('detailedSummary'); 
 
   // Update the page content dynamically
   const titleElement = document.getElementById('itemTitle');
@@ -298,35 +299,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const yearElement = document.getElementById('itemYear');
   const ratingElement = document.getElementById('itemRating');
   const starsFilledElement = document.querySelector('stars-filled');
-  const detailedSummary = document.querySelector('itemDetailedSummary');
-
+  const detailedSummaryElement = document.getElementById("itemDetailedSummary"); 
 
   if (titleElement) titleElement.textContent = title;
   if (imageElement) imageElement.src = imageUrl;
   if (descriptionElement) descriptionElement.textContent = description;
   if (yearElement) yearElement.textContent = year ? `Year: ${year}` : '';
+  if (detailedSummaryElement) detailedSummaryElement.textContent = detailedSummary; // Set the detailed summary
   if (ratingElement) ratingElement.textContent = rating ? `Rating: ${rating}` : '';
 
   // Update star meter based on rating
-  document.addEventListener("DOMContentLoaded", () => {
-    const numericRating = 8.8; // Replace with actual dynamic rating
-    updateStarRating(numericRating);
+  const numericRating = 8.8; // Replace with actual dynamic rating
+  updateStarRating(numericRating);
 
-    // Update the numeric rating display if necessary
-    document.getElementById('itemRating').textContent = `${numericRating}/10`;
-});
+  // Update the numeric rating display if necessary
+  document.getElementById('itemRating').textContent = `${numericRating}/10`;
 
-
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  const detailedSummary = document.getElementById("itemDetailedSummary");
   const videoSource = document.getElementById("videoSource");
-  videoSource.src = "path/to/your/video.mp4"; 
-  detailedSummary.textContent = params.get("detailedSummary"); // Set the detailed summary
+  videoSource.src = "path/to/your/video.mp4"; // Set the video source
 });
-
 
 
 

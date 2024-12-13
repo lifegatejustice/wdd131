@@ -36,17 +36,21 @@
     <main>
         <section class="details">
             <h1 id="itemTitle"></h1>
+            <div class="video-wrapper">
+                <video id="movieVideo" controls>
+                    <source src="" id="videoSource" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="griding">
             <img id="itemImage" alt="Item Image">
             <p id="itemDescription"></p>
             <p id="itemYear"></p>
-            <p id="itemRating"></p>
+            <p id="itemRating"></p></div>
+            <p class="summary" id="itemDetailedSummary"></p>
+        </section>
         
-            <video id="movieVideo" width="640" height="360" controls>
-                <source src="" id="videoSource" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        
-            <p id="itemDetailedSummary"></p>
+            
 
           <section class="beforefooter">
             <h2>There’s even more to watch.</h2>
