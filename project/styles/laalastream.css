@@ -460,6 +460,32 @@ input[type="submit"]:hover {
   height: auto;
 }
 
+.detials
+
+.stars {
+  display: inline-block;
+  position: relative;
+  width: 100px; /* Adjust based on your design */
+  height: 20px;
+  background: url('images/mdi--star-outline.svg') repeat-x; /* Use your star outline image */
+  background-size: contain;
+}
+
+.section h1{
+  color: var(--lemon-yellow);
+}
+
+.stars-filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; /* This will be dynamically set based on the rating */
+  height: 100%;
+  background-color: #e1c700;
+  background: url('images/mdi--star-outline.svg') repeat-x; /* Use your filled star image */
+  background-size: contain;
+}
+
 footer {
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: space-evenly;

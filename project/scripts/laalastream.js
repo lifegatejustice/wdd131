@@ -39,7 +39,8 @@ const movies = [
     genre: "Sci-Fi", 
     rating: 8.8, 
     imageUrl: "images/Inception.webp",
-    description: "A mind-bending thriller by Christopher Nolan." 
+    description: "A mind-bending thriller by Christopher Nolan.",
+    detailedSummary: "Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable. Cobb’s rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has also made him an international fugitive and cost him everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could give him his life back but only if he can accomplish the impossible-inception. Instead of the perfect heist, Cobb and his team of specialists have to pull off the reverse: their task is not to steal an idea but to plant one. If they succeed, it could be a perfect crime. But no amount of careful planning or expertise can prepare the team for the dangerous enemy that seems to predict their every move. An enemy that only Cobb could have seen coming."
   },
   { 
     title: "Deadpool And Wolverine", 
@@ -150,7 +151,7 @@ function createCards(items, sectionId) {
 
     // Create a clickable link
     const link = document.createElement("a");
-    link.href = `movie.html?title=${encodeURIComponent(movie.title)}`; // Replace with the correct destination
+    link.href = `details.html?title=${encodeURIComponent(item.title)}&type=${encodeURIComponent(item.genre || item.type || "")}&imageUrl=${encodeURIComponent(item.imageUrl)}&description=${encodeURIComponent(item.description)}&year=${encodeURIComponent(item.year || "")}&rating=${encodeURIComponent(item.rating || "")}&detailedSummary=${encodeURIComponent(item.detailedSummary || "")}`;
     link.title = item.title;
     link.className = "card-link";
 
@@ -158,7 +159,7 @@ function createCards(items, sectionId) {
     link.innerHTML = `
       <img src="${item.imageUrl}" alt="${item.title}" loading="lazy"/>
       <h3>${item.title}</h3>
-      <p><strong></strong> ${item.rating ? "Rating: " + item.rating : item.seasons ? "Seasons: " + item.seasons : item.type}</p>
+      <p>${item.rating ? "Rating: " + item.rating : item.seasons ? "Seasons: " + item.seasons : item.type}</p>
     `;
 
     // Append the link to the card and the card to the wrapper
@@ -288,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const imageUrl = params.get('imageUrl');
   const description = params.get('description');
   const year = params.get('year');
-  const rating = params.get('rating');
+  const rating = parseFloat(params.get('rating')); // Parse rating as a number
 
   // Update the page content dynamically
   const titleElement = document.getElementById('itemTitle');
@@ -296,12 +297,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const descriptionElement = document.getElementById('itemDescription');
   const yearElement = document.getElementById('itemYear');
   const ratingElement = document.getElementById('itemRating');
+  const starsFilledElement = document.querySelector('stars-filled');
+  const detailedSummary = document.querySelector('itemDetailedSummary');
+
 
   if (titleElement) titleElement.textContent = title;
   if (imageElement) imageElement.src = imageUrl;
   if (descriptionElement) descriptionElement.textContent = description;
   if (yearElement) yearElement.textContent = year ? `Year: ${year}` : '';
   if (ratingElement) ratingElement.textContent = rating ? `Rating: ${rating}` : '';
+
+  // Update star meter based on rating
+  document.addEventListener("DOMContentLoaded", () => {
+    const numericRating = 8.8; // Replace with actual dynamic rating
+    updateStarRating(numericRating);
+
+    // Update the numeric rating display if necessary
+    document.getElementById('itemRating').textContent = `${numericRating}/10`;
+});
+
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  // ... other code to extract URL parameters
+
+  const videoSource = document.getElementById("videoSource");
+  videoSource.src = "path/to/your/video.mp4"; // Set the video source
 });
 
 
