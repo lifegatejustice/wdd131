@@ -262,7 +262,7 @@ function createCards(items, sectionId) {
 
     // Create a clickable link
     const link = document.createElement("a");
-    link.href = `details.html?title=${encodeURIComponent(item.title)}&type=${encodeURIComponent(item.genre || item.type || "")}&imageUrl=${encodeURIComponent(item.imageUrl)}&description=${encodeURIComponent(item.description)}&year=${encodeURIComponent(item.year || "")}&rating=${encodeURIComponent(item.rating || "")}`;
+    link.href = `details.html?title=${encodeURIComponent(item.title)}&type=${encodeURIComponent(item.genre || item.type || "")}&imageUrl=${encodeURIComponent(item.imageUrl)}&description=${encodeURIComponent(item.description)}&year=${encodeURIComponent(item.year || "")}&rating=${encodeURIComponent(item.rating || "")}&detailedSummary=${encodeURIComponent(item.detailedSummary)}`; // Add detailedSummary
     link.title = item.title;
     link.className = "card-link";
 
@@ -321,10 +321,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
-  // ... other code to extract URL parameters
-
+  const detailedSummary = document.getElementById("itemDetailedSummary");
   const videoSource = document.getElementById("videoSource");
-  videoSource.src = "path/to/your/video.mp4"; // Set the video source
+  videoSource.src = "path/to/your/video.mp4"; 
+  detailedSummary.textContent = params.get("detailedSummary"); // Set the detailed summary
 });
 
 
