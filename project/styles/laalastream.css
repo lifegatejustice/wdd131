@@ -352,8 +352,7 @@ input[type="submit"] {
   border: 0;
   padding: 15px;
   color: var(--black);
-  font-size: 14px;t
-  cursor: pointer;
+  font-size: 14px;
 }
 input[type="submit"]:hover,
 input[type="submit"]:active,
