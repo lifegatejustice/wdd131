@@ -7,8 +7,6 @@ const images = [
     "images/tvseries2.webp",
     "images/sport2.webp",
     "images/movies3.webp"
-
-
 ];
 let currentIndex = 0;
 
@@ -48,7 +46,8 @@ const movies = [
     genre: "Sci-Fi", 
     rating: 7.8, 
     imageUrl: "images/deadpoolandwolverine.webp",
-    description: "The Mech with the mouth meets Wolverine" 
+    description: "The Mech with the mouth meets Wolverine",
+    detailedSummary: "In a world where mutants and mercenaries collide, Deadpool teams up with Wolverine to take down a powerful enemy. Their journey is filled with action, humor, and unexpected twists as they navigate the challenges of their unique abilities."
   },
   { 
     title: "Avengers: Age of Ultron", 
@@ -56,7 +55,8 @@ const movies = [
     genre: "Action", 
     rating: 8.0, 
     imageUrl: "images/avengers.webp",
-    description: "Earth's mightiest heroes team up to save the world." 
+    description: "Earth's mightiest heroes team up to save the world.",
+    detailedSummary: "When Tony Stark tries to jumpstart a dormant peacekeeping program, things go awry and it is up to the Avengers to stop the villainous Ultron from enacting his terrible plans. The team must work together to save humanity from extinction."
   },
   { 
     title: "The Dark Knight", 
@@ -64,7 +64,8 @@ const movies = [
     genre: "Action", 
     rating: 9.0, 
     imageUrl: "images/darkknight.webp",
-    description: "Batman faces the Joker in Gotham City." 
+    description: "Batman faces the Joker in Gotham City.",
+    detailedSummary: "As the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice while facing his own moral dilemmas."
   }
 ];
 
@@ -75,7 +76,8 @@ const sports = [
     type: "Football", 
     location: "Qatar", 
     imageUrl: "images/worldcup.webp",
-    description: "The biggest football tournament held in Qatar." 
+    description: "The biggest football tournament held in Qatar.",
+    detailedSummary: "The FIFA World Cup is the most prestigious football tournament in the world, featuring teams from across the globe competing for the ultimate prize. The 2022 edition in Qatar promises to be a spectacular event with thrilling matches and unforgettable moments."
   },
   { 
     title: "NBA Finals", 
@@ -83,7 +85,8 @@ const sports = [
     type: "Basketball", 
     location: "USA", 
     imageUrl: "images/nba.webp",
-    description: "The championship series of the NBA." 
+    description: "The championship series of the NBA.",
+    detailedSummary: "The NBA Finals is the culmination of the basketball season, where the two best teams compete for the championship title. Fans eagerly await the high-stakes games filled with incredible performances and unforgettable plays."
   },
   { 
     title: "Super Bowl", 
@@ -91,16 +94,17 @@ const sports = [
     type: "American Football", 
     location: "USA", 
     imageUrl: "images/superbowl.webp",
-    description: "The NFL's biggest game of the year." 
+    description: "The NFL's biggest game of the year.",
+    detailedSummary: "The Super Bowl is the annual championship game of the National Football League (NFL), featuring the best teams in a thrilling showdown. It's a cultural phenomenon, known for its extravagant halftime shows and memorable commercials."
   },
-  
   { 
     title: "Wimbledon", 
     year: 2023, 
     type: "Tennis", 
     location: "UK", 
     imageUrl: "images/winbeldon.webp",
-    description: "The oldest and most prestigious tennis tournament." 
+    description: "The oldest and most prestigious tennis tournament.",
+    detailedSummary: "Wimbledon is the premier tennis tournament in the world, held annually in London. Known for its rich history and traditions, it attracts the best players who compete for the coveted title on the iconic grass courts."
   }
 ];
 
@@ -111,7 +115,8 @@ const series = [
     genre: "Crime", 
     seasons: 5, 
     imageUrl: "images/breakingbad.webp",
-    description: "A chemistry teacher turns to making methamphetamine." 
+    description: "A chemistry teacher turns to making methamphetamine.",
+    detailedSummary: "Walter White, a high school chemistry teacher turned methamphetamine manufacturer, partners with former student Jesse Pinkman. As they navigate the drug trade, Walter's descent into the criminal underworld leads to moral dilemmas and dangerous confrontations."
   },
   { 
     title: "Stranger Things", 
@@ -119,7 +124,8 @@ const series = [
     genre: "Sci-Fi", 
     seasons: 4, 
     imageUrl: "images/strangerthings.webp",
-    description: "A group of kids encounters supernatural forces in their town." 
+    description: "A group of kids encounters supernatural forces in their town.",
+    detailedSummary: "Set in the 1980s, a group of young friends uncovers a series of supernatural mysteries in their small town. They encounter strange creatures, government conspiracies, and the power of friendship as they search for their missing friend."
   },
   { 
     title: "Witcher", 
@@ -127,7 +133,8 @@ const series = [
     genre: "Fantasy", 
     seasons: 4, 
     imageUrl: "images/witcher.webp",
-    description: "The Witcher follows Geralt, a monster hunter in a dark, magical world." 
+    description: "The Witcher follows Geralt, a monster hunter in a dark, magical world.",
+    detailedSummary: "Geralt of Rivia, a monster hunter known as a Witcher, navigates a world filled with dangerous beasts and treacherous humans. As he seeks to find his place in a chaotic world, he faces moral challenges and battles against dark forces."
   },
   { 
     title: "Superman and Lois", 
@@ -135,7 +142,8 @@ const series = [
     genre: "Fantasy", 
     seasons: 4, 
     imageUrl: "images/superman.webp",
-    description: "Superman Series" 
+    description: "Superman Series",
+    detailedSummary: "Clark Kent and Lois Lane navigate the challenges of parenthood while balancing their superhero responsibilities. As they face new threats, they must protect their family and the world from dangers that lurk in the shadows."
   }
 ];
 
@@ -289,7 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const imageUrl = params.get('imageUrl');
   const description = params.get('description');
   const year = params.get('year');
-  const rating = parseFloat(params.get('rating')); // Parse rating as a number
+  const rating = parseFloat(params.get('rating')); // Parse rating as a number // Parse rating as a number
   const detailedSummary = params.get('detailedSummary'); 
 
   // Update the page content dynamically
@@ -298,7 +306,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const descriptionElement = document.getElementById('itemDescription');
   const yearElement = document.getElementById('itemYear');
   const ratingElement = document.getElementById('itemRating');
-  const starsFilledElement = document.querySelector('stars-filled');
   const detailedSummaryElement = document.getElementById("itemDetailedSummary"); 
 
   if (titleElement) titleElement.textContent = title;
@@ -319,7 +326,10 @@ document.addEventListener("DOMContentLoaded", () => {
   videoSource.src = "path/to/your/video.mp4"; // Set the video source
 });
 
-
-
-
-
+function updateStarRating(rating) {
+  const starsFilled = document.querySelector('.stars-filled'); 
+  const stars = document.querySelector('.stars'); 
+  
+  const starWidth = (rating / 10) * stars.offsetWidth; // Calculate filled star width
+  starsFilled.style.width = starWidth + 'px'; 
+}

@@ -474,6 +474,7 @@ input[type="submit"]:hover {
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   overflow: hidden;
   background-color: #000; /* Optional: background color for the video container */
+  margin-bottom: 20px;
 }
 
 #movieVideo {
@@ -489,9 +490,19 @@ input[type="submit"]:hover {
 .stars {
   display: inline-block;
   position: relative;
-  width: 100px; /* Adjust based on your design */
+  width: 100px; /* Adjust width as needed */
   height: 20px;
   background: url('images/mdi--star-outline.svg') repeat-x; /* Use your star outline image */
+  background-size: contain;
+}
+
+.stars-filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; /* This will be dynamically set based on the rating */
+  height: 100%;
+  background-image: url('images/mdi--star-outline (1).svg') repeat-x; /* Use your filled star image */
   background-size: contain;
 }
 
@@ -530,16 +541,7 @@ input[type="submit"]:hover {
   grid-column: 3;
 }
 
-.stars-filled {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0; /* This will be dynamically set based on the rating */
-  height: 100%;
-  background-color: #e1c700;
-  background: url('images/mdi--star-outline.svg') repeat-x; /* Use your filled star image */
-  background-size: contain;
-}
+
 
 footer {
   grid-template-rows: 1fr 1fr 1fr;
