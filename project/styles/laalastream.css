@@ -196,6 +196,18 @@ main {
   margin-top: 2vw;
 }
 
+.aboutsection h2{
+  margin-bottom: 20px ;
+}
+
+.aboutsection span{
+  font-weight: bold;
+}
+
+.aboutsection li{
+  margin-top: 10px;
+}
+
 .card-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -222,6 +234,10 @@ main {
   transition: transform 0.2s, box-shadow 0.2s;
   text-align: center;
   height: auto;
+}
+
+.card a{
+  text-decoration: none;
 }
 
 .card img {
@@ -439,6 +455,11 @@ input[type="submit"]:hover {
   background-color: var(--amber-yellow);
 }
 
+.section img {
+  width: 95%;
+  height: auto;
+}
+
 footer {
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: space-evenly;
@@ -521,7 +542,6 @@ footer a {
     scroll-snap-align: start; /* Align each card when scrolling */
     background-color: var(--black-variant);
 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
   
   }
@@ -555,6 +575,7 @@ footer a {
   .navigation a {
     color: white; /* Link color */
     padding: 10px; /* Padding for links */
+    font-weight: bold;
     text-decoration: none; /* Remove underline */
     transition: background 0.3s; /* Smooth background transition */
   }
@@ -661,6 +682,12 @@ footer a {
     background-color: var(--amber-yellow); /* Falu Red */
   }
 
+  input::placeholder{
+    font-size: 20px;
+    text-align: left;
+    
+  }
+
   header img {
     width: auto;
     height: 80px;
@@ -755,12 +782,16 @@ footer a {
     transition: transform 0.2s ease-in-out;
   }
 
+  .card a{
+    text-decoration: none;
+  }
+
   .aboutcard {
     flex: 0 0 calc(50% - 16px); /* Two cards per view */
     scroll-snap-align: start; /* Align each card when scrolling */
     background-color: var(--black-variant);
 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
     transition: transform 0.2s ease-in-out;
   }
 
@@ -777,7 +808,7 @@ footer a {
   .aboutcard h3 {
     margin: 0 0 8px;
     color: var(--amber-yellow);
-    font-size: 1em;
+    font-size: 1.2em;
     text-align: center;
   }
 
@@ -795,14 +826,12 @@ footer a {
 
   .navigation a {
     color: white; /* Link color */
+    font-weight: bold;
     padding: 10px; /* Padding for links */
     text-decoration: none; /* Remove underline */
     transition: background 0.3s; /* Smooth background transition */
   }
 
-  .navigation a:hover {
-    background-color: #555; /* Change background on hover */
-  }
 
   /* Hamburger button styles */
   #menu {
@@ -875,7 +904,7 @@ footer a {
     border: none;
     flex: 1;
     border-radius: 25px 0 0 25px;
-    font-size: 1.8vw;
+    font-size: -1em;
     outline: none;
   }
 
@@ -890,9 +919,15 @@ footer a {
     justify-content: center;
   }
 
+  input::placeholder{
+    font-size: 10px;
+    text-align: left;
+    
+  }
+
   .search-container button img {
     font-size: large;
-    width: 2vw;
+    width: 20px;
     height: 4vw;
   }
 
@@ -901,8 +936,9 @@ footer a {
   }
 
   .sign:hover {
-    background-color: var(--amber-yellow); /* Falu Red */
-  }
+    background-color: var(--amber-yellow);
+    padding: 2vw;
+}
 
   header img {
     width: auto;

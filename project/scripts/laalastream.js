@@ -147,19 +147,26 @@ function createCards(items, sectionId) {
   items.forEach(item => {
     const card = document.createElement("div");
     card.className = "card";
-    card.onclick = () => alert(`${item.title}: ${item.description}`);
+
+    // Create a clickable link
+    const link = document.createElement("a");
+    link.href = `movie.html?title=${encodeURIComponent(movie.title)}`; // Replace with the correct destination
+    link.title = item.title;
+    link.className = "card-link";
 
     // Populate card content dynamically
-    card.innerHTML = `
+    link.innerHTML = `
       <img src="${item.imageUrl}" alt="${item.title}" loading="lazy"/>
       <h3>${item.title}</h3>
-    
-      <p><strong></strong> ${item.rating ? "Rating: " + item.rating : item.seasons ? "Seasons: " + item.seasons : "" + item.type}</p>
+      <p><strong></strong> ${item.rating ? "Rating: " + item.rating : item.seasons ? "Seasons: " + item.seasons : item.type}</p>
     `;
 
+    // Append the link to the card and the card to the wrapper
+    card.appendChild(link);
     cardWrapper.appendChild(card);
   });
 }
+
 
 // Populate all sections by default
 document.addEventListener("DOMContentLoaded", () => {
@@ -241,6 +248,61 @@ function getSelectedMovie() {
   return localStorage.getItem('selectedMovie');
 }
 
+
+// Function to create cards dynamically
+function createCards(items, sectionId) {
+  const section = document.getElementById(sectionId);
+  const cardWrapper = section.querySelector(".card-wrapper");
+  cardWrapper.innerHTML = ""; // Clear previous cards
+
+  items.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    // Create a clickable link
+    const link = document.createElement("a");
+    link.href = `details.html?title=${encodeURIComponent(item.title)}&type=${encodeURIComponent(item.genre || item.type || "")}&imageUrl=${encodeURIComponent(item.imageUrl)}&description=${encodeURIComponent(item.description)}&year=${encodeURIComponent(item.year || "")}&rating=${encodeURIComponent(item.rating || "")}`;
+    link.title = item.title;
+    link.className = "card-link";
+
+    // Populate card content dynamically
+    link.innerHTML = `
+      <img src="${item.imageUrl}" alt="${item.title}" loading="lazy"/>
+      <h3>${item.title}</h3>
+      <p><strong></strong> ${item.rating ? "Rating: " + item.rating : item.seasons ? "Seasons: " + item.seasons : item.type}</p>
+    `;
+
+    // Append the link to the card and the card to the wrapper
+    card.appendChild(link);
+    cardWrapper.appendChild(card);
+  });
+}
+
+// Script for `details.html`
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+
+  // Extract parameters from the URL
+  const title = params.get('title');
+  const type = params.get('type');
+  const imageUrl = params.get('imageUrl');
+  const description = params.get('description');
+  const year = params.get('year');
+  const rating = params.get('rating');
+
+  // Update the page content dynamically
+  const titleElement = document.getElementById('itemTitle');
+  const imageElement = document.getElementById('itemImage');
+  const descriptionElement = document.getElementById('itemDescription');
+  const yearElement = document.getElementById('itemYear');
+  const ratingElement = document.getElementById('itemRating');
+
+  if (titleElement) titleElement.textContent = title;
+  if (imageElement) imageElement.src = imageUrl;
+  if (descriptionElement) descriptionElement.textContent = description;
+  if (yearElement) yearElement.textContent = year ? `Year: ${year}` : '';
+  if (ratingElement) ratingElement.textContent = rating ? `Rating: ${rating}` : '';
+});
 
 
 

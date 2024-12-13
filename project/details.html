@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details - Laala Stream</title>
+    <link rel="stylesheet" href="styles/laalastream.css">
+    <link rel="stylesheet" href="styles/laalastream-large.css">
+    <script src="scripts/laalastream.js" defer></script>
+    <link rel="icon" href="images/laalaflix_logo.svg" type="image/svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="headercontainer">
+            <img src="images/laalaflix_logo.svg" alt="laala stream logo">
+            <button id="menu" aria-label="Toggle navigation">
+                <span class="hamburger-icon"></span>
+            </button>
+            <nav class="navigation" aria-label="Main navigation">
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search..." >
+                    <button type="submit"><img src="images/search-icon.svg" alt="Search"></button>
+                </div>
+                <a href="laalastream.html" title="Home">Home</a>
+                <a href="aboutus.html" title="About Us" class="active">About Us</a>
+                <div class="sign">
+                    <a href="#loginForm" title="Sign">Sign In/Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="section">
+            <h1 id="itemTitle"></h1>
+            <img id="itemImage" alt="Item Image">
+            <p id="itemDescription"></p>
+            <p id="itemYear"></p>
+            <p id="itemRating"></p>
+          </div>
+
+          <section class="beforefooter">
+            <h2>There’s even more to watch.</h2>
+            <p>Laala Stream has an extensive library of feature films, documentaries, TV shows, anime, award-winning Laala Stream originals, and more. Watch as much as you want, anytime you want.</p>
+            
+
+            <div class="login-page">
+                <div class="form">
+                    <form id="registerForm" class="hidden" action="review.html" method="get">
+                        <input type="text" placeholder="name" required>
+                        <input type="password" placeholder="password" required>
+                        <input type="text" placeholder="email address" required>
+                        <input type="submit" value="Join Now">
+                        <p class="message">Already registered? <a href="#loginForm">Sign In</a></p>
+                    </form>
+                    <form id="loginForm" class="hidden" action="review.html" method="get">
+                        <input type="text" placeholder="username" required>
+                        <input type="password" placeholder="password" required>
+                        <input type="submit" value="Sign In">
+                        <p class="message">Don't have an account? <a href="#">Create an account</a></p>
+                    </form>
+                    <button id="showFormButton">Join Now</button>
+                </div>
+            </div></section>
+          
+    </main>
+
+    <footer>
+        <div class="footer">
+            <a href="#">FACEBOOK</a>
+            <a href="#">MAIL</a>
+            <a href="#">LINKEDIN</a>
+            <a href="#">INSTAGRAM</a>
+        </div>
+        <p>© 2024 LAALA STREAM | Nigeria</p>
+    </footer>
+</body>
+</html>
