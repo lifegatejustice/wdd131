@@ -304,8 +304,8 @@ input[type="text"] {
 .beforefooter p {
   color: var(--white);
   font-size: 1rem;
-  margin-left: 20vw;
-  margin-right: 20vw;
+  text-align: center;
+  margin: 10px;
 }
 
 .login-page {
@@ -375,10 +375,17 @@ input[type="submit"]:active,
 .form button:focus {
   background: var(--amber-yellow);
 }
+
+
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
   font-size: 12px;
+}
+
+.stars-filled{
+  color: #e1c700;
+  background-color: white;
 }
 
 #showFormButton {
@@ -391,14 +398,12 @@ input[type="submit"]:active,
   color: var(--black);
   font-size: 14px;
   -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 
 #showFormButton:hover {
-  background-color: var(--amber-yellow);
-  font-weight: 20px; /* Change background on hover */
+  background-color: var(--amber-yellow); /* Change background on hover */
 }
 
 #showFormButton:focus {
@@ -407,7 +412,7 @@ input[type="submit"]:active,
 
 #showFormButton p:hover {
   background-color: var(--amber-yellow);
-  font-weight: 20px; /* Change background on hover */
+   /* Change background on hover */
 }
 .form .message a {
   color: var(--amber-yellow);
@@ -475,6 +480,7 @@ input[type="submit"]:hover {
   overflow: hidden;
   background-color: #000; /* Optional: background color for the video container */
   margin-bottom: 20px;
+  border: 1px solid var(--amber-yellow);
 }
 
 #movieVideo {
@@ -496,15 +502,6 @@ input[type="submit"]:hover {
   background-size: contain;
 }
 
-.stars-filled {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0; /* This will be dynamically set based on the rating */
-  height: 100%;
-  background-image: url('images/mdi--star-outline (1).svg') repeat-x; /* Use your filled star image */
-  background-size: contain;
-}
 
 #itemTitle{
   color: var(--lemon-yellow);
@@ -539,6 +536,7 @@ input[type="submit"]:hover {
 #itemRating{
   font-weight: bold;
   grid-column: 3;
+  color: var(--goldenrod-yellow);
 }
 
 
@@ -566,11 +564,6 @@ footer a {
   color: var(--lemon-yellow);
   text-decoration: none;
 }
-
-.sign a{
-    text-decoration: none;
-    color: var(--black);
-  }
 
 @media (max-width: 793px) {
   .navigation {
@@ -992,7 +985,6 @@ footer a {
     border: none;
     flex: 1;
     border-radius: 25px 0 0 25px;
-    font-size: -1em;
     outline: none;
   }
 
@@ -1060,33 +1052,13 @@ footer a {
 }
 
 
-.watch{
-background-color: var(--lemon-yellow);
-padding-left: 10vw;
-padding-right: 4vw;
-padding-top: 2vw;
-padding-bottom: 2vw;
-position: relative;
-bottom: 40vw;
-
-top: -10vw;
-border-radius: 5px;
-
-}
-
-.watch a{
-text-decoration: none;
-color: var(--black);
-font-weight: bold;
-font-size: 2vw;
-text-align: center;
-
-}
-
-.watch:hover{
+.watch a:hover{
 background-color: var(--amber-yellow);
 }
 
+.sign a{
+  color: var(--black);
+}
 
   .sign {
     background-color: var(--lemon-yellow);
@@ -1098,18 +1070,33 @@ background-color: var(--amber-yellow);
   }
 
 .review {
+  display: flex;
+  padding: 3vw;
+  border-radius: 20px;
+ 
+  margin: 1vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
   background-color: var(--black-variant);
+  align-items: center;
+  margin-top: 2vw;
+  flex-direction: column;
+
+}
+
+
+.review a {
   padding: 3vw;
   border-radius: 20px;
   max-width: 600px;
   margin: 1vw;
   text-align: center;
   color: var(--white);
+  color: #e1c700;
 }
 
-
-.review a {
-  color: #e1c700;
+.review h1 {
+  color: var(--white);
 }
 .footer {
   display: flex;

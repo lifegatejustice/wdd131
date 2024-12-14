@@ -38,15 +38,17 @@
             <h1 id="itemTitle"></h1>
             <div class="video-wrapper">
                 <video id="movieVideo" controls>
-                    <source src="" id="videoSource" type="video/mp4">
-                    Your browser does not support the video tag.
+                    <source src="video/thankyou.mp4" id="videoSource" type="video/mp4">
+                    <p>Your browser does not support the video tag.</p>
                 </video>
             </div>
             <div class="griding">
-            <img id="itemImage" alt="Item Image">
+            <img id="itemImage" src="" alt="Item Image">
             <p id="itemDescription"></p>
             <p id="itemYear"></p>
-            <p id="itemRating"></p></div>
+
+                <span id="itemRating"></span>
+            </div>
             <p class="summary" id="itemDetailedSummary"></p>
         </section>
         
@@ -62,7 +64,7 @@
                     <form id="registerForm" class="hidden" action="review.html" method="get">
                         <input type="text" placeholder="name" required>
                         <input type="password" placeholder="password" required>
-                        <input type="text" placeholder="email address" required>
+                        <input type="email" placeholder="email address" required>
                         <input type="submit" value="Join Now">
                         <p class="message">Already registered? <a href="#loginForm">Sign In</a></p>
                     </form>
@@ -80,12 +82,12 @@
 
     <footer>
         <div class="footer">
-            <a href="#">FACEBOOK</a>
-            <a href="#">MAIL</a>
-            <a href="#">LINKEDIN</a>
-            <a href="#">INSTAGRAM</a>
+            <a href="https://www.facebook.com/lifegate.justice.1/" target="_blank">FACEBOOK</a>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">MAIL</a>
+            <a href="https://www.linkedin.com/in/lifegatejustice" target="_blank">LINKEDIN</a>
+            <a href="https://www.instagram.com/lifegatejustice/" target="_blank">INSTAGRAM</a>
         </div>
-        <p>© 2024 LAALA STREAM | Nigeria</p>
+        <p>&copy; 2024 LAALA STREAM | Nigeria</p>
     </footer>
 </body>
 </html>

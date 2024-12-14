@@ -6,6 +6,7 @@
         <title>Product Review</title>
         <script src="scripts/laalastream.js" defer></script>
         <link rel="stylesheet" href="styles/laalastream.css"> 
+        <link rel="stylesheet" href="styles/laalastream-large.css">
         <meta name="description" content="A form with laala stream theme">
         <meta name="author" content="Lifegate Justice De-Tom">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,14 +14,38 @@
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     </head>
 <body>
+    <header>
+        <div class="headercontainer">
+            <img src="images/laalaflix_logo.svg" alt="laala stream logo" loading="lazy">
+            <button id="menu" aria-label="Toggle navigation">
+                <span class="hamburger-icon"></span>
+            </button>
+            <nav class="navigation" aria-label="Main navigation">
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search..." >
+                    <button type="submit"><img src="images/search-icon.svg" alt="Search"></button>
+                </div>
+                <a href="laalastream.html" title="Home">Home</a>
+                <a href="aboutus.html" title="About Us" class="active">About Us</a>
+                <div class="sign">
+                    <a href="#loginForm" title="Sign">Sign In/Sign Up</a>
+                </div>
+            </nav>
+        </div>
+    </header>
     <main>
     <section class="review">
   <h1>Thank You!</h1>
   <p>Your submission has been received. We appreciate your feedback!</p>
   <p><a href="laalastream.html">Go back to the homepage</a></p></section>
   <footer>
-    <p>&copy; 2024 Lifegate Justice De-Tom | Nigeria</p>
-    <p class="lm">Last Modified: <span id="last-modified"></span></p>
+    <div class="footer">
+        <a href="https://www.facebook.com/lifegate.justice.1/" target="_blank">FACEBOOK</a>
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">MAIL</a>
+        <a href="https://www.linkedin.com/in/lifegatejustice" target="_blank">LINKEDIN</a>
+        <a href="https://www.instagram.com/lifegatejustice/" target="_blank">INSTAGRAM</a>
+    </div>
+    <p>&copy; 2024 LAALA STREAM | Nigeria</p>
 </footer>
 </main>
 </body>

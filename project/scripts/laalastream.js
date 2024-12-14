@@ -38,11 +38,14 @@ const movies = [
     rating: 8.8, 
     imageUrl: "images/Inception.webp",
     description: "A mind-bending thriller by Christopher Nolan.",
-    detailedSummary: "Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable. Cobb’s rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has also made him an international fugitive and cost him everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could give him his life back but only if he can accomplish the impossible-inception. Instead of the perfect heist, Cobb and his team of specialists have to pull off the reverse: their task is not to steal an idea but to plant one. If they succeed, it could be a perfect crime. But no amount of careful planning or expertise can prepare the team for the dangerous enemy that seems to predict their every move. An enemy that only Cobb could have seen coming."
+    detailedSummary: "Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable. Cobb’s rare ability has made him a coveted player in this treacherous new world of corporate espionage, but it has also made him an international fugitive and cost him everything he has ever loved. Now Cobb is being offered a chance at redemption. One last job could give him his life back but only if he can accomplish the impossible-inception. Instead of the perfect heist, Cobb and his team of specialists have to pull off the reverse: their task is not to steal an idea but to plant one. If they succeed, it could be a perfect crime. But no amount of careful planning or expertise can prepare the team for the dangerous enemy that seems to predict their every move. An enemy that only Cobb could have seen coming.",
+    trailerUrl: "https://www.youtube.com/embed/8hP9D6kZseM" 
+
+
   },
   { 
     title: "Deadpool And Wolverine", 
-    year: 1997, 
+    year: 2024, 
     genre: "Sci-Fi", 
     rating: 7.8, 
     imageUrl: "images/deadpoolandwolverine.webp",
@@ -111,7 +114,7 @@ const sports = [
 const series = [
   { 
     title: "Breaking Bad", 
-    year: 2008, 
+    year: 2024, 
     genre: "Crime", 
     seasons: 5, 
     imageUrl: "images/breakingbad.webp",
@@ -129,7 +132,7 @@ const series = [
   },
   { 
     title: "Witcher", 
-    year: 2011, 
+    year: 2019, 
     genre: "Fantasy", 
     seasons: 4, 
     imageUrl: "images/witcher.webp",
@@ -138,7 +141,7 @@ const series = [
   },
   { 
     title: "Superman and Lois", 
-    year: 2016, 
+    year: 2022, 
     genre: "Fantasy", 
     seasons: 4, 
     imageUrl: "images/superman.webp",
@@ -147,7 +150,10 @@ const series = [
   }
 ];
 
-// Function to create cards
+// Declare trailerUrl globally
+let trailerUrl = '';
+
+// Function to create cards dynamically
 function createCards(items, sectionId) {
   const section = document.getElementById(sectionId);
   const cardWrapper = section.querySelector(".card-wrapper");
@@ -159,7 +165,8 @@ function createCards(items, sectionId) {
 
     // Create a clickable link
     const link = document.createElement("a");
-    link.href = `details.html?title=${encodeURIComponent(item.title)}&type=${encodeURIComponent(item.genre || item.type || "")}&imageUrl=${encodeURIComponent(item.imageUrl)}&description=${encodeURIComponent(item.description)}&year=${encodeURIComponent(item.year || "")}&rating=${encodeURIComponent(item.rating || "")}&detailedSummary=${encodeURIComponent(item.detailedSummary || "")}`;
+    link.href = `details.html?title=${encodeURIComponent(item.title)}&type=${encodeURIComponent(item.genre || item.type || "")}&imageUrl=${encodeURIComponent(item.imageUrl)}&description=${encodeURIComponent(item.description)}&year=${encodeURIComponent(item.year || "")}&rating=${encodeURIComponent(item.rating || "")}&detailedSummary=${encodeURIComponent(item.detailedSummary || "")}&trailerUrl=${encodeURIComponent(item.trailerUrl || "")}`;
+
     link.title = item.title;
     link.className = "card-link";
 
@@ -173,16 +180,48 @@ function createCards(items, sectionId) {
     // Append the link to the card and the card to the wrapper
     card.appendChild(link);
     cardWrapper.appendChild(card);
+
+    // Set the global trailerUrl
+    trailerUrl = item.trailerUrl; // Assuming you have a trailerUrl property in your items
   });
 }
-
 
 // Populate all sections by default
 document.addEventListener("DOMContentLoaded", () => {
   createCards(movies, "moviesSection");
   createCards(sports, "sportsSection");
   createCards(series, "seriesSection");
+
+  // Set up search functionality
+  document.getElementById('searchButton').addEventListener('click', function() {
+      const searchTerm = document.getElementById('search').value.toLowerCase();
+      filterCards(searchTerm);
+  });
+
+  // Debounce search input
+  let debounceTimer;
+  document.getElementById('search').addEventListener('input', function() {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+          const searchTerm = this.value.toLowerCase();
+          filterCards(searchTerm);
+      }, 300); 
+  });
 });
+
+// Function to filter cards based on search input
+function filterCards(searchTerm) {
+  const allCards = document.querySelectorAll('.card'); // Select all cards dynamically
+  allCards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase(); // Get the title of the card
+      if (title.includes(searchTerm)) {
+          card.style.display = 'block'; // Show card if it matches the search term
+      } else {
+          card.style.display = 'none'; // Hide card if it doesn't match
+      }
+  });
+}
+
 
 document.querySelector('.sign').addEventListener('click', (e) => {
   e.preventDefault(); // Prevent default jump behavior
@@ -198,6 +237,7 @@ document.querySelector('.sign').addEventListener('click', (e) => {
       registerForm.scrollIntoView({ behavior: 'smooth' });
   }
 });
+
 
 document.getElementById('showFormButton').addEventListener('click', function () {
   const registerForm = document.getElementById('registerForm');
@@ -257,7 +297,6 @@ function getSelectedMovie() {
   return localStorage.getItem('selectedMovie');
 }
 
-
 // Function to create cards dynamically
 function createCards(items, sectionId) {
   const section = document.getElementById(sectionId);
@@ -270,7 +309,9 @@ function createCards(items, sectionId) {
 
     // Create a clickable link
     const link = document.createElement("a");
-    link.href = `details.html?title=${encodeURIComponent(item.title)}&type=${encodeURIComponent(item.genre || item.type || "")}&imageUrl=${encodeURIComponent(item.imageUrl)}&description=${encodeURIComponent(item.description)}&year=${encodeURIComponent(item.year || "")}&rating=${encodeURIComponent(item.rating || "")}&detailedSummary=${encodeURIComponent(item.detailedSummary)}`; // Add detailedSummary
+    //  NOTE: The trailerUrl is now included in the href
+    link.href = `details.html?title=${encodeURIComponent(item.title)}&type=${encodeURIComponent(item.genre || item.type || "")}&imageUrl=${encodeURIComponent(item.imageUrl)}&description=${encodeURIComponent(item.description)}&year=${encodeURIComponent(item.year || "")}&rating=${encodeURIComponent(item.rating || "")}&detailedSummary=${encodeURIComponent(item.detailedSummary || "")}&trailerUrl=${encodeURIComponent(item.trailerUrl || "")}`;
+
     link.title = item.title;
     link.className = "card-link";
 
@@ -278,7 +319,7 @@ function createCards(items, sectionId) {
     link.innerHTML = `
       <img src="${item.imageUrl}" alt="${item.title}" loading="lazy"/>
       <h3>${item.title}</h3>
-      <p><strong></strong> ${item.rating ? "Rating: " + item.rating : item.seasons ? "Seasons: " + item.seasons : item.type}</p>
+      <p>${item.rating ? "Rating: " + item.rating : item.seasons ? "Seasons: " + item.seasons : item.type}</p>
     `;
 
     // Append the link to the card and the card to the wrapper
@@ -290,15 +331,22 @@ function createCards(items, sectionId) {
 // Script for `details.html`
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
-
-  // Extract parameters from the URL
   const title = params.get('title');
   const type = params.get('type');
   const imageUrl = params.get('imageUrl');
   const description = params.get('description');
   const year = params.get('year');
-  const rating = parseFloat(params.get('rating')); // Parse rating as a number // Parse rating as a number
+  const rating = parseFloat(params.get('rating'));
   const detailedSummary = params.get('detailedSummary'); 
+  const trailerUrl = params.get('trailerUrl'); 
+  const videoSource = document.getElementById("videoSource"); 
+    if (videoSource) {
+        videoSource.src = trailerUrl; // Set the video source
+    } else {
+        console.error("videoSource element not found in the DOM.");
+    }
+  
+  
 
   // Update the page content dynamically
   const titleElement = document.getElementById('itemTitle');
@@ -312,24 +360,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (imageElement) imageElement.src = imageUrl;
   if (descriptionElement) descriptionElement.textContent = description;
   if (yearElement) yearElement.textContent = year ? `Year: ${year}` : '';
-  if (detailedSummaryElement) detailedSummaryElement.textContent = detailedSummary; // Set the detailed summary
+  if (detailedSummaryElement) detailedSummaryElement.textContent = detailedSummary; 
   if (ratingElement) ratingElement.textContent = rating ? `Rating: ${rating}` : '';
 
-  // Update star meter based on rating
-  const numericRating = 8.8; // Replace with actual dynamic rating
-  updateStarRating(numericRating);
-
-  // Update the numeric rating display if necessary
-  document.getElementById('itemRating').textContent = `${numericRating}/10`;
-
-  const videoSource = document.getElementById("videoSource");
-  videoSource.src = "path/to/your/video.mp4"; // Set the video source
 });
 
-function updateStarRating(rating) {
-  const starsFilled = document.querySelector('.stars-filled'); 
-  const stars = document.querySelector('.stars'); 
-  
-  const starWidth = (rating / 10) * stars.offsetWidth; // Calculate filled star width
-  starsFilled.style.width = starWidth + 'px'; 
-}

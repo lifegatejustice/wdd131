@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laala Site Plan</title>
+    <title>Laala Stream</title>
     <link rel="stylesheet" href="styles/laalastream.css">
     <link rel="stylesheet" href="styles/laalastream-large.css">
     <script src="scripts/laalastream.js" defer></script>
@@ -27,7 +27,7 @@
             <nav class="navigation" aria-label="Main navigation">
                 <div class="search-container">
                     <input type="text" id="search" placeholder="Search..." >
-                    <button type="submit"><img src="images/search-icon.svg" alt="Search"></button>
+                    <button type="submit" id="searchButton"><img src="images/search-icon.svg" alt="Search"></button>
                 </div>
                 <a href="laalastream.html" title="Home">Home</a>
                 <a href="aboutus.html" title="About Us" class="active">About Us</a>
@@ -43,9 +43,9 @@
             <img src="images/movies2.webp" alt="dynamic images containing sports, series and movies" id="myImage">
             <div class="gradient-overlay"></div>
         </div>
-        <span class="watch">
-            <a href="watchbutton">Watch Now</a>
-        </span>
+        <div class="watch">
+            <a href="#moviesSection" >Watch Now</a>
+        </div>
 
           <section id="moviesSection" class="section">
             <h2>Movies</h2>
@@ -73,7 +73,7 @@
                     <form id="registerForm" class="hidden" action="review.html" method="get">
                         <input type="text" placeholder="name" required>
                         <input type="password" placeholder="password" required>
-                        <input type="text" placeholder="email address" required>
+                        <input type="email" placeholder="email address" required>
                         <input type="submit" value="Join Now">
                         <p class="message">Already registered? <a href="#loginForm">Sign In</a></p>
                     </form>
@@ -87,12 +87,12 @@
                 </div>
             </div></section>
             <footer>
-            <div class="footer">
-                <a href="#">FACEBOOK</a>
-                <a href="#">MAIL</a>
-                <a href="#">LINKEDIN</a>
-                <a href="#">INSTAGRAM</a></div>
-                <p>© 2024 LAALA STREAM | Nigeria</p>
+                <div class="footer">
+                    <a href="https://www.facebook.com/lifegate.justice.1/" target="_blank">FACEBOOK</a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">MAIL</a>
+                    <a href="https://www.linkedin.com/in/lifegatejustice" target="_blank">LINKEDIN</a>
+                    <a href="https://www.instagram.com/lifegatejustice/" target="_blank">INSTAGRAM</a>
+                </div>
             </footer>
         </main>
             
