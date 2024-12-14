@@ -567,6 +567,11 @@ footer a {
   text-decoration: none;
 }
 
+.sign a{
+    text-decoration: none;
+    color: var(--black);
+  }
+
 @media (max-width: 793px) {
   .navigation {
     display: none; /* Hide navigation by default */
