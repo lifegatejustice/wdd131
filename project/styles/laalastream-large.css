@@ -246,6 +246,10 @@
 
 section h2{
     color: var(--white);
+}    
+
+.sign a{
+    color: var(--black);
 }
 
 
