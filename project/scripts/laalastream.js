@@ -338,13 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const year = params.get('year');
   const rating = parseFloat(params.get('rating'));
   const detailedSummary = params.get('detailedSummary'); 
-  const trailerUrl = params.get('trailerUrl'); 
-  const videoSource = document.getElementById("videoSource"); 
-    if (videoSource) {
-        videoSource.src = trailerUrl; // Set the video source
-    } else {
-        console.error("videoSource element not found in the DOM.");
-    }
+  const trailerUrl = params.get('trailerUrl');
   
   
 
